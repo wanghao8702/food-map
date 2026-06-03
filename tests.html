@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>tests</title></head>
+<body><pre id="out"></pre>
+<script type="module">
+import { project } from './src/projection.js';
+const out = document.getElementById('out');
+let pass = 0, fail = 0;
+function eq(name, a, b, tol=0.5){
+  if (Math.abs(a-b) <= tol){ pass++; out.textContent += `PASS ${name}\n`; }
+  else { fail++; out.textContent += `FAIL ${name}: got ${a}, want ${b}\n`; }
+}
+// 世界图参数：经度[-180,180]→x[0,1000]，纬度[85,-60]→y[0,500]
+const W = { lngMin:-180, lngMax:180, latTop:85, latBottom:-60, width:1000, height:500 };
+let p = project(0, 12.5, W);          // 经度0→中点x=500；纬度12.5(范围中点)→y=250
+eq('world-center-x', p.x, 500);
+eq('world-center-y', p.y, 250);
+p = project(180, 85, W);              // 右上角
+eq('world-topright-x', p.x, 1000);
+eq('world-topright-y', p.y, 0);
+out.textContent += (fail===0)?`\nALL PASS (${pass})`:`\n${fail} FAILED`;
+</script></body></html>
