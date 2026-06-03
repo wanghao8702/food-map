@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """校验 dishes.json 与 episodes/*.json 的结构与引用一致性。"""
-import json, os, sys, glob
+import json, os, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 REQUIRED = ["id","name","season","episode","episodeTitle","region",
