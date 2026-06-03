@@ -17,8 +17,8 @@ header h1{font-size:18px;margin:0;color:var(--ink)}
 #back:hover{background:var(--accent-2)}
 #stage{width:100%;height:calc(100vh - 56px)}
 #map{width:100%;height:100%;display:block}
-.pin{fill:var(--accent);stroke:#fff;stroke-width:1.5;cursor:pointer;transition:r .1s}
-.pin:hover{r:10}
+.pin{fill:var(--accent);stroke:#fff;stroke-width:2;cursor:pointer;transition:r .1s;r:11}
+.pin:hover{r:14}
 .cluster circle{fill:var(--accent);opacity:.92;cursor:pointer}
 .cluster text{fill:#fff;font-size:11px;font-weight:700;pointer-events:none}
 .cluster .cnt{font-size:9px;font-weight:400}
@@ -35,6 +35,7 @@ header h1{font-size:18px;margin:0;color:var(--ink)}
 #panel .ft{margin-top:18px;width:100%;background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px;cursor:pointer}
 #panel .ft:hover{background:var(--accent-2)}
 #fulltext{position:fixed;inset:0;background:rgba(40,25,10,.5);z-index:10;display:flex;justify-content:center;align-items:flex-start;padding:4vh 0}
+#fulltext[hidden]{display:none}
 .ft-box{background:var(--paper-2);width:760px;max-width:94vw;max-height:92vh;border-radius:10px;overflow:auto}
 .ft-box header{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:var(--band);border-bottom:2px solid var(--line)}
 .ft-box h2{font-size:16px;margin:0;color:var(--ink)}
