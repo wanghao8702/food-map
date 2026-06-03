@@ -22,3 +22,15 @@ header h1{font-size:18px;margin:0;color:var(--ink)}
 .cluster circle{fill:var(--accent);opacity:.92;cursor:pointer}
 .cluster text{fill:#fff;font-size:11px;font-weight:700;pointer-events:none}
 .cluster .cnt{font-size:9px;font-weight:400}
+#panel{position:fixed;top:56px;right:0;width:360px;max-width:90vw;height:calc(100vh - 56px);
+  background:var(--paper-2);border-left:2px solid var(--line);box-shadow:-6px 0 24px rgba(60,40,10,.18);
+  padding:18px 20px;overflow:auto;animation:slide .18s ease}
+@keyframes slide{from{transform:translateX(40px);opacity:.3}to{transform:none;opacity:1}}
+#panel .close{position:absolute;top:8px;right:12px;border:none;background:none;font-size:22px;cursor:pointer;color:var(--accent-2)}
+#panel .art{display:block;width:120px;height:120px;margin:6px auto}
+#panel h2{text-align:center;color:var(--ink);margin:6px 0}
+#panel .meta{text-align:center;color:var(--ink-soft);font-size:12px;margin:0 0 10px}
+#panel h3{font-size:13px;color:var(--accent-2);margin:14px 0 4px}
+#panel blockquote{margin:0;padding-left:12px;border-left:3px solid var(--accent);color:var(--ink-soft);font-style:italic}
+#panel .ft{margin-top:18px;width:100%;background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px;cursor:pointer}
+#panel .ft:hover{background:var(--accent-2)}
