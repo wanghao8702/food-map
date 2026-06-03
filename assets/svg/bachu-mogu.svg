@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- plate -->
+    <ellipse cx="60" cy="78" rx="40" ry="12" fill="#fbf3e0"/>
+    <ellipse cx="60" cy="76" rx="30" ry="8" fill="#f0a05a"/>
+    <!-- mushroom 1 (cap + stem) -->
+    <rect x="36" y="62" width="5" height="10" rx="2" fill="#fbf3e0"/>
+    <path d="M30,62 Q38,52 47,62 Q38,68 30,62 Z" fill="#b9763c"/>
+    <!-- mushroom 2 -->
+    <rect x="58" y="60" width="5" height="11" rx="2" fill="#fbf3e0"/>
+    <path d="M50,60 Q60,48 70,60 Q60,67 50,60 Z" fill="#9a5a2a"/>
+    <!-- lamb slices -->
+    <path d="M40,70 Q50,64 60,70 Q56,76 44,74 Z" fill="#c0492f"/>
+    <path d="M64,70 Q74,64 82,70 Q76,76 66,74 Z" fill="#e8623f"/>
+    <!-- chili / scallion accents -->
+    <path d="M74,58 Q80,56 84,60" fill="#e8623f"/>
+    <path d="M44,58 L50,54" fill="none" stroke="#7fa860" stroke-width="2"/>
+    <circle cx="58" cy="56" r="1.5" fill="#fff" stroke="none"/>
+  </g>
+</svg>

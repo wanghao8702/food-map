@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- legs left -->
+    <path d="M42,52 Q26,48 20,38" fill="none"/>
+    <path d="M40,60 Q24,60 16,54" fill="none"/>
+    <path d="M42,68 Q26,72 20,80" fill="none"/>
+    <!-- legs right -->
+    <path d="M78,52 Q94,48 100,38" fill="none"/>
+    <path d="M80,60 Q96,60 104,54" fill="none"/>
+    <path d="M78,68 Q94,72 100,80" fill="none"/>
+    <!-- claws -->
+    <path d="M44,46 Q32,36 26,38 Q32,42 28,46 Q36,48 44,52 Z" fill="#c0492f"/>
+    <path d="M76,46 Q88,36 94,38 Q88,42 92,46 Q84,48 76,52 Z" fill="#c0492f"/>
+    <!-- body -->
+    <ellipse cx="60" cy="58" rx="20" ry="16" fill="#e8623f"/>
+    <path d="M48,52 Q60,46 72,52" fill="none"/>
+    <path d="M48,62 Q60,56 72,62" fill="none"/>
+    <circle cx="52" cy="52" r="1.8" fill="#fff" stroke="none"/>
+    <!-- water-wave ripples beneath (warm tones) -->
+    <path d="M22,92 Q32,86 42,92 Q52,98 62,92 Q72,86 82,92 Q92,98 100,92" fill="none" stroke="#f0a05a" stroke-width="2"/>
+    <path d="M26,102 Q36,96 46,102 Q56,108 66,102 Q76,96 86,102 Q94,107 98,103" fill="none" stroke="#d9863c" stroke-width="2"/>
+  </g>
+</svg>

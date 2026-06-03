@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- steam -->
+    <path d="M48,40 Q44,32 50,26 Q56,20 50,14" fill="none"/>
+    <path d="M62,38 Q58,30 64,24 Q70,18 64,12" fill="none"/>
+    <path d="M76,40 Q72,33 78,27" fill="none"/>
+    <!-- clear broth bowl -->
+    <ellipse cx="60" cy="80" rx="36" ry="11" fill="#fbf3e0"/>
+    <path d="M24,76 Q60,98 96,76 L94,82 Q60,102 26,82 Z" fill="#e8d6b0"/>
+    <path d="M28,72 Q60,86 92,72 Q60,82 28,72 Z" fill="#f0a05a" opacity="1"/>
+    <!-- lamb chunks -->
+    <ellipse cx="48" cy="68" rx="9" ry="6" fill="#d9863c"/>
+    <ellipse cx="68" cy="66" rx="10" ry="6.5" fill="#b9763c"/>
+    <ellipse cx="58" cy="73" rx="8" ry="5" fill="#d9863c"/>
+    <!-- fat-tail hint (米白 chunk) -->
+    <ellipse cx="74" cy="72" rx="7" ry="4.5" fill="#fbf3e0"/>
+    <circle cx="46" cy="66" r="1.6" fill="#fff" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- wooden pail body -->
+    <path d="M34,52 L40,100 Q60,108 80,100 L86,52 Z" fill="#b9763c"/>
+    <!-- pail top rim -->
+    <ellipse cx="60" cy="52" rx="26" ry="8" fill="#d9863c"/>
+    <!-- wood staves -->
+    <path d="M48,52 L51,100" fill="none"/>
+    <path d="M60,53 L60,103" fill="none"/>
+    <path d="M72,52 L69,100" fill="none"/>
+    <!-- metal hoops -->
+    <path d="M37,70 Q60,78 83,70" fill="none"/>
+    <path d="M39,88 Q60,95 81,88" fill="none"/>
+    <!-- roasted lamb on top -->
+    <ellipse cx="60" cy="48" rx="20" ry="8" fill="#9a5a2a"/>
+    <ellipse cx="52" cy="45" rx="8" ry="5" fill="#c0492f"/>
+    <ellipse cx="68" cy="46" rx="9" ry="5" fill="#d9863c"/>
+    <ellipse cx="60" cy="43" rx="7" ry="4.5" fill="#e8623f"/>
+    <circle cx="56" cy="42" r="1.6" fill="#fff" stroke="none"/>
+  </g>
+</svg>

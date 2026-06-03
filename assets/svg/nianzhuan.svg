@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- bowl -->
+    <ellipse cx="60" cy="80" rx="36" ry="11" fill="#fbf3e0"/>
+    <path d="M24,76 Q60,98 96,76 L94,82 Q60,102 26,82 Z" fill="#e8d6b0"/>
+    <!-- green nianzhuan mound -->
+    <path d="M28,72 Q60,50 92,72 Q60,84 28,72 Z" fill="#7fa860"/>
+    <!-- green strands -->
+    <path d="M40,70 Q44,62 50,68" fill="none"/>
+    <path d="M52,66 Q56,58 62,64" fill="none"/>
+    <path d="M66,66 Q70,58 76,64" fill="none"/>
+    <path d="M46,72 Q52,66 58,72" fill="none"/>
+    <!-- garlic / peanut bits -->
+    <circle cx="50" cy="66" r="2.5" fill="#fbf3e0"/>
+    <circle cx="70" cy="68" r="2.5" fill="#f4c95d"/>
+    <!-- chili -->
+    <path d="M58,60 Q64,58 68,62" fill="#e8623f"/>
+    <circle cx="48" cy="64" r="1.5" fill="#fff" stroke="none"/>
+  </g>
+</svg>

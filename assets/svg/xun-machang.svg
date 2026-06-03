@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- hanging string/bar -->
+    <path d="M18,22 L102,22" fill="none"/>
+    <!-- hooks -->
+    <path d="M40,22 Q36,28 41,30" fill="none"/>
+    <path d="M62,22 Q58,28 63,30" fill="none"/>
+    <path d="M84,22 Q80,28 85,30" fill="none"/>
+    <!-- cured sausage link 1 (looped) -->
+    <path d="M30,30 Q24,52 34,70 Q44,86 40,100 Q40,108 48,104 Q44,90 50,74 Q56,56 48,32 Z" fill="#9a5a2a"/>
+    <!-- sausage segment ties -->
+    <path d="M31,48 Q40,52 47,48" fill="none"/>
+    <path d="M35,68 Q43,72 47,68" fill="none"/>
+    <!-- cured sausage link 2 -->
+    <path d="M60,30 Q56,54 64,74 Q70,90 66,102 Q66,108 73,104 Q70,90 75,72 Q80,52 73,32 Z" fill="#b9763c"/>
+    <path d="M61,50 Q69,54 75,50" fill="none"/>
+    <!-- hung meat strip -->
+    <path d="M84,30 L80,92 Q88,98 92,92 L90,30 Z" fill="#c0492f"/>
+    <path d="M84,55 L87,58" fill="none"/>
+    <circle cx="36" cy="40" r="1.6" fill="#fff" stroke="none"/>
+  </g>
+</svg>

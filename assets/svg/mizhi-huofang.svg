@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- plate -->
+    <ellipse cx="60" cy="84" rx="40" ry="11" fill="#fbf3e0"/>
+    <ellipse cx="60" cy="82" rx="30" ry="7" fill="#f0a05a"/>
+    <!-- ham block: top face -->
+    <path d="M34,58 L60,50 L88,58 L62,68 Z" fill="#d9863c"/>
+    <!-- front face (pink-red ham) -->
+    <path d="M34,58 L62,68 L62,82 L34,72 Z" fill="#e8623f"/>
+    <!-- side face -->
+    <path d="M62,68 L88,58 L88,72 L62,82 Z" fill="#c0492f"/>
+    <!-- rind on top edge -->
+    <path d="M34,58 L60,50 L66,53 L40,61 Z" fill="#9a5a2a"/>
+    <!-- ham marbling -->
+    <path d="M40,66 L44,67" fill="none"/>
+    <path d="M48,70 L52,71" fill="none"/>
+    <!-- glossy honey highlight -->
+    <path d="M44,60 Q54,55 64,60" fill="none" stroke="#fff" stroke-width="2"/>
+    <circle cx="50" cy="74" r="1.6" fill="#fff" stroke="none"/>
+  </g>
+</svg>

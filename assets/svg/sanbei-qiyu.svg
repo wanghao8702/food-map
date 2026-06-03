@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <!-- plate -->
+    <ellipse cx="60" cy="80" rx="40" ry="12" fill="#fbf3e0"/>
+    <ellipse cx="60" cy="78" rx="30" ry="8" fill="#f0a05a"/>
+    <!-- rolled marlin-skin pieces (dark skin) -->
+    <path d="M38,66 Q38,58 46,58 Q54,58 54,66 Q54,74 46,74 Q38,74 38,66 Z" fill="#9a5a2a"/>
+    <path d="M42,66 Q46,62 50,66" fill="none"/>
+    <path d="M58,70 Q58,62 66,62 Q74,62 74,70 Q74,78 66,78 Q58,78 58,70 Z" fill="#b9763c"/>
+    <path d="M62,70 Q66,66 70,70" fill="none"/>
+    <path d="M74,62 Q74,56 80,56 Q86,56 86,62 Q86,68 80,68 Q74,68 74,62 Z" fill="#9a5a2a"/>
+    <!-- basil (九层塔) leaves -->
+    <path d="M48,54 Q44,46 52,44 Q56,50 48,54 Z" fill="#7fa860"/>
+    <path d="M66,56 Q62,48 70,46 Q74,52 66,56 Z" fill="#7fa860"/>
+    <path d="M56,58 Q54,52 60,52 Q62,56 56,58 Z" fill="#7fa860"/>
+    <circle cx="44" cy="64" r="1.5" fill="#fff" stroke="none"/>
+  </g>
+</svg>
