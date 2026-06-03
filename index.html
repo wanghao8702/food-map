@@ -5,9 +5,12 @@
 <header><h1>风味地图</h1><button id="back" hidden>← 返回世界</button></header>
 <main id="stage"><svg id="map" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet"></svg></main>
 <aside id="panel" hidden></aside>
+<div id="fulltext" hidden></div>
 <script type="module">
   import { init } from './src/map.js';
-  import { openPanel } from './src/panel.js';
+  import { openPanel, bindFulltext } from './src/panel.js';
+  import { openFulltext } from './src/fulltext.js';
   init(openPanel);
+  bindFulltext(openFulltext);
 </script>
 </body></html>

@@ -34,3 +34,15 @@ header h1{font-size:18px;margin:0;color:var(--ink)}
 #panel blockquote{margin:0;padding-left:12px;border-left:3px solid var(--accent);color:var(--ink-soft);font-style:italic}
 #panel .ft{margin-top:18px;width:100%;background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px;cursor:pointer}
 #panel .ft:hover{background:var(--accent-2)}
+#fulltext{position:fixed;inset:0;background:rgba(40,25,10,.5);z-index:10;display:flex;justify-content:center;align-items:flex-start;padding:4vh 0}
+.ft-box{background:var(--paper-2);width:760px;max-width:94vw;max-height:92vh;border-radius:10px;overflow:auto}
+.ft-box header{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:var(--band);border-bottom:2px solid var(--line)}
+.ft-box h2{font-size:16px;margin:0;color:var(--ink)}
+.ft-close{border:none;background:none;font-size:22px;cursor:pointer;color:var(--accent-2)}
+.ft-nav{display:flex;flex-wrap:wrap;gap:6px;padding:10px 20px;border-bottom:1px solid var(--line)}
+.ft-nav button{border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:2px 10px;font-size:12px;cursor:pointer;color:var(--ink)}
+.ft-nav button:hover{border-color:var(--accent);color:var(--accent-2)}
+.ft-box article{padding:16px 24px;line-height:1.9;color:var(--ink)}
+.ft-box .loc{color:var(--ink-soft);font-weight:700}
+.ft-box .seg .tag{display:inline-block;background:var(--accent);color:#fff;font-size:11px;border-radius:8px;padding:0 6px;margin-right:6px}
+.ft-box .seg.active{background:rgba(217,119,87,.22);border-radius:6px;padding:6px 8px;transition:background .3s}
