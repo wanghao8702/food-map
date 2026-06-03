@@ -10,6 +10,19 @@ let store, onPick = ()=>{};
 const NS='http://www.w3.org/2000/svg';
 function el(t,a){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;}
 
+function spread(list){
+  // 把经纬度近邻（约 1.67° 桶）的点视为重叠组；同组成员沿圆环均匀外推，避免针脚相互覆盖。
+  const key=d=>Math.round(d.lng*0.6)+','+Math.round(d.lat*0.6); // 例：太湖/苏州 落入同一桶
+  const total={};
+  list.forEach(d=>{const k=key(d); total[k]=(total[k]||0)+1;});
+  const seen={};
+  return list.map(d=>{const k=key(d);
+    const n=(seen[k]=(seen[k]||0)+1)-1, c=total[k];
+    if(c<2) return {...d, _dx:0, _dy:0};
+    const r=9*Math.min(c,3)/2, ang=(n/c)*Math.PI*2 + 0.6; // 同组成员各占一个角度槽，整体外推
+    return {...d, _dx:Math.cos(ang)*r, _dy:Math.sin(ang)*r};});
+}
+
 async function setBase(cfg){
   const txt = await (await fetch(cfg.base)).text();
   svg.innerHTML = '';
@@ -17,7 +30,8 @@ async function setBase(cfg){
 }
 function pin(d,cfg){
   const {x,y}=project(d.lng,d.lat,cfg);
-  const p=el('circle',{cx:x,cy:y,r:7,class:'pin','data-id':d.id});
+  const cx=x+(d._dx||0), cy=y+(d._dy||0);
+  const p=el('circle',{cx,cy,r:7,class:'pin','data-id':d.id});
   p.addEventListener('click',()=>onPick(d));
   const t=el('title',{}); t.textContent=d.name; p.appendChild(t);
   svg.appendChild(p);
@@ -34,7 +48,7 @@ export async function renderWorld(){
 }
 export async function renderChina(){
   await setBase(CHINA); back.hidden=false;
-  store.china.forEach(d=>pin(d,CHINA));
+  spread(store.china).forEach(d=>pin(d,CHINA));
 }
 export function init(onPickCb){ onPick = onPickCb || onPick; }
 
