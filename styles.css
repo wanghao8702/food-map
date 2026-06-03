@@ -1,0 +1,24 @@
+/* Claude 暖色调：暖米纸底 + 赤陶/珊瑚橙主色 + 暖深棕文字 */
+:root{
+  --paper:#F0EEE6;     /* Claude 暖米纸背景 */
+  --paper-2:#FAF9F5;   /* 更浅卡片底 */
+  --band:#E8E2D2;      /* 顶栏/分隔暖色 */
+  --line:#D9D2C0;      /* 描边/分割线 */
+  --accent:#D97757;    /* Claude orange（珊瑚橙）主色 */
+  --accent-2:#CC785C;  /* 赤陶（hover/次级） */
+  --ink:#3D3929;       /* 暖深棕主文字 */
+  --ink-soft:#6B6453;  /* 次级文字 */
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Noto Serif SC",serif;background:var(--paper);color:var(--ink)}
+header{display:flex;align-items:center;gap:12px;padding:10px 18px;background:var(--band);border-bottom:2px solid var(--line)}
+header h1{font-size:18px;margin:0;color:var(--ink)}
+#back{background:var(--accent);color:#fff;border:none;border-radius:14px;padding:4px 12px;cursor:pointer}
+#back:hover{background:var(--accent-2)}
+#stage{width:100%;height:calc(100vh - 56px)}
+#map{width:100%;height:100%;display:block}
+.pin{fill:var(--accent);stroke:#fff;stroke-width:1.5;cursor:pointer;transition:r .1s}
+.pin:hover{r:10}
+.cluster circle{fill:var(--accent);opacity:.92;cursor:pointer}
+.cluster text{fill:#fff;font-size:11px;font-weight:700;pointer-events:none}
+.cluster .cnt{font-size:9px;font-weight:400}
