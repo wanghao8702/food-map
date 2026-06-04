@@ -28,6 +28,13 @@ const CHINA_PX = {
   'fw1-01-sanbei-qiyu':[600.7,508.0],  // 中国台湾·台东
 };
 
+// china.svg 为圆锥投影。经"最小二乘拟合各省中心"得到的仿射变换(经纬度→像素)，
+// 比单纯等距圆柱线性更准，作为没有 CHINA_PX 显式校准时的默认定位。
+function chinaProject(lng,lat){
+  return { x: 12.5924*lng + 0.2276*lat - 931.326,
+           y: 0.0473*lng - 15.5677*lat + 862.9133 };
+}
+
 // 像素空间防重叠：距离 < min 的点对相互推开(处理太湖/苏州这类近邻)。
 function pixelSpread(list, min=22){
   const out=list.map(o=>({...o}));
@@ -115,7 +122,7 @@ function clusterMarker(x,y,china){
 }
 export async function renderChina(){
   await setBase(CHINA); back.hidden=false;
-  const list = store.china.map(d=>{ const px=CHINA_PX[d.id]; const p = px ? {x:px[0],y:px[1]} : project(d.lng,d.lat,CHINA); return {d, x:p.x, y:p.y}; });
+  const list = store.china.map(d=>{ const px=CHINA_PX[d.id]; const p = px ? {x:px[0],y:px[1]} : chinaProject(d.lng,d.lat); return {d, x:p.x, y:p.y}; });
   pixelSpread(list).forEach(o=>pinAt(o.d, o.x, o.y));
 }
 export function init(onPickCb){ onPick = onPickCb || onPick; }
