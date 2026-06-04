@@ -78,11 +78,39 @@ export async function renderWorld(){
   store.world.forEach(d=>{ const c=regionCenter(WORLD_REGION[d.id]); c ? pinAt(d,c.x,c.y) : pinAt(d, ...Object.values(project(d.lng,d.lat,WORLD))); });
   const cn=regionCenter('CN');
   const {x,y}= cn || project(105,36,WORLD);
-  const g=el('g',{class:'cluster'});
-  g.appendChild(el('circle',{cx:x,cy:y,r:20}));
-  const label=el('text',{x,y:y-2,'text-anchor':'middle'}); label.textContent='中国';
-  const cnt=el('text',{x,y:y+12,'text-anchor':'middle',class:'cnt'}); cnt.textContent=store.china.length+'道';
-  g.append(label,cnt); g.addEventListener('click',renderChina); svg.appendChild(g);
+  svg.appendChild(clusterMarker(x,y,store.china));
+}
+
+// 「中国」汇总点：几张代表美食插画叠成一个集合(像一叠卡片) + 数量徽标 + 注释文字。
+function clusterMarker(x,y,china){
+  const want=['taihu-dazhaxie.svg','mizhi-huofang.svg','dawei-yang.svg'];
+  const have=new Set(china.map(d=>d.svg));
+  const reps=want.filter(s=>have.has(s)).concat(china.map(d=>d.svg)).slice(0,3);
+  const g=el('g',{class:'cluster', transform:`translate(${x},${y})`});
+  const inner=el('g',{class:'cl-inner'});
+  // 三张叠放：先画两侧、后画中间(中间在最上)
+  [{x:-13,y:3,rot:-14},{x:13,y:3,rot:14},{x:0,y:-4,rot:0}].forEach((o,i)=>{
+    const disc=el('g',{transform:`translate(${o.x},${o.y}) rotate(${o.rot})`});
+    disc.appendChild(el('circle',{r:13,class:'cl-disc'}));
+    const img=el('image',{x:-11,y:-11,width:22,height:22,class:'pin-img'});
+    img.setAttribute('href',`./assets/svg/${reps[i]}`);
+    img.setAttributeNS('http://www.w3.org/1999/xlink','href',`./assets/svg/${reps[i]}`);
+    disc.appendChild(img); inner.appendChild(disc);
+  });
+  // 数量徽标(右上)
+  const badge=el('g',{class:'cl-badge', transform:'translate(20,-17)'});
+  badge.appendChild(el('circle',{r:11}));
+  const bt=el('text',{y:4,'text-anchor':'middle'}); bt.textContent=china.length; badge.appendChild(bt);
+  inner.appendChild(badge);
+  g.appendChild(inner);
+  // 注释文字(下方药丸)
+  const lab=el('g',{class:'cl-label', transform:'translate(0,32)'});
+  lab.appendChild(el('rect',{x:-26,y:0,width:52,height:19,rx:9.5,class:'cl-pill'}));
+  const lt=el('text',{y:13.5,'text-anchor':'middle'}); lt.textContent='中国'; lab.appendChild(lt);
+  g.appendChild(lab);
+  const tip=el('title',{}); tip.textContent=`中国 · ${china.length} 道风味(点击展开)`; g.appendChild(tip);
+  g.addEventListener('click',renderChina);
+  return g;
 }
 export async function renderChina(){
   await setBase(CHINA); back.hidden=false;
