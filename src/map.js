@@ -81,33 +81,34 @@ export async function renderWorld(){
   svg.appendChild(clusterMarker(x,y,store.china));
 }
 
-// 「中国」汇总点：几张代表美食插画叠成一个集合(像一叠卡片) + 数量徽标 + 注释文字。
+// 「中国」汇总点：多张代表美食插画聚成一个集合(中心+环绕) + 数量徽标。
 function clusterMarker(x,y,china){
-  const want=['taihu-dazhaxie.svg','mizhi-huofang.svg','dawei-yang.svg'];
+  const want=['taihu-dazhaxie.svg','mizhi-huofang.svg','dawei-yang.svg','xun-machang.svg','tuhuangyou.svg','longxu-sun.svg','bachu-mogu.svg','naitong-rou.svg'];
   const have=new Set(china.map(d=>d.svg));
-  const reps=want.filter(s=>have.has(s)).concat(china.map(d=>d.svg)).slice(0,3);
+  let reps=want.filter(s=>have.has(s));
+  for(const s of china.map(d=>d.svg)) if(!reps.includes(s)) reps.push(s);
+  reps=reps.slice(0, Math.max(5, Math.min(7, reps.length)));   // 5–7 张
   const g=el('g',{class:'cluster', transform:`translate(${x},${y})`});
   const inner=el('g',{class:'cl-inner'});
-  // 三张叠放：先画两侧、后画中间(中间在最上)
-  [{x:-13,y:3,rot:-14},{x:13,y:3,rot:14},{x:0,y:-4,rot:0}].forEach((o,i)=>{
-    const disc=el('g',{transform:`translate(${o.x},${o.y}) rotate(${o.rot})`});
-    disc.appendChild(el('circle',{r:13,class:'cl-disc'}));
-    const img=el('image',{x:-11,y:-11,width:22,height:22,class:'pin-img'});
-    img.setAttribute('href',`./assets/svg/${reps[i]}`);
-    img.setAttributeNS('http://www.w3.org/1999/xlink','href',`./assets/svg/${reps[i]}`);
-    disc.appendChild(img); inner.appendChild(disc);
-  });
+  const n=reps.length, R=15;
+  const pos=[{x:0,y:0}];                                        // 中心
+  for(let i=0;i<n-1;i++){ const a=-Math.PI/2 + i*(2*Math.PI/(n-1)); pos.push({x:Math.cos(a)*R, y:Math.sin(a)*R}); }
+  const disc=(o,svgName)=>{
+    const d=el('g',{transform:`translate(${o.x},${o.y})`});
+    d.appendChild(el('circle',{r:11,class:'cl-disc'}));
+    const img=el('image',{x:-9,y:-9,width:18,height:18,class:'pin-img'});
+    img.setAttribute('href',`./assets/svg/${svgName}`);
+    img.setAttributeNS('http://www.w3.org/1999/xlink','href',`./assets/svg/${svgName}`);
+    d.appendChild(img); inner.appendChild(d);
+  };
+  for(let i=1;i<n;i++) disc(pos[i], reps[i]);                   // 先画环绕
+  disc(pos[0], reps[0]);                                        // 中心最后(在最上)
   // 数量徽标(右上)
-  const badge=el('g',{class:'cl-badge', transform:'translate(20,-17)'});
+  const badge=el('g',{class:'cl-badge', transform:'translate(22,-22)'});
   badge.appendChild(el('circle',{r:11}));
   const bt=el('text',{y:4,'text-anchor':'middle'}); bt.textContent=china.length; badge.appendChild(bt);
   inner.appendChild(badge);
   g.appendChild(inner);
-  // 注释文字(下方药丸)
-  const lab=el('g',{class:'cl-label', transform:'translate(0,32)'});
-  lab.appendChild(el('rect',{x:-26,y:0,width:52,height:19,rx:9.5,class:'cl-pill'}));
-  const lt=el('text',{y:13.5,'text-anchor':'middle'}); lt.textContent='中国'; lab.appendChild(lt);
-  g.appendChild(lab);
   const tip=el('title',{}); tip.textContent=`中国 · ${china.length} 道风味(点击展开)`; g.appendChild(tip);
   g.addEventListener('click',renderChina);
   return g;

@@ -30,8 +30,6 @@ header h1{font-size:18px;margin:0;color:var(--ink)}
 .cl-disc{fill:#fffdf7;stroke:var(--accent);stroke-width:1.2}
 .cl-badge circle{fill:var(--accent);stroke:#fff;stroke-width:1.5}
 .cl-badge text{fill:#fff;font-size:12px;font-weight:700;pointer-events:none}
-.cl-pill{fill:var(--accent);stroke:#fff;stroke-width:1}
-.cl-label text{fill:#fff;font-size:12px;font-weight:700;pointer-events:none}
 #panel{position:fixed;top:56px;right:0;width:360px;max-width:90vw;height:calc(100vh - 56px);
   background:var(--paper-2);border-left:2px solid var(--line);box-shadow:-6px 0 24px rgba(60,40,10,.18);
   padding:18px 20px;overflow:auto;animation:slide .18s ease}
