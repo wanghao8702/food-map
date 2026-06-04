@@ -33,11 +33,18 @@ src/fulltext.js       本集全文覆盖层（高亮 + 集内跳转）
 dishes.json           美食数据（一菜一条）
 episodes/fw1-01.json  第1集结构化全文（带段落锚点）
 assets/svg/*.svg      14 张扁平填色美食插画 + _spec.md 视觉规范
-assets/world-map.svg  手绘世界地图底座
-assets/china-map.svg  手绘中国近景地图底座
+assets/world.svg      世界底图（svg-maps，国家 path）
+assets/china.svg      中国底图（svg-maps，省份 path）
 tests.html            坐标投影纯函数浏览器测试页（应显示 ALL PASS）
 validate.py           数据校验（结构 / 坐标 / svg 与锚点引用一致性）
 ```
+
+## 底图与对齐
+
+底图来自 [svg-maps](https://github.com/VictorCazanave/svg-maps)（MapSVG 导出，每文件带 `mapsvg:geoViewBox`，已用 CSS 统一为 Claude 暖色）。
+
+- **中国近景**：china.svg 近似等距圆柱投影，图钉由 `src/projection.js` 按经纬度线性投影定位（精确落到省份）。
+- **世界视图**：world.svg 为 Miller 类投影，线性投影不准；海外图钉改为按所在国家 path（`ES`/`FR`/`NL`）几何中心放置，「中国」聚合气泡按 `CN` path 中心放置。新增国家时在 `src/map.js` 的 `WORLD_REGION` 补一条 `dishId → ISO2` 即可。
 
 ## 如何按集扩展
 
