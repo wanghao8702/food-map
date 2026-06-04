@@ -43,8 +43,12 @@ validate.py           数据校验（结构 / 坐标 / svg 与锚点引用一致
 
 底图来自 [svg-maps](https://github.com/VictorCazanave/svg-maps)（MapSVG 导出，每文件带 `mapsvg:geoViewBox`，已用 CSS 统一为 Claude 暖色）。
 
-- **中国近景**：china.svg 近似等距圆柱投影，图钉由 `src/projection.js` 按经纬度线性投影定位（精确落到省份）。
+- **中国近景**：china.svg 为圆锥投影，经纬度线性投影在边缘/高纬会偏；中国图钉改用 `src/map.js` 中 `CHINA_PX` 的**校准像素坐标**（仿射拟合各省中心后吸附到所在省份，逐一验证落对省）。新增中国菜时在 `CHINA_PX` 补一条 `dishId → [x,y]`（缺省回退到经纬度线性投影）。
 - **世界视图**：world.svg 为 Miller 类投影，线性投影不准；海外图钉改为按所在国家 path（`ES`/`FR`/`NL`）几何中心放置，「中国」聚合气泡按 `CN` path 中心放置。新增国家时在 `src/map.js` 的 `WORLD_REGION` 补一条 `dishId → ISO2` 即可。
+
+## 平移 / 缩放
+
+地图支持**滚轮缩放**（对准光标）、**拖动平移**、**双击复位**。实现为操作 `#map` 的 `viewBox`（`src/map.js` 底部），图钉与底图一起变换；拖动位移 <3px 视为点击，不影响图钉点击。
 
 ## 如何按集扩展
 
