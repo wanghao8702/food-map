@@ -26,6 +26,10 @@ const CHINA_PX = {
   'fw1-01-taihu-dazhaxie':[589.5,383.2],// 江苏·太湖
   'fw1-01-tuhuangyou':[594.7,381.3],   // 江苏·苏州
   'fw1-01-sanbei-qiyu':[600.7,508.0],  // 中国台湾·台东
+  // 第2集：澳门三道(CN-92 区块极小，仿射够不着)→ 取澳门附近，渲染时由 pixelSpread 散开
+  'fw1-02-majiexiu-qiu':[504.0,515.0], // 澳门·马介休球
+  'fw1-02-feizhou-ji':[507.0,517.0],   // 澳门·非洲鸡
+  'fw1-02-tacho':[506.0,513.0],        // 澳门·Tacho
 };
 
 // china.svg 为圆锥投影。经"最小二乘拟合各省中心"得到的仿射变换(经纬度→像素)，
@@ -39,9 +43,14 @@ function chinaProject(lng,lat){
 function pixelSpread(list, min=22){
   const out=list.map(o=>({...o}));
   for(let i=0;i<out.length;i++) for(let j=i+1;j<out.length;j++){
-    const a=out[i], b=out[j]; let dx=b.x-a.x, dy=b.y-a.y, dist=Math.hypot(dx,dy)||0.01;
-    if(dist<min){ const push=(min-dist)/2, ux=dx/dist, uy=dy/dist;
-      a.x-=ux*push; a.y-=uy*push; b.x+=ux*push; b.y+=uy*push; }
+    const a=out[i], b=out[j]; let dx=b.x-a.x, dy=b.y-a.y, dist=Math.hypot(dx,dy);
+    if(dist<min){
+      let ux,uy;
+      if(dist<0.5){ const ang=i*2.399+j; ux=Math.cos(ang); uy=Math.sin(ang); dist=0.01; } // 完全重合：按索引给确定方向
+      else { ux=dx/dist; uy=dy/dist; }
+      const push=(min-dist)/2;
+      a.x-=ux*push; a.y-=uy*push; b.x+=ux*push; b.y+=uy*push;
+    }
   }
   return out;
 }
@@ -58,7 +67,10 @@ async function setBase(cfg){
 }
 
 // 世界图海外钉按所在国家 path 几何中心放置。
-const WORLD_REGION = { 'fw1-01-iberico':'ES', 'fw1-01-aligot':'FR', 'fw1-01-holland-crab':'NL' };
+const WORLD_REGION = {
+  'fw1-01-iberico':'ES', 'fw1-01-aligot':'FR', 'fw1-01-holland-crab':'NL',
+  'fw1-02-sangak':'IR', 'fw1-02-hainan-jifan':'MY', 'fw1-02-chifa-yuntun':'PE', 'fw1-02-mushu-wuhua':'PE',
+};
 function regionCenter(id){
   const p = svg.querySelector('path[id="'+id+'"]');
   if(!p) return null;
@@ -82,7 +94,8 @@ function pinAt(d,cx,cy){
 }
 export async function renderWorld(){
   await setBase(WORLD); back.hidden=true;
-  store.world.forEach(d=>{ const c=regionCenter(WORLD_REGION[d.id]); c ? pinAt(d,c.x,c.y) : pinAt(d, ...Object.values(project(d.lng,d.lat,WORLD))); });
+  const wlist = store.world.map(d=>{ const c=regionCenter(WORLD_REGION[d.id]) || project(d.lng,d.lat,WORLD); return {d, x:c.x, y:c.y}; });
+  pixelSpread(wlist, 26).forEach(o=>pinAt(o.d, o.x, o.y));
   const cn=regionCenter('CN');
   const {x,y}= cn || project(105,36,WORLD);
   svg.appendChild(clusterMarker(x,y,store.china));
