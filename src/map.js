@@ -30,6 +30,7 @@ const CHINA_PX = {
   'fw1-02-majiexiu-qiu':[504.0,515.0], // 澳门·马介休球
   'fw1-02-feizhou-ji':[507.0,517.0],   // 澳门·非洲鸡
   'fw1-02-tacho':[506.0,513.0],        // 澳门·Tacho
+  'fw1-03-huzhou-yangrou':[603.0,407.0],// 浙江·湖州(贴苏浙界，置浙江纵深以抗防重叠位移)
 };
 
 // china.svg 为圆锥投影。经"最小二乘拟合各省中心"得到的仿射变换(经纬度→像素)，
@@ -70,6 +71,7 @@ async function setBase(cfg){
 const WORLD_REGION = {
   'fw1-01-iberico':'ES', 'fw1-01-aligot':'FR', 'fw1-01-holland-crab':'NL',
   'fw1-02-sangak':'IR', 'fw1-02-hainan-jifan':'MY', 'fw1-02-chifa-yuntun':'PE', 'fw1-02-mushu-wuhua':'PE',
+  'fw1-03-tagine':'MA', 'fw1-03-juan-doufu':'JP',
 };
 function regionCenter(id){
   const p = svg.querySelector('path[id="'+id+'"]');
