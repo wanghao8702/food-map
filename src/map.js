@@ -58,11 +58,20 @@ function regionCenter(id){
   const b = p.getBBox();
   return { x:b.x+b.width/2, y:b.y+b.height/2 };
 }
+const PIN_R = 15;    // 衬底圆半径(用户单位)
+const PIN_IMG = 28;  // 美食插画边长
 function pinAt(d,cx,cy){
-  const p=el('circle',{cx,cy,r:7,class:'pin','data-id':d.id});
-  p.addEventListener('click',()=>onPick(d));
-  const t=el('title',{}); t.textContent=d.name; p.appendChild(t);
-  svg.appendChild(p);
+  const g=el('g',{class:'pin','data-id':d.id, transform:`translate(${cx},${cy})`});
+  const inner=el('g',{class:'pin-inner'});
+  inner.appendChild(el('circle',{r:PIN_R,class:'pin-bg'}));
+  const img=el('image',{x:-PIN_IMG/2,y:-PIN_IMG/2,width:PIN_IMG,height:PIN_IMG,class:'pin-img'});
+  img.setAttribute('href',`./assets/svg/${d.svg}`);
+  img.setAttributeNS('http://www.w3.org/1999/xlink','href',`./assets/svg/${d.svg}`); // 老内核兼容
+  inner.appendChild(img);
+  g.appendChild(inner);
+  const t=el('title',{}); t.textContent=d.name; g.appendChild(t);
+  g.addEventListener('click',()=>onPick(d));
+  svg.appendChild(g);
 }
 export async function renderWorld(){
   await setBase(WORLD); back.hidden=true;
