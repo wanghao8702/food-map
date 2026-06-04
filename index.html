@@ -1,16 +1,66 @@
 <!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>风味地图 · 山海之间</title><link rel="stylesheet" href="styles.css"></head>
+<title>风味地图 · 风味人间</title><link rel="stylesheet" href="styles.css"></head>
 <body>
-<header><h1>风味地图</h1><button id="back" hidden>← 返回世界</button></header>
-<main id="stage"><svg id="map" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet"></svg></main>
+<header>
+  <h1>风味地图</h1>
+  <nav id="viewtabs">
+    <button id="tab-map" class="active">风味地图</button>
+    <button id="tab-connect">风味连接</button>
+  </nav>
+  <button id="back" hidden>← 返回世界</button>
+</header>
+<div id="eptabs" hidden></div>
+<main id="stage">
+  <svg id="map" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet"></svg>
+  <div id="conn-label" hidden></div>
+</main>
 <aside id="panel" hidden></aside>
 <div id="fulltext" hidden></div>
 <script type="module">
-  import { init } from './src/map.js';
+  import { init, renderWorld, renderConnections, getEpisodes } from './src/map.js';
   import { openPanel, bindFulltext } from './src/panel.js';
   import { openFulltext } from './src/fulltext.js';
   init(openPanel);
   bindFulltext(openFulltext);
+
+  const tabMap = document.getElementById('tab-map');
+  const tabConnect = document.getElementById('tab-connect');
+  const eptabs = document.getElementById('eptabs');
+  const back = document.getElementById('back');
+  const connLabel = document.getElementById('conn-label');
+  let curEp = null;
+
+  function setView(connect){
+    tabMap.classList.toggle('active', !connect);
+    tabConnect.classList.toggle('active', connect);
+    eptabs.hidden = !connect;
+    connLabel.hidden = true;
+    document.getElementById('panel').hidden = true;
+    if(connect){ back.hidden = true; }
+  }
+  tabMap.addEventListener('click', ()=>{ setView(false); renderWorld(); });
+  tabConnect.addEventListener('click', ()=>{ if(tabConnect.classList.contains('active')) return; openConnect(); });
+
+  function openConnect(){
+    setView(true);
+    if(!eptabs.childElementCount){
+      getEpisodes().forEach(ep=>{
+        const b=document.createElement('button');
+        b.textContent = `《风味人间》S${ep.season} 第${ep.episode}集 ${ep.title}`;
+        b.addEventListener('click', ()=>selectEp(ep, b));
+        eptabs.appendChild(b);
+      });
+    }
+    const first = curEp || getEpisodes()[0];
+    const btn = [...eptabs.children][getEpisodes().findIndex(e=>e.season===first.season && e.episode===first.episode)];
+    selectEp(first, btn);
+  }
+  function selectEp(ep, btn){
+    curEp = ep;
+    [...eptabs.children].forEach(c=>c.classList.toggle('active', c===btn));
+    connLabel.hidden = true;
+    renderConnections(ep.season, ep.episode);
+  }
 </script>
 </body></html>

@@ -27,5 +27,12 @@
     {"text": "/浙江-龙游-李山头/", "marker": true},
     {"anchor": "p-huijian-zong", "dishId": "fw1-02-huijian-zong", "text": "妇女们用稻米制作灰碱粽。糯米用牡荆灰烬滤出的碳酸钾灰碱水浸泡一夜，箬叶包裹。粽子呈现谷壳般金黄的色泽，混合着箬叶和碱水的香气，米粒缠绵相拥。"},
     {"text": "物种的交换和族群的聚散，既不动声色又充满艰辛。风味寻根的旅程，永远伴随着偶然和惊喜。"}
+  ],
+  "links": [
+    {"a": "fw1-02-sangak", "b": "fw1-02-shizimo", "theme": "面食西传"},
+    {"a": "fw1-02-shizimo", "b": "fw1-02-zhentou-mo", "theme": "面食西传"},
+    {"a": "fw1-02-chifa-yuntun", "b": "fw1-02-mushu-wuhua", "theme": "秘鲁中餐"},
+    {"a": "fw1-02-majiexiu-qiu", "b": "fw1-02-feizhou-ji", "theme": "澳门土生葡菜"},
+    {"a": "fw1-02-feizhou-ji", "b": "fw1-02-tacho", "theme": "澳门土生葡菜"}
   ]
 }

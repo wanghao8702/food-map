@@ -30,5 +30,13 @@
     {"text": "/四川-成都/", "marker": true},
     {"anchor": "p-mapo-doufu", "dishId": "fw1-03-mapo-doufu", "text": "郫县豆瓣选用青色蚕豆制曲，混合二荆条辣椒，日晒夜露而成，赋予麻婆豆腐醇浓味厚的特点。这道菜是英国人扶霞此次学习的重点，也是她在伦敦展示最多的中国味道。"},
     {"text": "洪荒岁月的炉火明灭，时代巨变的波澜不惊，最终都不着痕迹地投射在食物上，化作我们平凡的一日三餐。"}
+  ],
+  "links": [
+    {"a": "fw1-03-baizu-shengpi", "b": "fw1-03-luobu-kaoyu", "theme": "火与烤"},
+    {"a": "fw1-03-luobu-kaoyu", "b": "fw1-03-jiaohua-ji", "theme": "火与烤"},
+    {"a": "fw1-03-xiekehuang", "b": "fw1-03-guokui", "theme": "烧饼演化"},
+    {"a": "fw1-03-huang-doufu", "b": "fw1-03-mapo-doufu", "theme": "豆腐"},
+    {"a": "fw1-03-huang-doufu", "b": "fw1-03-juan-doufu", "theme": "豆腐外传"},
+    {"a": "fw1-03-mapo-doufu", "b": "fw1-03-juan-doufu", "theme": "豆腐外传"}
   ]
 }

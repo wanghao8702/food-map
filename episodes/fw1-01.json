@@ -34,5 +34,11 @@
     {"text": "/中国台湾-成功港/", "marker": true},
     {"anchor": "p-sanbei-qiyu", "dishId": "fw1-01-sanbei-qiyu", "text": "旗鱼皮富含胶原蛋白，加酱油、米酒，大火旺炒……带有浓郁家常风味的三杯旗鱼皮就端上了桌。"},
     {"text": "环球同此凉热，边界逐渐模糊……山川依旧，风味不改。"}
+  ],
+  "links": [
+    {"a": "fw1-01-mizhi-huofang", "b": "fw1-01-iberico", "theme": "腌制风干"},
+    {"a": "fw1-01-yangyu-jiaotuan", "b": "fw1-01-aligot", "theme": "土豆"},
+    {"a": "fw1-01-taihu-dazhaxie", "b": "fw1-01-holland-crab", "theme": "大闸蟹"},
+    {"a": "fw1-01-taihu-dazhaxie", "b": "fw1-01-tuhuangyou", "theme": "蟹·江南"}
   ]
 }

@@ -142,6 +142,56 @@ export async function renderChina(){
 }
 export function init(onPickCb){ onPick = onPickCb || onPick; }
 
+/* ---------- 风味连接视图：单集内、按地理铺开、主题彩色弧线 ---------- */
+export function getEpisodes(){
+  const seen={}, out=[];
+  for(const d of store.all){ const k=d.season+'-'+d.episode; if(!seen[k]){ seen[k]=1; out.push({season:d.season,episode:d.episode,title:d.episodeTitle}); } }
+  return out.sort((a,b)=> a.season-b.season || a.episode-b.episode);
+}
+const _epCache={};
+async function loadEpData(season,episode){ const key=`fw${season}-${String(episode).padStart(2,'0')}`; if(!_epCache[key]) _epCache[key]=await (await fetch(`./episodes/${key}.json`)).json(); return _epCache[key]; }
+// world.svg 为 Miller 投影。中国菜定位：经纬度在中国地理范围内线性映射到 world 的 CN path 包围盒(近似)。
+const CN_GEO={lngMin:73.554302,lngMax:134.775703,latTop:53.561780,latBottom:18.155060};
+function worldPixel(d){
+  const c=regionCenter(WORLD_REGION[d.id]); if(c) return c;
+  const cn=svg.querySelector('path[id="CN"]');
+  if(cn){ const b=cn.getBBox();
+    return { x:b.x+(d.lng-CN_GEO.lngMin)/(CN_GEO.lngMax-CN_GEO.lngMin)*b.width,
+             y:b.y+(CN_GEO.latTop-d.lat)/(CN_GEO.latTop-CN_GEO.latBottom)*b.height }; }
+  return project(d.lng,d.lat,WORLD);
+}
+const THEME_PALETTE=['#D97757','#C9822F','#7C9A6B','#9A6BA8','#3F8B8B','#B3543C','#5E7CA8','#B58A2E'];
+function arcD(A,B){
+  const dx=B.x-A.x, dy=B.y-A.y, len=Math.hypot(dx,dy)||1;
+  const off=Math.min(140, Math.max(30, len*0.22)), mx=(A.x+B.x)/2, my=(A.y+B.y)/2, nx=-dy/len, ny=dx/len;
+  return `M${A.x},${A.y} Q${mx+nx*off},${my+ny*off} ${B.x},${B.y}`;
+}
+export async function renderConnections(season,episode){
+  await setBase(WORLD); back.hidden=true;
+  const data=await loadEpData(season,episode);
+  const links=data.links||[];
+  const dishes=store.all.filter(d=>d.season===season && d.episode===episode);
+  const spread=pixelSpread(dishes.map(d=>({d,...worldPixel(d)})), 26);
+  const posById={}; spread.forEach(o=>posById[o.d.id]=o);
+  const tc={}; let ti=0;
+  for(const lk of links) if(!(lk.theme in tc)) tc[lk.theme]=THEME_PALETTE[ti++ % THEME_PALETTE.length];
+  const L=document.getElementById('conn-label');
+  const setHL=(theme)=>{
+    arcs.querySelectorAll('.arc').forEach(a=>{ a.classList.toggle('hl', a.dataset.theme===theme); a.classList.toggle('dim', !!theme && a.dataset.theme!==theme); });
+    if(L){ if(theme){ L.textContent=theme; L.style.background=tc[theme]; L.hidden=false; } else L.hidden=true; }
+  };
+  const arcs=el('g',{class:'arc-layer'}); svg.appendChild(arcs);
+  links.forEach(lk=>{ const A=posById[lk.a], B=posById[lk.b]; if(!A||!B) return;
+    const d=arcD(A,B);
+    const hit=el('path',{class:'arc-hit', d}); arcs.appendChild(hit);
+    const arc=el('path',{class:'arc', d, 'data-theme':lk.theme, stroke:tc[lk.theme]}); arcs.appendChild(arc);
+    hit.addEventListener('mouseenter',()=>setHL(lk.theme));
+    hit.addEventListener('mouseleave',()=>setHL(null));
+    hit.addEventListener('click',()=>setHL(lk.theme));
+  });
+  spread.forEach(o=>pinAt(o.d,o.x,o.y));   // 节点在弧线之上
+}
+
 /* ---------- 平移 / 缩放(操作 viewBox，钉与底图一起变换) ---------- */
 let vb={x:0,y:0,w:0,h:0}, baseW=0, baseH=0;
 function applyVB(){ svg.setAttribute('viewBox', `${vb.x} ${vb.y} ${vb.w} ${vb.h}`); }
