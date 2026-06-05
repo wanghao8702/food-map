@@ -1,0 +1,39 @@
+{
+  "id": "fw1-06",
+  "title": "香料歧路",
+  "season": 1,
+  "episode": 6,
+  "paragraphs": [
+    {"text": "原本是植物的自卫武器，却在不经意间为美食做了五彩斑斓的嫁衣。人类对香料的追逐，在地球上开辟出一条条路径，香气四溢、色彩纷呈。每一次相逢都开启了人与食物之间的一场艳遇。"},
+    {"text": "/四川·阿坝-松潘/", "marker": true},
+    {"anchor": "p-maoniu-rou", "dishId": "fw1-06-maoniu-rou", "text": "花椒在中国有超过两千年的种植历史。新鲜牦牛肉煮熟切条过滚油，现舂的花椒面给口腔带来刺痛和麻木的奇妙感受，再加辣椒面和芝麻、一勺热油，气味热烈奔放。"},
+    {"text": "/云南-德宏/", "marker": true},
+    {"anchor": "p-fengyong-sapie", "dishId": "fw1-06-fengyong-sapie", "text": "刺芫荽、香蓼、野韭剁碎，与蜂蛹凉拌做成蘸料，傣语叫撒撇。涮涮辣是中国最辣的品种之一，只需浅浅一涮，整碗瞬间辛辣无比，更衬出蜂蛹瓜果般的香甜。"},
+    {"text": "/中国·台湾-南投/", "marker": true},
+    {"anchor": "p-shizhuyu-jidan", "dishId": "fw1-06-shizhuyu-jidan", "text": "红刺楤又名食茱萸，叶中生物碱带来微微刺痛的麻味。刺楤叶剁碎煎蛋，山野醇香。食茱萸、花椒和生姜曾并称“三香”，是辣椒传入前中国人获取辛辣的重要来源。"},
+    {"text": "/贵州·三都-新阳/", "marker": true},
+    {"anchor": "p-jiucai-baoyu", "dishId": "fw1-06-jiucai-baoyu", "text": "水族端节的主角禾花鱼，以韭菜的含硫辛香为天然调味，鱼包裹韭菜放整坛米酒慢炖一夜，韭菜纤维化于无形，辛香浸入鱼肉。鱼是水族图腾，寄托年年有余的祈愿。"},
+    {"text": "/泰国-苏梅岛/", "marker": true},
+    {"anchor": "p-lvchali-ji", "dishId": "fw1-06-lvchali-ji", "text": "多种香料制成的调味品叫咖喱，泰国咖喱酸辣甜香，最突出的是对新鲜香草的精妙运用。椰油爆香绿咖喱放入鸡块，椰浆增清甜、中和辣椒，最后加罗勒和柠檬叶，每种味道都跃然口中。"},
+    {"text": "/泰国·美功-铁道市场/", "marker": true},
+    {"anchor": "p-dongyingong", "dishId": "fw1-06-dongyingong", "text": "香茅草清新温和的柠檬香气，让清柠的酸涩和红咖喱的激烈携起手来。泰式酸辣虾汤当地叫冬阴功，酸辣只是显性外观，层次丰富的味蕾刺激才是它风靡世界的奥秘。"},
+    {"text": "/河北·保定-白洋淀/", "marker": true},
+    {"anchor": "p-lvrou-huoshao", "dishId": "fw1-06-lvrou-huoshao", "text": "盐水加复合香料炖煮使食物入味，这在中餐里叫卤。卤水去除异味、烘托驴肉的香腴醇厚。起酥的火烧表皮焦脆、内里松软，包容被众多香料再造的驴肉，扎实美味。"},
+    {"text": "/广西·藤县-古龙/", "marker": true},
+    {"anchor": "p-bajiao", "dishId": "fw1-06-bajiao", "text": "全世界八角七成以上产自广西温暖山谷。煮八角又称杀青，时间至关重要。果壳中的茴香油独具芳香又有浓烈甜味，甜度达食用糖的13倍，是华北卤味中最张扬的香气来源。"},
+    {"text": "/广东-潮州/", "marker": true},
+    {"anchor": "p-chaoshan-luee", "dishId": "fw1-06-chaoshan-luee", "text": "以潮汕为代表的南派卤水色泽绛红、又叫红卤。下锅时一味高良姜辛香味厚、辣中带甜涩，为南卤指引方向。豉油鱼露蒙上焦糖色，卤鹅是潮汕祭祀必备、毫无争议的头道年菜。"},
+    {"text": "/安徽·铜陵-天门/", "marker": true},
+    {"anchor": "p-qingzheng-jiangxie", "dishId": "fw1-06-qingzheng-jiangxie", "text": "农历九月皖江江蟹正肥，吃河鲜佐以生姜，特殊的清香辟腥开胃，酱醋的组合更固定为清蒸江蟹的最佳搭配，蕴含中国人独特的平衡哲学。"},
+    {"anchor": "p-jiangcu-jiang", "dishId": "fw1-06-jiangcu-jiang", "text": "铜陵白姜含水超过90%、脆嫩少纤维。盐腌脱水晾晒后，加糖和白醋腌渍，水果味的糖醋姜是铜陵人家必备的开胃小吃。姜是最古老的香料，辛香馥郁，千百年温暖中国人的口和胃。"},
+    {"text": "香料，是一种若即若离的存在。它赋予食物鲜明的标签，又坚守自己的秉性。人们不停追寻着香料的气息，陌路相逢，又殊途同归。"}
+  ],
+  "links": [
+    {"a": "fw1-06-maoniu-rou", "b": "fw1-06-shizhuyu-jidan", "theme": "古辛香·三香"},
+    {"a": "fw1-06-shizhuyu-jidan", "b": "fw1-06-fengyong-sapie", "theme": "辛辣探索"},
+    {"a": "fw1-06-bajiao", "b": "fw1-06-lvrou-huoshao", "theme": "卤·八角"},
+    {"a": "fw1-06-lvrou-huoshao", "b": "fw1-06-chaoshan-luee", "theme": "南北卤水"},
+    {"a": "fw1-06-lvchali-ji", "b": "fw1-06-dongyingong", "theme": "泰国香料"},
+    {"a": "fw1-06-qingzheng-jiangxie", "b": "fw1-06-jiangcu-jiang", "theme": "姜"}
+  ]
+}

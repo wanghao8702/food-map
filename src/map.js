@@ -82,6 +82,7 @@ const WORLD_REGION = {
   'fw1-03-tagine':'MA', 'fw1-03-juan-doufu':'JP',
   'fw1-04-herring':'SE', 'fw1-04-roquefort':'FR', 'fw1-04-yulu':'VN', 'fw1-04-bresi-ji':'FR',
   'fw1-05-cajun-crawfish':'US',
+  'fw1-06-lvchali-ji':'TH', 'fw1-06-dongyingong':'TH',
 };
 function regionCenter(id){
   const p = svg.querySelector('path[id="'+id+'"]');
