@@ -1,8 +1,14 @@
 # 风味地图 · Food Map
 
-一张手绘 SVG 世界地图，把《风味人间》纪录片里的美食钉在产地上。点一道菜，看插画、介绍、纪录片文案，并能溯源到「哪一季哪一集」。纯前端、无构建、无后端、无地图 key。
+一张真实世界/中国地图（svg-maps，Claude 暖色），把《风味人间》纪录片里的美食钉在产地上。每个标点是该菜的手绘 SVG 插画；点一道菜，看插画、介绍、纪录片文案，并能溯源到「哪一季哪一集」。另有「风味连接」视图，按集展示纪录片里食物之间的跨地域连接。纯前端、无构建、无后端、无地图 key。
 
-当前内容：**风味人间 1 · 第 1 集《山海之间》**，14 道美食（海外 3 + 中国 11）。
+当前内容：**《风味人间》第 1 季全 6 集**，共 72 道美食。
+- S1E1 山海之间 / S1E2 落地生根 / S1E3 滚滚红尘 / S1E4 肴变万千 / S1E5 江湖夜雨 / S1E6 香料歧路
+
+## 两个视图
+
+- **风味地图**：世界图（海外美食单点 + 「中国 N 道」聚合）→ 点中国聚合钻取到中国近景图（按省份铺开）。点标点弹详情面板，可「查看本集全文」。
+- **风味连接**：顶部切换进入，按集标签查看；选中某集，在世界图上铺开该集的菜，相连的菜之间画主题彩色弧线（如「面食西传」「嗜臭·发酵」「小龙虾·跨洋」），hover/点击弧线显示主题、高亮整条风味链。
 
 ## 运行
 
@@ -50,9 +56,16 @@ validate.py           数据校验（结构 / 坐标 / svg 与锚点引用一致
 
 地图支持**滚轮缩放**（对准光标）、**拖动平移**、**双击复位**。实现为操作 `#map` 的 `viewBox`（`src/map.js` 底部），图钉与底图一起变换；拖动位移 <3px 视为点击，不影响图钉点击。
 
+## 风味连接
+
+- 连接是**集内**关系，存在每集 `episodes/fwX-YY.json` 的 `links` 数组：`[{a:菜id, b:菜id, theme:"主题"}]`。
+- 渲染见 `src/map.js` 的 `renderConnections`：该集菜按地理铺在世界图（中国菜由 `worldPixel` 按 CN 包围盒线性定位），相连菜画二次贝塞尔弧，颜色按主题分配（`THEME_PALETTE`），hover/点击高亮同主题链并显示主题文字。
+- `ensureOnLand`：中国近景图防重叠后，把落到海里的图钉就近吸附回陆地。
+
 ## 如何按集扩展
 
-1. 在 `episodes/` 新增 `fwX-YY.json`（结构同 `fw1-01.json`：有序 `paragraphs`，美食段落带 `anchor` + `dishId`）。
-2. 在 `dishes.json` 追加该集美食记录（`scope` 为 `world` 或 `china`；`episodeAnchor` 对应全文锚点；`svg` 指向插画文件名）。
-3. 按 `assets/svg/_spec.md` 规范为每道新菜画一张 SVG，放入 `assets/svg/`。
-4. 运行 `python validate.py` 确认数据一致，再用 http server 预览。
+1. 在 `episodes/` 新增 `fwX-YY.json`（结构同 `fw1-01.json`：有序 `paragraphs` + 美食段落 `anchor`/`dishId`；可选 `links` 连接数组）。
+2. 在 `dishes.json` 追加该集记录（`scope`=`world`/`china`；`episodeAnchor` 对应锚点；`svg`=`<id>.svg`）。
+3. 按 `assets/svg/_spec.md` 为每道菜画一张 SVG。
+4. 海外菜在 `src/map.js` 的 `WORLD_REGION` 补 `dishId → ISO2`；中国菜默认走仿射投影，落位不准时在 `CHINA_PX` 补 `dishId → [x,y]`（用 `isPointInFill` 验证落对省）。
+5. 运行 `python validate.py`，再用 http server 预览校验。
