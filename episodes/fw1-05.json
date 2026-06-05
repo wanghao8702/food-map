@@ -1,0 +1,41 @@
+{
+  "id": "fw1-05",
+  "title": "江湖夜雨",
+  "season": 1,
+  "episode": 5,
+  "paragraphs": [
+    {"text": "有人的地方，就有江湖。江湖之上，一直都流传着风味的故事：关于师承，关于门派，关于琢磨，关于顿悟。世上的滋味，就这样流转于方寸餐桌，交织在冷暖人间。"},
+    {"text": "/湖北·潜江-龙湾/", "marker": true},
+    {"anchor": "p-youmen-daxia", "dishId": "fw1-05-youmen-daxia", "text": "稻虾共养使湖北成为中国最大的小龙虾产区。剪背去线，十几种香料在热油里爆香，一勺红油最重要，用啤酒烹烧，辣而不燥、油润不腻，满手甜辣浓香。可很多人不知道，小龙虾竟是来自大洋彼岸的入侵物种。"},
+    {"text": "/美国·路易斯安那州-新奥尔良/", "marker": true},
+    {"anchor": "p-cajun-crawfish", "dishId": "fw1-05-cajun-crawfish", "text": "约两百年前，路易斯安那的居民就开始食用小龙虾。水煮时加入玉米、土豆和蘑菇，撒上卡疆粉，与柠檬汁混合。用小船作餐桌，肉质饱满、滋味香辣，带着粗犷浪漫的南部乡村气息。"},
+    {"text": "/湖北-武汉/", "marker": true},
+    {"anchor": "p-lu-jizhua", "dishId": "fw1-05-lu-jizhua", "text": "高压锅蒸熟鸡爪逐一修剪，晚上九点高架桥下支起餐桌。宵夜的江湖各家原料大同小异，唯有在调味上下足功夫。皮软骨酥，嫩滑软糯，吃鸡爪的乐趣在啃食过程中的摸索。"},
+    {"text": "/重庆/", "marker": true},
+    {"anchor": "p-luanpichai", "dishId": "fw1-05-luanpichai", "text": "宵夜是一个城市的灵魂。重庆人叫它“乱劈柴”，意思是不按常理出牌，也是猜拳的代称。顾客输了拳要买卤菜，赢了就白送，派生的菜系粗犷豪放、麻辣鲜香。"},
+    {"text": "/辽宁-锦州/", "marker": true},
+    {"anchor": "p-jinzhou-shaokao", "dishId": "fw1-05-jinzhou-shaokao", "text": "六百多米长的凌河夜市密布三百多个摊位，最多的是烧烤。小串的“小”指肉粒细小，更容易入味，铁签穿起内外同时受热。点上几十上百串，烟熏火燎中，撸的是豪迈，吃的是滋味。"},
+    {"text": "/广东-汕头/", "marker": true},
+    {"anchor": "p-chaoshan-baizhou", "dishId": "fw1-05-chaoshan-baizhou", "text": "南海边，中国宵夜的发源地。潮汕人把宵夜称为“夜糜”，糜就是粥，猛火烧滚、米粒将开花时迅即关火，讲究水米分离、稠薄得当。豪华的搭配，都要归于一碗白糜。"},
+    {"text": "/江苏-南京/", "marker": true},
+    {"anchor": "p-chao-shanyu", "dishId": "fw1-05-chao-shanyu", "text": "黄鳝去骨，将刀反握，以刀背沉稳敲击使内侧肌肉松散起茸。经物理致嫩的鳝段过油泛花，五花肉煸香、高汤调味，转砂锅慢炖，脆爽鳝肉脱胎换骨，口感酥烂、汤汁饱满。这是侯新庆想教给儿子的南京近乎失传的做法。"},
+    {"text": "/北京-周家巷/", "marker": true},
+    {"anchor": "p-qingjiang-rou", "dishId": "fw1-05-qingjiang-rou", "text": "清酱肉，北京曾流行三百多年的腌肉。用水稀释黄酱过细筛，连续八天酱制，再通风挂晾三个月，风干发酵。不同于广东腊肉的肥腴、金华火腿的馥郁，清酱肉晶莹凝玉、清逸爽口。"},
+    {"text": "/中国·香港-中环/", "marker": true},
+    {"anchor": "p-chiyou-ji", "dishId": "fw1-05-chiyou-ji", "text": "80℃高汤把鸡肉烫制25分钟，精确到分毫，再放入冰镇卤汁慢浸两小时，表皮爽滑、香味柔和。邓天眼中，豉油鸡张扬的香气与鸡肉内敛的本味缺一不可。"},
+    {"anchor": "p-huadiao-xiexie", "dishId": "fw1-05-huadiao-xiexie", "text": "海带蛤蜊的鲜汁倒入陈年花雕，蒸半熟后和蛋液混合、淋上鸡油再次蒸制，酒香蛋液垫底、浓香鸡汁提味，衬托花蟹的鲜甜，最后放上素净米粉。再加一点时光腌就的咸青柠，芳香沁脾，回味绵长。"},
+    {"text": "/福建·厦门-八市/", "marker": true},
+    {"anchor": "p-jiangyoushui", "dishId": "fw1-05-jiangyoushui", "text": "小管学名小管枪乌贼，肉质鲜甜弹牙。爆香萝卜干、用酱油和水做底，这是厦门独特的“酱油水”，源于渔船上的因陋就简，却成就大道至简，咸鲜红亮趁势染色、提味、增鲜。"},
+    {"text": "/四川-眉山/", "marker": true},
+    {"anchor": "p-xuewang", "dishId": "fw1-05-xuewang", "text": "鸡血加盐制成血豆腐，四川话叫“血旺”。一家做血旺的乡间小店历经九十多年。川菜重调味、粤菜讲搭配，川粤厨师同灶切磋，菜系之间的比拼里各有生存之道。"},
+    {"text": "相濡以滋味，相忘于江湖。每一个制造和享用美食的人，无不历经江湖夜雨，期待桃李春风。"}
+  ],
+  "links": [
+    {"a": "fw1-05-youmen-daxia", "b": "fw1-05-cajun-crawfish", "theme": "小龙虾·跨洋"},
+    {"a": "fw1-05-lu-jizhua", "b": "fw1-05-luanpichai", "theme": "宵夜江湖"},
+    {"a": "fw1-05-luanpichai", "b": "fw1-05-jinzhou-shaokao", "theme": "宵夜江湖"},
+    {"a": "fw1-05-jinzhou-shaokao", "b": "fw1-05-chaoshan-baizhou", "theme": "宵夜江湖"},
+    {"a": "fw1-05-chao-shanyu", "b": "fw1-05-qingjiang-rou", "theme": "师承"},
+    {"a": "fw1-05-chiyou-ji", "b": "fw1-05-huadiao-xiexie", "theme": "香港·邓天"}
+  ]
+}

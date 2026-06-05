@@ -36,6 +36,9 @@ const CHINA_PX = {
   'fw1-04-meixiancaigeng':[601.2,398.0],// 浙江·宁波(贴沪界)
   'fw1-04-guoshou-mixian':[305.6,489.2],// 云南·德宏(极西南)
   'fw1-04-chaihui-yutou':[573.0,372.0], // 江苏·扬州(贴皖界)
+  // 第5集：香港两道(CN-91 极小)→ 取香港附近，渲染时散开
+  'fw1-05-chiyou-ji':[511.0,513.5],     // 香港·豉油鸡
+  'fw1-05-huadiao-xiexie':[515.0,512.0],// 香港·花雕蒸花蟹
 };
 
 // china.svg 为圆锥投影。经"最小二乘拟合各省中心"得到的仿射变换(经纬度→像素)，
@@ -78,6 +81,7 @@ const WORLD_REGION = {
   'fw1-02-sangak':'IR', 'fw1-02-hainan-jifan':'MY', 'fw1-02-chifa-yuntun':'PE', 'fw1-02-mushu-wuhua':'PE',
   'fw1-03-tagine':'MA', 'fw1-03-juan-doufu':'JP',
   'fw1-04-herring':'SE', 'fw1-04-roquefort':'FR', 'fw1-04-yulu':'VN', 'fw1-04-bresi-ji':'FR',
+  'fw1-05-cajun-crawfish':'US',
 };
 function regionCenter(id){
   const p = svg.querySelector('path[id="'+id+'"]');
