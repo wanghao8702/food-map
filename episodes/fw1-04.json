@@ -1,0 +1,41 @@
+{
+  "id": "fw1-04",
+  "title": "肴变万千",
+  "season": 1,
+  "episode": 4,
+  "paragraphs": [
+    {"text": "烹饪的起点在哪里？终点又在何处？当食物被称作菜和肴，在这两个汉字及其组合变化之间，经历了无数心手合一的塑造，呈现出风味的千姿百态。"},
+    {"text": "/上海-崇明/", "marker": true},
+    {"anchor": "p-pidan", "dishId": "fw1-04-pidan", "text": "用盐、石灰、食用碱调制的黄泥包裹鸭蛋。蛋的内部经历一场蛋白质分解与重组，凝固、褐变、结晶，30天后物理和化学性状翻天覆地，奇特色泽、又滑又黏的口感，是中国人独享的体验。"},
+    {"text": "/浙江·宁波-附海/", "marker": true},
+    {"anchor": "p-meixiancaigeng", "dishId": "fw1-04-meixiancaigeng", "text": "待苋菜茎秆粗壮，切寸段、少量盐腌、封进瓦甏。三伏天里，方婆婆要的恰好是腐败带来的特殊风味。难以名状的味道直冲鼻腔，有人避之不及，有人甘之若饴。"},
+    {"text": "/浙江-绍兴/", "marker": true},
+    {"anchor": "p-choudoufu", "dishId": "fw1-04-choudoufu", "text": "霉苋菜梗的卤水是老绍兴人的命，鲜嫩洁白的豆腐仅一夜就变身重口味。奇臭和异香达到微妙临界点，坚硬的次元壁被瞬间击穿，让人神魂颠倒、欲罢不能。"},
+    {"text": "/瑞典-恩舍尔兹韦克/", "marker": true},
+    {"anchor": "p-herring", "dishId": "fw1-04-herring", "text": "嗜臭并不是中国人的专利。波罗的海产卵期的鲱鱼以盐和血水腌制，装罐发酵，厌氧菌在15℃里静默狂欢八个星期。大名鼎鼎的鲱鱼罐头，是希芙一直想念的家乡味道。"},
+    {"text": "/法国-苏宗河畔·霍克福/", "marker": true},
+    {"anchor": "p-roquefort", "dishId": "fw1-04-roquefort", "text": "拉克衲绵羊奶入模前撒上青霉菌粉末，在通风恒温又潮湿的石灰岩洞穴里熟成。蓝纹奶酪成熟后散发强烈的动物性气息，是祖先的偶然发现，也是大自然的神迹。"},
+    {"text": "/越南-富国岛/", "marker": true},
+    {"anchor": "p-yulu", "dishId": "fw1-04-yulu", "text": "体长不超过10厘米的黑凤尾鱼用海盐层层叠压，封入巨型木桶发酵至少一年。仅用鱼和盐发酵所得的鱼露，鲜味深沉浓郁，给东亚和东南亚的饮食烙上神奇的风味印记，作用比肩酱油。"},
+    {"text": "/云南-芒市/", "marker": true},
+    {"anchor": "p-yunnan-zhanshui", "dishId": "fw1-04-yunnan-zhanshui", "text": "傣家人把滋味的部分托付给蘸水。广泛利用蔬果植物中的芳香辛辣和发酵酱料之间的排列组合，云南蘸水绽放出万花筒般绚丽的风味色彩。"},
+    {"text": "/浙江-缙云/", "marker": true},
+    {"anchor": "p-qiaorougeng", "dishId": "fw1-04-qiaorougeng", "text": "用木棒捶打，肉筋断裂、纤维松弛，淀粉颗粒嵌入肌理。淀粉遇热糊化，使肉片滑嫩、汤汁浓稠，黏滑绵软、滋味悠长。羹是中国最古老的菜肴形式，几经变化，不改本色。"},
+    {"text": "/云南·德宏-弄丘/", "marker": true},
+    {"anchor": "p-guoshou-mixian", "dishId": "fw1-04-guoshou-mixian", "text": "阿昌族的过手米线，无需碗筷直接用手。用手与用筷子、刀叉并列为三大进食方式；为更适应筷子的夹取，中式烹饪里的刀工应运而生，发展成复杂的技术体系。"},
+    {"text": "/江苏-扬州/", "marker": true},
+    {"anchor": "p-chaihui-yutou", "dishId": "fw1-04-chaihui-yutou", "text": "硕大的鱼头在70℃到85℃水温中浸熟，徒手拆骨，手中无刀、心中有刀。鱼骨褪尽，品相完整，浓汤挂汁附着在软糯的鱼肉上。"},
+    {"anchor": "p-babao-ya", "dishId": "fw1-04-babao-ya", "text": "小乳鸭脱骨之后，既是食材也是容器。甘香粉糯弹硬脆黏八种质地各异的食物与糯米炒至六成熟，填满脱骨鸭内腔。八宝葫芦鸭是一场内外兼修、神形颠覆的烹饪魔术，亮相时五味俱全、形同再造。"},
+    {"text": "/法国-巴黎/", "marker": true},
+    {"anchor": "p-bresi-ji", "dishId": "fw1-04-bresi-ji", "text": "布雷斯鸡简单腌制、五花大绑，放进猪膀胱，悬浮在汤汁中恒温慢煮。四小时后膀胱膨胀成气囊、内部加压。取下最完整的胸腹肉，内外成熟一致，配鹅肝酱汁与黑松露，相得益彰。"},
+    {"text": "厨师正是“菜”和“肴”之间的摆渡人，他们让静默的食物有了生命。菜肴穿越人间，看见祖先的足迹和身影，听见悠远过往的回响。"}
+  ],
+  "links": [
+    {"a": "fw1-04-pidan", "b": "fw1-04-meixiancaigeng", "theme": "腌渍发酵"},
+    {"a": "fw1-04-meixiancaigeng", "b": "fw1-04-choudoufu", "theme": "绍兴三臭"},
+    {"a": "fw1-04-choudoufu", "b": "fw1-04-herring", "theme": "嗜臭·发酵"},
+    {"a": "fw1-04-choudoufu", "b": "fw1-04-roquefort", "theme": "嗜臭·发酵"},
+    {"a": "fw1-04-yulu", "b": "fw1-04-yunnan-zhanshui", "theme": "蘸料·发酵酱"},
+    {"a": "fw1-04-babao-ya", "b": "fw1-04-bresi-ji", "theme": "包裹慢煮·中法"}
+  ]
+}

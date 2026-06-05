@@ -31,6 +31,11 @@ const CHINA_PX = {
   'fw1-02-feizhou-ji':[507.0,517.0],   // 澳门·非洲鸡
   'fw1-02-tacho':[506.0,513.0],        // 澳门·Tacho
   'fw1-03-huzhou-yangrou':[603.0,407.0],// 浙江·湖州(贴苏浙界，置浙江纵深以抗防重叠位移)
+  // 第4集：边界/小区/极西校准
+  'fw1-04-pidan':[607.6,381.6],         // 上海·崇明(沪区极小)
+  'fw1-04-meixiancaigeng':[601.2,398.0],// 浙江·宁波(贴沪界)
+  'fw1-04-guoshou-mixian':[305.6,489.2],// 云南·德宏(极西南)
+  'fw1-04-chaihui-yutou':[573.0,372.0], // 江苏·扬州(贴皖界)
 };
 
 // china.svg 为圆锥投影。经"最小二乘拟合各省中心"得到的仿射变换(经纬度→像素)，
@@ -72,6 +77,7 @@ const WORLD_REGION = {
   'fw1-01-iberico':'ES', 'fw1-01-aligot':'FR', 'fw1-01-holland-crab':'NL',
   'fw1-02-sangak':'IR', 'fw1-02-hainan-jifan':'MY', 'fw1-02-chifa-yuntun':'PE', 'fw1-02-mushu-wuhua':'PE',
   'fw1-03-tagine':'MA', 'fw1-03-juan-doufu':'JP',
+  'fw1-04-herring':'SE', 'fw1-04-roquefort':'FR', 'fw1-04-yulu':'VN', 'fw1-04-bresi-ji':'FR',
 };
 function regionCenter(id){
   const p = svg.querySelector('path[id="'+id+'"]');
@@ -135,10 +141,20 @@ function clusterMarker(x,y,china){
   g.addEventListener('click',renderChina);
   return g;
 }
+// 落地保障：防重叠后若有点落在海里(不在任何省内)，就近吸附回最近陆地，避免图钉浮海。
+function ensureOnLand(list){
+  const provs=[...svg.querySelectorAll('.basemap path')].filter(p=>/^CN-/.test(p.id));
+  const inAny=(x,y)=>provs.some(p=>{try{return p.isPointInFill(new DOMPoint(x,y));}catch(e){return false;}});
+  for(const o of list){ if(inAny(o.x,o.y)) continue;
+    outer: for(let r=2;r<=40;r+=2) for(let a=0;a<360;a+=20){ const nx=o.x+r*Math.cos(a*Math.PI/180), ny=o.y+r*Math.sin(a*Math.PI/180); if(inAny(nx,ny)){ o.x=nx; o.y=ny; break outer; } }
+  }
+}
 export async function renderChina(){
   await setBase(CHINA); back.hidden=false;
   const list = store.china.map(d=>{ const px=CHINA_PX[d.id]; const p = px ? {x:px[0],y:px[1]} : chinaProject(d.lng,d.lat); return {d, x:p.x, y:p.y}; });
-  pixelSpread(list).forEach(o=>pinAt(o.d, o.x, o.y));
+  const placed = pixelSpread(list);
+  ensureOnLand(placed);
+  placed.forEach(o=>pinAt(o.d, o.x, o.y));
 }
 export function init(onPickCb){ onPick = onPickCb || onPick; }
 
