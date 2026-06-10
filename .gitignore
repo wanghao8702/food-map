@@ -6,3 +6,6 @@ docs/
 .workbuddy/
 tests.html
 validate.py
+PRD*.md
+实现计划*.md
+连接功能*.md
