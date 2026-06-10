@@ -1,3 +1,8 @@
 .superpowers/
 .venv/
 __pycache__/
+CLAUDE.md
+docs/
+.workbuddy/
+tests.html
+validate.py
