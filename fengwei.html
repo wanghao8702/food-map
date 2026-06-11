@@ -6,10 +6,16 @@
   <a id="home" href="./index.html" title="返回首页">← 首页</a>
   <h1>风味地图 · 风味人间</h1>
   <button id="back" hidden>← 返回世界</button>
+  <div id="search"><input id="searchbox" type="search" placeholder="🔍 搜菜名 / 产地" autocomplete="off"></div>
   <label id="minortoggle" hidden title="纪录片里一闪而过的小食/拼盘菜，默认隐藏以减少拥挤">
     <input type="checkbox" id="minorchk"> 显示短暂出现的食物
   </label>
 </header>
+<div id="searchpanel" hidden>
+  <div id="searchchips"></div>
+  <ul id="searchresults"></ul>
+  <div id="searchempty" hidden>没有匹配的美食</div>
+</div>
 <main id="stage">
   <svg id="map" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet"></svg>
   <div id="conn-label" hidden></div>
@@ -20,11 +26,13 @@
 <div id="seasoncard" hidden></div>
 <div id="fulltext" hidden></div>
 <script type="module">
-  import { init, renderWorld, renderConnections, getEpisodes, setScope, setShowMinor, onReady } from './src/map.js';
+  import { init, renderWorld, renderConnections, getEpisodes, setScope, setShowMinor, onReady, getAllDishes, focusDish } from './src/map.js';
   import { openPanel, bindFulltext, openConnModal, openSeasonCard } from './src/panel.js';
   import { openFulltext } from './src/fulltext.js';
+  import { initSearch } from './src/search.js';
   init(openPanel, openConnModal);
   bindFulltext(openFulltext);
+  onReady(()=> initSearch(getAllDishes(), focusDish));
   document.getElementById('minorchk').addEventListener('change', e=> setShowMinor(e.target.checked));
 
   const mapnav = document.getElementById('mapnav');

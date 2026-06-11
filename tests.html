@@ -2,6 +2,7 @@
 <body><pre id="out"></pre>
 <script type="module">
 import { project } from './src/projection.js';
+import { matchDishes } from './src/search.js';
 const out = document.getElementById('out');
 let pass = 0, fail = 0;
 function eq(name, a, b, tol=0.5){
@@ -16,5 +17,19 @@ eq('world-center-y', p.y, 250);
 p = project(180, 85, W);              // 右上角
 eq('world-topright-x', p.x, 1000);
 eq('world-topright-y', p.y, 0);
+
+// 搜索过滤纯函数 matchDishes(dishes, query, season)
+const sample=[
+  {id:'a',name:'太湖大闸蟹',region:'江苏·太湖',season:1,episode:1},
+  {id:'b',name:'土黄油',region:'江苏·苏州',season:1,episode:1},
+  {id:'c',name:'西班牙海鲜饭',region:'西班牙',season:4,episode:2},
+];
+eq('search-by-name', matchDishes(sample,'大闸蟹',null).length, 1);
+eq('search-by-region', matchDishes(sample,'江苏',null).length, 2);
+eq('search-season-filter', matchDishes(sample,'',1).length, 2);
+eq('search-empty-all', matchDishes(sample,'',null).length, 3);
+eq('search-no-match', matchDishes(sample,'zzz',null).length, 0);
+eq('search-query-and-season', matchDishes(sample,'海鲜',4).length, 1);
+
 out.textContent += (fail===0)?`\nALL PASS (${pass})`:`\n${fail} FAILED`;
 </script></body></html>
