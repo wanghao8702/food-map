@@ -1,4 +1,5 @@
 // 欢迎/门户页交互：插画墙、数据 count-up、滚动进场、节目门户卡片。数据全部运行时从 dishes.json / seasons.json / episodes 读取。
+import { worldMerc } from './worldproj.js';
 const $ = (s, r = document) => r.querySelector(s);
 const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
 
@@ -15,15 +16,6 @@ async function main(){
 
 /* ---------- 招牌功能 · 风味连接（大闸蟹迁移：太湖 → 荷兰） ---------- */
 const NS = 'http://www.w3.org/2000/svg';
-const WORLD = {lngMin:-169.110266,lngMax:190.486279,latTop:83.600842,latBottom:-58.508473,width:1009.6727,height:665.96301};
-function worldPx(lng,lat){
-  const merc = l => Math.log(Math.tan(Math.PI/4 + l*Math.PI/360));
-  const MTOP = merc(WORLD.latTop), MBOT = merc(WORLD.latBottom);
-  return {
-    x:(lng-WORLD.lngMin)/(WORLD.lngMax-WORLD.lngMin)*WORLD.width,
-    y:(MTOP-merc(lat))/(MTOP-MBOT)*WORLD.height
-  };
-}
 function elNS(tag, attrs){ const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); return e; }
 
 // 招牌跨地域连接（横跨欧亚美）。按「主题组」展示：一条连接可能串起 3 道以上美食，全部标出，文案用整段 groupDesc。
@@ -77,7 +69,7 @@ async function buildConnDemo(ds){
 
   // 所有出现过的菜 → 像素位置 + 轻量防重叠（弧线与钉共用这套位置）
   const pos = {};
-  items.forEach(it=>it.dishes.forEach(d=>{ if(!pos[d.id]){ const p=worldPx(d.lng,d.lat); pos[d.id]={x:p.x,y:p.y}; } }));
+  items.forEach(it=>it.dishes.forEach(d=>{ if(!pos[d.id]){ const p=worldMerc(d.lng,d.lat); pos[d.id]={x:p.x,y:p.y}; } }));
   { const arr=Object.values(pos); relaxPins(arr,40,80); }
 
   // 裁剪到招牌点所在区域，并拉成横图（更大、更宽）；钉与字按缩放比例放大

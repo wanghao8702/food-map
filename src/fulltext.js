@@ -1,3 +1,4 @@
+import { dishName } from './data.js';
 const layer = document.getElementById('fulltext');
 const epCache = {};
 async function loadEp(season,ep){
@@ -23,8 +24,6 @@ export async function openFulltext(dish){
   layer.querySelector('.ft-close').onclick=()=>layer.hidden=true;
   layer.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>focusSeg(b.dataset.go));
   requestAnimationFrame(()=>focusSeg(dish.episodeAnchor));
-
-  function dishName(id){ return (window.__dishNames&&window.__dishNames[id])||''; }
 }
 function focusSeg(anchor){
   const seg=document.getElementById(anchor); if(!seg) return;
