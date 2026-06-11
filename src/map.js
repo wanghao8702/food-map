@@ -573,4 +573,9 @@ svg.addEventListener('dblclick', ()=>{ vb={x:0,y:0,w:baseW,h:baseH}; applyVB(); 
 back.addEventListener('click',()=>{ if(chinaZoom) exitProvince(); else animateSwap(renderWorld,'out'); });
 let _ready=false; const _readyCbs=[];
 export function onReady(cb){ if(_ready) cb(); else _readyCbs.push(cb); }
-loadData().then(s=>{ store=s; renderWorld(); _ready=true; _readyCbs.forEach(f=>f()); });
+loadData().then(async s=>{
+  store=s;
+  await renderWorld();                                  // 等首帧底图+图钉就位再撤加载浮层
+  document.getElementById('maploading')?.setAttribute('hidden','');
+  _ready=true; _readyCbs.forEach(f=>f());
+});
