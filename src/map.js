@@ -189,7 +189,8 @@ function regionCenter(id){
 const PIN_R = 12;    // 衬底圆半径(用户单位)
 const PIN_IMG = 22;  // 美食插画边长
 function pinAt(d,cx,cy){
-  const g=el('g',{class:'pin','data-id':d.id,'data-x':cx,'data-y':cy, transform:`translate(${cx},${cy})`});
+  const g=el('g',{class:'pin','data-id':d.id,'data-x':cx,'data-y':cy, transform:`translate(${cx},${cy})`,
+    tabindex:'0', role:'button', 'aria-label':`${d.name}，${d.region}`});
   const inner=el('g',{class:'pin-inner'});
   inner.appendChild(el('circle',{r:PIN_R,class:'pin-bg'}));
   const img=el('image',{x:-PIN_IMG/2,y:-PIN_IMG/2,width:PIN_IMG,height:PIN_IMG,class:'pin-img'});
@@ -199,12 +200,14 @@ function pinAt(d,cx,cy){
   g.appendChild(inner);
   const t=el('title',{}); t.textContent=d.name; g.appendChild(t);
   g.addEventListener('click',()=>onPick(d, g));
+  g.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); onPick(d, g); } });
   svg.appendChild(g);
 }
 // 通用小聚合气泡：多张代表插画(中心+环绕)+ 数量徽标；点击执行 onClick(用于「就地散开」)。
 function miniCluster(x,y,dishes,labelText,onClick){
   const reps=dishes.map(d=>d.svg).slice(0, Math.min(6, dishes.length));
-  const g=el('g',{class:'cluster', transform:`translate(${x},${y})`});
+  const g=el('g',{class:'cluster', transform:`translate(${x},${y})`,
+    tabindex:'0', role:'button', 'aria-label':`${labelText}，点击展开`});
   const inner=el('g',{class:'cl-inner'});
   const n=reps.length, R=12;
   const ps=[{x:0,y:0}];
@@ -226,6 +229,7 @@ function miniCluster(x,y,dishes,labelText,onClick){
   g.appendChild(inner);
   const tip=el('title',{}); tip.textContent=`${labelText}（点击展开）`; g.appendChild(tip);
   g.addEventListener('click',()=>onClick(g));
+  g.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); onClick(g); } });
   return g;
 }
 // 把某国家的菜从聚合气泡散开成独立图钉(国家中心 seed + 防重叠)。renderWorld 与 focusDish 共用。
@@ -272,7 +276,8 @@ function clusterMarker(x,y,china){
   let reps=want.filter(s=>have.has(s));
   for(const s of china.map(d=>d.svg)) if(!reps.includes(s)) reps.push(s);
   reps=reps.slice(0, Math.max(5, Math.min(7, reps.length)));   // 5–7 张
-  const g=el('g',{class:'cluster', transform:`translate(${x},${y})`});
+  const g=el('g',{class:'cluster', transform:`translate(${x},${y})`,
+    tabindex:'0', role:'button', 'aria-label':`中国 · ${china.length} 道风味，点击展开`});
   const inner=el('g',{class:'cl-inner'});
   const n=reps.length, R=15;
   const pos=[{x:0,y:0}];                                        // 中心
@@ -295,6 +300,7 @@ function clusterMarker(x,y,china){
   g.appendChild(inner);
   const tip=el('title',{}); tip.textContent=`中国 · ${china.length} 道风味(点击展开)`; g.appendChild(tip);
   g.addEventListener('click',()=>animateSwap(renderChina,'in'));
+  g.addEventListener('keydown', e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); animateSwap(renderChina,'in'); } });
   return g;
 }
 // 落地保障：防重叠后若有点落在海里(不在任何省内)，就近吸附回最近陆地，避免图钉浮海。
