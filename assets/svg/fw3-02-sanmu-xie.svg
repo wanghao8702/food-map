@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>三目蟹蒸肉饼</title>
+  <ellipse cx="60" cy="72" rx="34" ry="22" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="68" rx="26" ry="16" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1"/>
+  <ellipse cx="60" cy="52" rx="20" ry="14" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <line x1="42" y1="52" x2="30" y2="43" stroke="#f0a05a" stroke-width="3" stroke-linecap="round"/>
+  <line x1="78" y1="52" x2="90" y2="43" stroke="#f0a05a" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="53" cy="46" r="2.5" fill="#7a2a1c"/>
+  <circle cx="67" cy="46" r="2.5" fill="#7a2a1c"/>
+  <ellipse cx="60" cy="50" rx="10" ry="6" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1"/></svg>

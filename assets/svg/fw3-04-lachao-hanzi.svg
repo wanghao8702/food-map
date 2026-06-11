@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>辣炒蚶子</title>
+  <ellipse cx="46" cy="64" rx="14" ry="10" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M32,64 Q46,54 60,64" fill="none" stroke="#7a2a1c" stroke-width="1.5"/>
+  <ellipse cx="74" cy="62" rx="14" ry="10" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M60,62 Q74,52 88,62" fill="none" stroke="#7a2a1c" stroke-width="1.5"/>
+  <ellipse cx="60" cy="76" rx="14" ry="10" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M46,76 Q60,66 74,76" fill="none" stroke="#7a2a1c" stroke-width="1.5"/>
+  <path d="M50,42 C48,32 56,26 54,18" fill="none" stroke="#e8623f" stroke-width="2" stroke-linecap="round"/>
+  <path d="M65,40 C63,30 71,24 69,16" fill="none" stroke="#e8623f" stroke-width="2" stroke-linecap="round"/></svg>

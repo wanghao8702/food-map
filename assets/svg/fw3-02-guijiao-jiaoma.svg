@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>椒麻啫喱佛手螺</title>
+  <ellipse cx="60" cy="65" rx="30" ry="22" fill="#7fa860" stroke="#7a2a1c" stroke-width="1.6" opacity="0.85"/>
+  <ellipse cx="60" cy="63" rx="20" ry="14" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.2" opacity="0.7"/>
+  <path d="M40,55 Q50,35 60,45 Q70,35 80,55" fill="none" stroke="#e8623f" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="55" cy="60" r="4" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="65" cy="63" r="3" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="58" cy="70" r="3.5" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/></svg>

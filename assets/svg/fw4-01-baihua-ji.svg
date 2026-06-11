@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>百花鸡</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="76" rx="42" ry="9" fill="#fbf3e0"/>
+    <path d="M28,66 q32,-26 64,0 Z" fill="#f0a05a"/>
+    <circle cx="46" cy="58" r="5" fill="#fbf3e0"/>
+    <circle cx="60" cy="54" r="5" fill="#fbf3e0"/>
+    <circle cx="74" cy="58" r="5" fill="#fbf3e0"/>
+    <circle cx="46" cy="58" r="1.6" fill="#e8623f"/>
+    <circle cx="60" cy="54" r="1.6" fill="#e8623f"/>
+    <circle cx="74" cy="58" r="1.6" fill="#e8623f"/>
+  </g>
+</svg>

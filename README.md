@@ -2,8 +2,11 @@
 
 一张真实世界/中国地图（svg-maps，Claude 暖色），把《风味人间》纪录片里的美食钉在产地上。每个标点是该菜的手绘 SVG 插画；点一道菜，看插画、介绍、纪录片文案，并能溯源到「哪一季哪一集」。另有「风味连接」视图，按集展示纪录片里食物之间的跨地域连接。纯前端、无构建、无后端、无地图 key。
 
-当前内容：**《风味人间》第 1 季全 6 集**，共 72 道美食。
-- S1E1 山海之间 / S1E2 落地生根 / S1E3 滚滚红尘 / S1E4 肴变万千 / S1E5 江湖夜雨 / S1E6 香料歧路
+当前内容：**《风味人间》第 1 季全 8 集 + 第 2 季全 8 集 + 第 3 季全 8 集 + 第 4 季全 6 集**，共 408 道美食。
+- S1E1 山海之间 / S1E2 落地生根 / S1E3 滚滚红尘 / S1E4 肴变万千 / S1E5 江湖夜雨 / S1E6 香料歧路 / S1E7 万家灯火 / S1E8 风味之旅（幕后寻味，仅收新登场食物）
+- S2E1 甜蜜缥缈录 / S2E2 螃蟹横行记 / S2E3 酱料四海谈 / S2E4 杂碎逆袭史 / S2E5 鸡肉风情说 / S2E6 颗粒苍穹传 / S2E7 香肠万象集 / S2E8 根茎春秋志
+- S3·大海小鲜 E1 天涯·四海为家 …… 全 8 集（海洋主题，含 E8 赓续·代代相传）
+- S4·谷物星球 E1 麦浪涌万年 / E2 稻香阡陌里 / E3 黍粟本嘉禾 / E4 种豆南山下 / E5 薯芋新天地 / E6 百谷皆风味
 
 ## 两个视图
 
@@ -16,8 +19,11 @@
 
 ```bash
 python -m http.server 8000
-# 浏览器打开 http://localhost:8000/
+# http://localhost:8000/            欢迎/门户页（滚动式，深色影院感 → 暖色）
+# http://localhost:8000/fengwei.html 《风味人间》地图应用
 ```
+
+入口结构：`index.html` 是欢迎/门户页（门户卡片点《风味人间》进入地图）；地图应用整套在 `fengwei.html`。以后每档新节目各占一页，门户再加卡片。
 
 ## 交互
 
@@ -29,16 +35,20 @@ python -m http.server 8000
 ## 目录结构
 
 ```
-index.html            应用主体（地图、面板、全文层）
-styles.css            Claude 暖色调样式
+index.html            欢迎/门户页（插画墙、数据统计、节目入口卡片）
+home.css              门户页样式（深色影院感 → 暖色渐变）
+fengwei.html          《风味人间》地图应用主体（地图、面板、全文层）
+styles.css            地图应用暖色调样式
+src/home.js           门户页交互（count-up、滚动进场、风味连接 demo）
 src/projection.js     经纬度 → SVG 坐标的线性映射（纯函数）
 src/data.js           加载 dishes.json，按 world/china 分组
 src/map.js            两层地图渲染、图钉、聚合气泡、钻取/返回、防重叠
 src/panel.js          右侧详情面板
 src/fulltext.js       本集全文覆盖层（高亮 + 集内跳转）
-dishes.json           美食数据（一菜一条）
-episodes/fw1-01.json  第1集结构化全文（带段落锚点）
-assets/svg/*.svg      14 张扁平填色美食插画 + _spec.md 视觉规范
+dishes.json           美食数据（一菜一条，408 道）
+episodes/fwS-EE.json  各集结构化全文（带段落锚点 + links 连接数组）
+assets/svg/*.svg      408 张扁平填色美食插画 + _spec.md 视觉规范
+assets/covers/        各季封面图（s1.jpg … s4.jpg 等）
 assets/world.svg      世界底图（svg-maps，国家 path）
 assets/china.svg      中国底图（svg-maps，省份 path）
 tests.html            坐标投影纯函数浏览器测试页（应显示 ALL PASS）
@@ -58,9 +68,9 @@ validate.py           数据校验（结构 / 坐标 / svg 与锚点引用一致
 
 ## 风味连接
 
-- 连接是**集内**关系，存在每集 `episodes/fwX-YY.json` 的 `links` 数组：`[{a:菜id, b:菜id, theme:"主题"}]`。
-- 渲染见 `src/map.js` 的 `renderConnections`：该集菜按地理铺在世界图（中国菜由 `worldPixel` 按 CN 包围盒线性定位），相连菜画二次贝塞尔弧，颜色按主题分配（`THEME_PALETTE`），hover/点击高亮同主题链并显示主题文字。
-- `ensureOnLand`：中国近景图防重叠后，把落到海里的图钉就近吸附回陆地。
+- 连接是**集内**关系，存在每集 `episodes/fwX-YY.json` 的 `links` 数组：`[{a:菜id, b:菜id, theme:"主题", desc:"一句解释性话语"}]`。`desc` 在点击弧线时随主题一同展示（第 1、2、4 季均带 `desc`）。
+- 渲染见 `src/map.js` 的 `renderConnections`：该集菜按地理铺在世界图（中国菜由 `worldPixel` 按 **Mercator 公式**定位，再 `worldSnapCN` 贴回 CN 陆地），相连菜画二次贝塞尔弧，颜色按主题分配（`THEME_PALETTE`），hover/点击高亮同主题链并显示主题文字。
+- 散开后用位移上限（`CAP`）约束沿海密集簇，避免图钉被甩离真实产地；`ensureOnLand`：中国近景图防重叠后，把落到海里的图钉就近吸附回陆地。
 
 ## 如何按集扩展
 

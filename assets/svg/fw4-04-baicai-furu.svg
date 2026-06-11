@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>白菜腐乳</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="34" y="52" width="52" height="34" rx="4" fill="#fbf3e0"/>
+    <rect x="34" y="52" width="52" height="12" rx="4" fill="#e8623f"/>
+    <circle cx="48" cy="58" r="2.4" fill="#e8623f"/>
+    <circle cx="60" cy="58" r="2.4" fill="#e8623f"/>
+    <circle cx="72" cy="58" r="2.4" fill="#e8623f"/>
+  </g>
+</svg>

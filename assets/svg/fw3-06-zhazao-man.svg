@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>炸糟鳗</title>
+  <path d="M22,56 C28,42 40,36 54,42 C68,48 76,42 88,46 C96,50 100,58 96,66 C92,74 82,76 70,70 C56,64 46,70 36,74 C26,78 16,70 22,56 Z" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M22,54 L14,56 L20,46 Z" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="32" cy="52" r="3" fill="#7a2a1c"/>
+  <line x1="46" y1="42" x2="48" y2="54" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="60" y1="44" x2="60" y2="58" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="74" y1="44" x2="72" y2="56" stroke="#7a2a1c" stroke-width="1"/></svg>

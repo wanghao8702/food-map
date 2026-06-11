@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>意大利方形饺</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="34" y="40" width="52" height="44" rx="6" fill="#f4c95d"/>
+    <path d="M34,46 h52 M34,78 h52 M40,40 v44 M80,40 v44" fill="none" stroke="#b9763c" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <ellipse cx="60" cy="62" rx="10" ry="8" fill="#7fa860"/>
+  </g>
+</svg>

@@ -1,0 +1,259 @@
+{
+  "id": "fw4-04",
+  "title": "种豆南山下",
+  "season": 4,
+  "episode": 4,
+  "paragraphs": [
+    {
+      "text": "它们是顽皮灵俏的种子，生长遍布地球每个角落。憨态可掬的外表，却有着深藏不露的城府。只有与巧手相逢，豆才会一次次卸下铠甲，释放非凡的能量，拓宽人类食谱的边界。"
+    },
+    {
+      "text": "/西藏·林芝·墨脱县/",
+      "marker": true
+    },
+    {
+      "anchor": "p-jiucai-ketengzi",
+      "dishId": "fw4-04-jiucai-ketengzi",
+      "text": "中国境内最大的豆荚，水煮九次去除皂苷，辣椒嫩韭爆炒。富含淀粉油脂的豆仁，有坚果口感和杏仁香气。"
+    },
+    {
+      "text": "/浙江·桐乡·店街塘村/",
+      "marker": true
+    },
+    {
+      "anchor": "p-ningshi-doubanshansi",
+      "dishId": "fw4-04-ningshi-doubanshansi",
+      "text": "初夏鳝鱼快炒定型，韭黄与蚕豆底油煸香，辛甜衬托鲜美。这便是初夏的江南味道了。"
+    },
+    {
+      "anchor": "p-lixia-fan",
+      "dishId": "fw4-04-lixia-fan",
+      "text": "咸肉雷笋蚕豆与粳糯对半的米同煮，铺满新鲜藠葱。孩子快快长高的美好愿望，都在这一碗蚕豆饭里。"
+    },
+    {
+      "text": "/埃及/",
+      "marker": true
+    },
+    {
+      "anchor": "p-alabo-duncandou",
+      "dishId": "fw4-04-alabo-duncandou",
+      "text": "地中海人偏爱干蚕豆，大肚锅熬煮十二小时以上，淀粉爆出。有炖肉般的浓香和细沙的颗粒感。"
+    },
+    {
+      "text": "/墨西哥·尤卡坦/",
+      "marker": true
+    },
+    {
+      "anchor": "p-polcan",
+      "dishId": "fw4-04-polcan",
+      "text": "南瓜籽与利玛豆绞碎作馅，填入玉米面团油炸，加炙石焦香。南瓜、玉米和菜豆是餐桌上的黄金搭配。"
+    },
+    {
+      "anchor": "p-pibipollo",
+      "dishId": "fw4-04-pibipollo",
+      "text": "新豇豆与猪油酱汁掺进面团，填玉米糊鸡肉，芭蕉叶裹入地坑炉。谷物来自土壤，现在又重新回归大地。"
+    },
+    {
+      "text": "/四川·成都/",
+      "marker": true
+    },
+    {
+      "anchor": "p-wandoujian-souroutang",
+      "dishId": "fw4-04-wandoujian-souroutang",
+      "text": "豌豆只掐顶端嫩尖，热汤汆烫，立刻激发标志性的清香。与人最亲和的豆类要数豌豆，每个阶段都是美味。"
+    },
+    {
+      "anchor": "p-helandou-baihe",
+      "dishId": "fw4-04-helandou-baihe",
+      "text": "结荚阶段培育出专吃豆荚的荷兰豆，与清甜百合同炒。豌豆生长的每个阶段，都被人们物尽其用。"
+    },
+    {
+      "anchor": "p-huotui-tiandou",
+      "dishId": "fw4-04-huotui-tiandou",
+      "text": "食用豆仁的甜豆脆嫩清甜，与火腿同炒，咸鲜衬甜。结荚果的阶段，人们各取所需。"
+    },
+    {
+      "text": "/重庆/",
+      "marker": true
+    },
+    {
+      "anchor": "p-wanzamian",
+      "dishId": "fw4-04-wanzamian",
+      "text": "成熟豌豆慢煮成绵软杂酱，浇在面上，浓稠裹味。仅凭一己之力，豌豆也能成就独特的美味。"
+    },
+    {
+      "anchor": "p-doutang-feichang",
+      "dishId": "fw4-04-doutang-feichang",
+      "text": "耙豌豆熬出浓白豆汤，炖入肥肠，绵软与丰腴交融。慢煮的豌豆，适合搭配不同的食物。"
+    },
+    {
+      "text": "/云南·大理·南涧县/",
+      "marker": true
+    },
+    {
+      "anchor": "p-guoba-youfen",
+      "dishId": "fw4-04-guoba-youfen",
+      "text": "豌豆既摊成薄脆锅巴，又熬成通透油粉，层层交叠合体。无量山的豌豆千层，有着独特的造型和口感魅力。"
+    },
+    {
+      "text": "/福建·晋江/",
+      "marker": true
+    },
+    {
+      "anchor": "p-shuizhu-huasheng",
+      "dishId": "fw4-04-shuizhu-huasheng",
+      "text": "闽南把花生叫土豆，加海盐同煮帮助脱水，日晒夜收七次。脆韧中有阳光和淡淡海风的味道。"
+    },
+    {
+      "text": "/福建·闽南/",
+      "marker": true
+    },
+    {
+      "anchor": "p-gongtang",
+      "dishId": "fw4-04-gongtang",
+      "text": "岭南甘蔗广植，花生与蔗糖结合，捶打成酥松甜糖。花生是最好相处的百搭型豆科食材。"
+    },
+    {
+      "anchor": "p-malao",
+      "dishId": "fw4-04-malao",
+      "text": "米胚膨化裹糖浆再滚芝麻花生，酥脆甜香的闽南茶配。花生与蔗糖结合，恰似金风玉露。"
+    },
+    {
+      "text": "/泰国·曼谷/",
+      "marker": true
+    },
+    {
+      "anchor": "p-qingmugua-shala",
+      "dishId": "fw4-04-qingmugua-shala",
+      "text": "高调的酸辣是泰餐标志，焙炒花生激发油脂香气点睛。花生温和醇厚、浓香耐嚼，是左右逢源的一味。"
+    },
+    {
+      "anchor": "p-taishi-zhujingrou",
+      "dishId": "fw4-04-taishi-zhujingrou",
+      "text": "炭烤猪颈肉佐酸辣蘸水，焙香花生碎让风味更立体。东南亚也将花生视作调味的主力。"
+    },
+    {
+      "text": "/印度尼西亚·日惹/",
+      "marker": true
+    },
+    {
+      "anchor": "p-shadie",
+      "dishId": "fw4-04-shadie",
+      "text": "沙嗲酱最重要的原料是粉身碎骨的花生，包容收纳众香。在争奇斗艳的香料面前，花生不动声色。"
+    },
+    {
+      "text": "/广东·化州/",
+      "marker": true
+    },
+    {
+      "anchor": "p-xiangyou-ji",
+      "dishId": "fw4-04-xiangyou-ji",
+      "text": "花生榨油香味嘹亮，化州白斩鸡都要用花生油最后润饰。才能以香油鸡之名登台亮相。"
+    },
+    {
+      "text": "/福建·晋江·深沪镇/",
+      "marker": true
+    },
+    {
+      "anchor": "p-huasheng-tang",
+      "dishId": "fw4-04-huasheng-tang",
+      "text": "小火煨足半天，蛋白助油脂乳化，汤色奶白不见油花。花生颗粒外观完好，舌头才知它早已绵密酥软。"
+    },
+    {
+      "text": "/黑龙江·逊克·下道干村/",
+      "marker": true
+    },
+    {
+      "anchor": "p-chunbing-douya",
+      "dishId": "fw4-04-chunbing-douya",
+      "text": "绿豆热水一夜唤醒、舒展成芽，快炒淋醋，卷进薄春饼。根根生脆，在一众荤腥中脱颖而出，肆意豆香。"
+    },
+    {
+      "text": "/四川·崇州·怀远镇/",
+      "marker": true
+    },
+    {
+      "anchor": "p-doufu-lianzi",
+      "dishId": "fw4-04-doufu-lianzi",
+      "text": "崇州人把豆腐压薄如布帘，让菌丝织成厚厚的毛毯。霉腐带来的鲜，剑走偏锋，迥异于肉类和蔬菜。"
+    },
+    {
+      "anchor": "p-yuxiang-lianzi",
+      "dishId": "fw4-04-yuxiang-lianzi",
+      "text": "豆腐帘子做红汤，麻辣也掩不住它超然于众的霉香鲜。即便做红汤，也无法掩盖它超然的风味。"
+    },
+    {
+      "anchor": "p-malaxiangcui-lianzi",
+      "dishId": "fw4-04-malaxiangcui-lianzi",
+      "text": "油炸豆腐帘子外酥内韧，浓稠酱料包围，是耐嚼的零嘴。五香或甜辣，剑走偏锋的下饭零食。"
+    },
+    {
+      "text": "/四川·什邡·红白场社区/",
+      "marker": true
+    },
+    {
+      "anchor": "p-baicai-furu",
+      "dishId": "fw4-04-baicai-furu",
+      "text": "霉豆腐滚上盐辣花椒，用褪水的霜白菜包裹隔绝空气发酵。一粒大豆历经脱胎换骨，浸透百转千回的滋味。"
+    },
+    {
+      "anchor": "p-hongyou-furu",
+      "dishId": "fw4-04-hongyou-furu",
+      "text": "出产大豆和盐的地方多有腐乳，各异风土造就千姿百态。腐乳的美妙奥义，也许只有华人懂得欣赏。"
+    },
+    {
+      "text": "/广东·广州/",
+      "marker": true
+    },
+    {
+      "anchor": "p-nanru-yangnan",
+      "dishId": "fw4-04-nanru-yangnan",
+      "text": "南乳色红酒香奔放，调味羊腩，动植物脂香悱恻缠绵。在岭南，南乳是一种色香味类型的代名词。"
+    },
+    {
+      "anchor": "p-xianjianbing",
+      "dishId": "fw4-04-xianjianbing",
+      "text": "南乳入面，油炸成外脆里软的咸煎饼，是粤式茶点。南乳常常是粤式面点代表性的风味。"
+    },
+    {
+      "anchor": "p-jizaibing",
+      "dishId": "fw4-04-jizaibing",
+      "text": "南乳与冰肉糖渍合馅，烘成咸甜交织、酥化耐嚼的鸡仔饼。南乳在粤式面点里大放异彩。"
+    },
+    {
+      "text": "豆，像一个慢热却忠诚的朋友，已经陪伴了我们几千年。它塑造生态，提供蛋白质，也是美味的魔法师。种豆南山下，此物最相思。"
+    }
+  ],
+  "links": [
+    {
+      "a": "fw4-04-jiucai-ketengzi",
+      "b": "fw4-04-alabo-duncandou",
+      "theme": "豆·去毒与慢熬",
+      "desc": "几乎所有豆荚都含皂苷凝集素，墨脱人把最大的榼藤子水煮九次去毒爆炒，地中海人把干蚕豆熬足十二小时——人们渐渐学会与豆类的相处之道。"
+    },
+    {
+      "a": "fw4-04-polcan",
+      "b": "fw4-04-pibipollo",
+      "theme": "生命三姐妹·玉米豆南瓜",
+      "desc": "玛雅人的米尔帕种植法里，玉米作支撑、豆为土壤固氮、南瓜抢养分；这套互助生态也端上餐桌，化作南瓜豆馅玉米饼与地坑鸡肉豆饼。"
+    },
+    {
+      "a": "fw4-04-guoba-youfen",
+      "b": "fw4-04-wanzamian",
+      "theme": "豌豆·一豆千面",
+      "desc": "同是豌豆，南涧人把它摊成薄脆锅巴又熬成通透油粉、层层合体，重庆人把它煮烂成杂酱浇面——最朴素的果腹之物，被改良成诱人小吃。"
+    },
+    {
+      "a": "fw4-04-huasheng-tang",
+      "b": "fw4-04-xiangyou-ji",
+      "theme": "花生·南北两味",
+      "desc": "花生最早登陆东南沿海：晋江人把它熬成奶白绵密、不见油花的花生汤，化州人则榨出嘹亮的花生油，给白斩鸡最后润饰成香油鸡。"
+    },
+    {
+      "a": "fw4-04-doufu-lianzi",
+      "b": "fw4-04-baicai-furu",
+      "theme": "霉变之鲜·豆腐的升华",
+      "desc": "川西迷恋微生物带来的鲜：崇州把豆腐压薄如帘让菌丝织毯，什邡用霜白菜裹住霉豆腐慢慢发酵——中国人把豆腐带给世界，腐乳的奥义却只华人懂得欣赏。"
+    }
+  ]
+}

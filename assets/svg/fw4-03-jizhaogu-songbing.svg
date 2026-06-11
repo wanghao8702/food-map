@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>鸡爪谷松饼</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="64" rx="34" ry="22" fill="#b9763c"/>
+    <circle cx="50" cy="58" r="2" fill="#b9763c"/>
+    <circle cx="68" cy="62" r="2" fill="#b9763c"/>
+    <circle cx="58" cy="70" r="2" fill="#b9763c"/>
+  </g>
+</svg>

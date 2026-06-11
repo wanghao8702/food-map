@@ -29,11 +29,15 @@
     {"text": "香料，是一种若即若离的存在。它赋予食物鲜明的标签，又坚守自己的秉性。人们不停追寻着香料的气息，陌路相逢，又殊途同归。"}
   ],
   "links": [
-    {"a": "fw1-06-maoniu-rou", "b": "fw1-06-shizhuyu-jidan", "theme": "古辛香·三香"},
-    {"a": "fw1-06-shizhuyu-jidan", "b": "fw1-06-fengyong-sapie", "theme": "辛辣探索"},
-    {"a": "fw1-06-bajiao", "b": "fw1-06-lvrou-huoshao", "theme": "卤·八角"},
-    {"a": "fw1-06-lvrou-huoshao", "b": "fw1-06-chaoshan-luee", "theme": "南北卤水"},
-    {"a": "fw1-06-lvchali-ji", "b": "fw1-06-dongyingong", "theme": "泰国香料"},
-    {"a": "fw1-06-qingzheng-jiangxie", "b": "fw1-06-jiangcu-jiang", "theme": "姜"}
-  ]
+    {"a": "fw1-06-maoniu-rou", "b": "fw1-06-shizhuyu-jidan", "theme": "古辛香·三香", "desc": "四川麻辣牦牛肉的花椒，与台湾食茱萸煎蛋的食茱萸，都是辣椒传入中国之前「三香」古辛香的遗存。"},
+    {"a": "fw1-06-shizhuyu-jidan", "b": "fw1-06-fengyong-sapie", "theme": "古辛香·三香", "desc": "从食茱萸叶的微微发麻，到德宏涮涮辣的瞬间灼烈，是人类对「辛辣」边界一路探索的两个刻度。"},
+    {"a": "fw1-06-bajiao", "b": "fw1-06-lvrou-huoshao", "theme": "南北卤水", "desc": "广西八角的甜香升腾，正是河北驴肉火烧卤水里最张扬的那缕气味——一味香料，让平凡的肉脱胎换骨。"},
+    {"a": "fw1-06-lvrou-huoshao", "b": "fw1-06-chaoshan-luee", "theme": "南北卤水", "desc": "保定驴火与潮汕卤鹅，北卤靠八角茴香、南卤靠高良姜，同一锅卤水，分出南北两种风味方向。"},
+    {"a": "fw1-06-lvchali-ji", "b": "fw1-06-dongyingong", "theme": "泰国香料", "desc": "绿咖喱鸡与冬阴功，泰国人精于新鲜香草，让酸辣甜香层层叠叠，却谁也不独霸味蕾。"},
+    {"a": "fw1-06-qingzheng-jiangxie", "b": "fw1-06-jiangcu-jiang", "theme": "姜", "desc": "清蒸江蟹以姜辟腥、糖醋姜以姜入味，最古老的香料生姜，藏着中国人平衡寒凉的那点哲学。"}
+  ],
+  "groupDesc": {
+    "古辛香·三香": "辣椒传入之前，先民另有取辛之道。四川以花椒成就麻辣牦牛肉，台湾用食茱萸煎一盘蛋——花椒、姜与食茱萸，曾并称「三香」；云南德宏更把涮涮辣拌进蜂蛹撒撇，把辛香一路探到舌尖的极限。",
+    "南北卤水": "一锅卤水，分出南北。广西八角的甜香，是河北驴肉火烧里最张扬的那缕气息；到了潮汕，卤鹅改由高良姜领衔，绛红浓香，另立一派。北靠八角茴香，南靠高良姜，同一门手艺，走出两个方向。"
+  }
 }

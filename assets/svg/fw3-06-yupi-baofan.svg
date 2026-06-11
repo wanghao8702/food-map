@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>鱼皮包饭</title>
+  <rect x="28" y="50" width="64" height="44" rx="4" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <rect x="32" y="54" width="56" height="36" rx="3" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <ellipse cx="60" cy="54" rx="28" ry="8" fill="#b9763c" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="60" y1="54" x2="60" y2="90" stroke="#7a2a1c" stroke-width="1"/>
+  <ellipse cx="48" cy="72" rx="14" ry="10" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <ellipse cx="72" cy="72" rx="14" ry="10" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/></svg>

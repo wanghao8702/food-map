@@ -31,11 +31,14 @@
     {"text": "相濡以滋味，相忘于江湖。每一个制造和享用美食的人，无不历经江湖夜雨，期待桃李春风。"}
   ],
   "links": [
-    {"a": "fw1-05-youmen-daxia", "b": "fw1-05-cajun-crawfish", "theme": "小龙虾·跨洋"},
-    {"a": "fw1-05-lu-jizhua", "b": "fw1-05-luanpichai", "theme": "宵夜江湖"},
-    {"a": "fw1-05-luanpichai", "b": "fw1-05-jinzhou-shaokao", "theme": "宵夜江湖"},
-    {"a": "fw1-05-jinzhou-shaokao", "b": "fw1-05-chaoshan-baizhou", "theme": "宵夜江湖"},
-    {"a": "fw1-05-chao-shanyu", "b": "fw1-05-qingjiang-rou", "theme": "师承"},
-    {"a": "fw1-05-chiyou-ji", "b": "fw1-05-huadiao-xiexie", "theme": "香港·邓天"}
-  ]
+    {"a": "fw1-05-youmen-daxia", "b": "fw1-05-cajun-crawfish", "theme": "小龙虾·跨洋", "desc": "潜江油焖大虾与新奥尔良卡疆小龙虾，同一种小龙虾，一边浓油重辣、一边水煮粗犷，隔着太平洋各成宵夜传奇。"},
+    {"a": "fw1-05-lu-jizhua", "b": "fw1-05-luanpichai", "theme": "宵夜江湖", "desc": "武汉卤味鸡爪与重庆乱劈柴卤菜，都是码头江湖气里长出的市井宵夜，乐趣全在越啃越有的那点摸索。"},
+    {"a": "fw1-05-luanpichai", "b": "fw1-05-jinzhou-shaokao", "theme": "宵夜江湖", "desc": "重庆乱劈柴与锦州小串，一南一北，把宵夜吃成了豪迈、吃成了输赢猜拳的人情江湖。"},
+    {"a": "fw1-05-jinzhou-shaokao", "b": "fw1-05-chaoshan-baizhou", "theme": "宵夜江湖", "desc": "锦州烧烤的烟火喧嚣，最终归于潮汕一碗清淡白糜——再热闹的夜排档，也要落回一碗粥的安顿。"},
+    {"a": "fw1-05-chao-shanyu", "b": "fw1-05-qingjiang-rou", "theme": "师承", "desc": "南京炒鳝与北京清酱肉，都是近乎失传的老手艺，靠师徒间口耳相传，才把这些江湖功夫延续至今。"},
+    {"a": "fw1-05-chiyou-ji", "b": "fw1-05-huadiao-xiexie", "theme": "香港·邓天", "desc": "豉油鸡与花雕蒸花蟹，都出自香港师傅邓天之手，一张一弛之间，见尽粤菜对火候与本味的讲究。"}
+  ],
+  "groupDesc": {
+    "宵夜江湖": "入夜，才是江湖。武汉的卤味鸡爪、重庆的乱劈柴卤菜、锦州炭火上的烧烤小串、潮汕一碗温润的夜糜——天南地北的城市，都在深夜里，用一口热乎的吃食，慰藉散场后的人。"
+  }
 }

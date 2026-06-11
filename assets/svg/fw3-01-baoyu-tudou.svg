@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>鲍鱼炖土豆</title>
+  <ellipse cx="60" cy="75" rx="38" ry="18" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <rect x="22" y="50" width="76" height="26" rx="4" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="50" rx="38" ry="12" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="45" cy="58" rx="12" ry="8" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.2"/>
+  <ellipse cx="72" cy="60" rx="10" ry="7" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.2"/>
+  <line x1="22" y1="30" x2="22" y2="50" stroke="#7a2a1c" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="98" y1="30" x2="98" y2="50" stroke="#7a2a1c" stroke-width="2.5" stroke-linecap="round"/></svg>

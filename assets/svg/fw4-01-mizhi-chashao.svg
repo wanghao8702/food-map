@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>蜜汁叉烧</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="74" rx="40" ry="9" fill="#fbf3e0"/>
+    <path d="M30,58 q30,-16 60,0 q-30,12 -60,0Z" fill="#e8623f"/>
+    <path d="M38,56 V66" fill="none"/>
+    <path d="M50,52 V64" fill="none"/>
+    <path d="M62,51 V64" fill="none"/>
+    <path d="M74,52 V64" fill="none"/>
+    <path d="M84,57 V66" fill="none"/>
+  </g>
+</svg>

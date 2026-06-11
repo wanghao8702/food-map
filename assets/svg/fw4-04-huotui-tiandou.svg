@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>火腿甜豆</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M34,52 q26,-12 52,6 q-4,10 -12,14 q-26,10 -44,-6 q-2,-8 4,-14Z" fill="#7fa860"/>
+    <circle cx="48" cy="60" r="4" fill="#f4c95d"/>
+    <circle cx="60" cy="62" r="4" fill="#f4c95d"/>
+    <circle cx="72" cy="62" r="4" fill="#f4c95d"/>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>虾酱蘸菜</title>
+  <rect x="30" y="62" width="60" height="36" rx="6" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="62" rx="30" ry="10" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.6"/>
+  <rect x="38" y="66" width="44" height="26" rx="4" fill="#e8623f" opacity="0.6"/>
+  <line x1="38" y1="32" x2="38" y2="62" stroke="#7fa860" stroke-width="3" stroke-linecap="round"/>
+  <line x1="50" y1="28" x2="50" y2="62" stroke="#7fa860" stroke-width="3" stroke-linecap="round"/>
+  <line x1="62" y1="26" x2="62" y2="62" stroke="#7fa860" stroke-width="3" stroke-linecap="round"/>
+  <line x1="74" y1="28" x2="74" y2="62" stroke="#7fa860" stroke-width="3" stroke-linecap="round"/>
+  <line x1="86" y1="32" x2="86" y2="62" stroke="#7fa860" stroke-width="3" stroke-linecap="round"/></svg>

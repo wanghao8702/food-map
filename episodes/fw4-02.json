@@ -1,0 +1,319 @@
+{
+  "id": "fw4-02",
+  "title": "稻香阡陌里",
+  "season": 4,
+  "episode": 2,
+  "paragraphs": [
+    {
+      "text": "一颗神奇的种子萌发于东方，滋养了大半个星球。稻作民族以群体之力耕耘，也获得丰厚回报。它朴素平和，衬托万千滋味；也绚丽百变，塑造多彩形态。让我们重新认识稻和它的亲缘家族。"
+    },
+    {
+      "text": "/江苏·南京/",
+      "marker": true
+    },
+    {
+      "anchor": "p-wumifan",
+      "dishId": "fw4-02-wumifan",
+      "text": "南烛叶汁浸染糯米，色素穿过细胞壁，米粒呈现深沉黝黑的色泽。南京，乌饭包油条，主食一加一，简单粗暴的欢愉直击清晨的大脑。"
+    },
+    {
+      "text": "/浙江·台州/",
+      "marker": true
+    },
+    {
+      "anchor": "p-hexiang-wumifan",
+      "dishId": "fw4-02-hexiang-wumifan",
+      "text": "鲜肉与香肠定下基调，山与海的滋味齐头并进，乌米饭统领全局。鲜香在米粒间穿梭，编织出春夏之交的丰饶姿色。"
+    },
+    {
+      "text": "/浙江·台州·陈郭村/",
+      "marker": true
+    },
+    {
+      "anchor": "p-wufan-guoba",
+      "dishId": "fw4-02-wufan-guoba",
+      "text": "紧贴锅底的乌饭饭焦，甜蜜沁润又有令人愉悦的脆口。节日过去，一家齐整，农忙就要开始。"
+    },
+    {
+      "text": "/西班牙/",
+      "marker": true
+    },
+    {
+      "anchor": "p-mozhi-haixianfan",
+      "dishId": "fw4-02-mozhi-haixianfan",
+      "text": "西班牙人用乌贼的墨囊给米饭染色，黑色的米饭出现在欧亚大陆的另一端。也能让我们看到稻米行走的足迹。"
+    },
+    {
+      "text": "/上海/",
+      "marker": true
+    },
+    {
+      "anchor": "p-cifangao",
+      "dishId": "fw4-02-cifangao",
+      "text": "糯米压实切块，油锅煎到外脆里糯，是上海弄堂的清晨味道。以米之名，人们总能在熟悉的谷物里找到新鲜的味觉。"
+    },
+    {
+      "text": "/江苏·苏州/",
+      "marker": true
+    },
+    {
+      "anchor": "p-tuhuangyou-fan",
+      "dishId": "fw4-02-tuhuangyou-fan",
+      "text": "纯蟹膏蟹黄熬成的秃黄油，浇在热米饭上，极致的鲜与香。这座海纳百川的都市，对来自全球的食物也表现出接纳和包容。"
+    },
+    {
+      "text": "/上海/",
+      "marker": true
+    },
+    {
+      "anchor": "p-babaofan",
+      "dishId": "fw4-02-babaofan",
+      "text": "糯米拌猪油白糖，嵌入红绿果脯豆沙，蒸出甜糯丰盈。用米做的甜食，表达对四季岁时的感悟。"
+    },
+    {
+      "text": "/广东·广州/",
+      "marker": true
+    },
+    {
+      "anchor": "p-baozaifan",
+      "dishId": "fw4-02-baozaifan",
+      "text": "瓦煲明火煮饭，腊味油脂渗入米粒，锅底结出焦香饭焦。旧识与新友，人们总能在熟悉的谷物里找到新鲜的味觉。"
+    },
+    {
+      "text": "/意大利/",
+      "marker": true
+    },
+    {
+      "anchor": "p-risotto",
+      "dishId": "fw4-02-risotto",
+      "text": "稻米在高汤里慢搅，释放淀粉，呈现绵密浓稠的奶油质地。米芯仍然坚挺，这种夹生状态正是南欧人执拗的口感。"
+    },
+    {
+      "text": "/韩国/",
+      "marker": true
+    },
+    {
+      "anchor": "p-shiguo-banfan",
+      "dishId": "fw4-02-shiguo-banfan",
+      "text": "滚烫石锅里，米饭、野菜、肉与辣酱拌匀，锅底结出脆香饭焦。对黏糯与锅气的迷恋，是稻作民族共有的爱好。"
+    },
+    {
+      "text": "/日本/",
+      "marker": true
+    },
+    {
+      "anchor": "p-shousi",
+      "dishId": "fw4-02-shousi",
+      "text": "醋饭捏成小团，覆上鲜鱼，米与海味在指尖完成精准的配比。使用筷子、迷恋黏糯，是东亚地区近乎趋同的爱好。"
+    },
+    {
+      "text": "/新疆·乌鲁木齐/",
+      "marker": true
+    },
+    {
+      "anchor": "p-xinjiang-zhuafan",
+      "dishId": "fw4-02-xinjiang-zhuafan",
+      "text": "羊肉、胡萝卜与米同焖，油脂裹住每一粒米，金黄油亮。抓饭泛指与肉类一起烹煮的米饭，诞生于西亚。"
+    },
+    {
+      "text": "/海南·海口/",
+      "marker": true
+    },
+    {
+      "anchor": "p-hainan-jifan",
+      "dishId": "fw4-02-hainan-jifan",
+      "text": "鸡油鸡汤煮饭，米粒油润喷香，配白切文昌鸡同食。以米之名，旧识与新友在熟悉的谷物里相遇。"
+    },
+    {
+      "text": "/中国台湾/",
+      "marker": true
+    },
+    {
+      "anchor": "p-luroufan",
+      "dishId": "fw4-02-luroufan",
+      "text": "肥瘦卤肉碎浇在白饭上，酱汁咸香，是台湾街头的家常。一碗米饭，盛得下最朴素的满足。"
+    },
+    {
+      "text": "/江苏·扬州/",
+      "marker": true
+    },
+    {
+      "anchor": "p-yangzhou-chaofan",
+      "dishId": "fw4-02-yangzhou-chaofan",
+      "text": "米粒分明，蛋香裹饭，火腿青豆虾仁点缀，颗颗金黄。人们把所有的奇思妙想都托付在一粒米里。"
+    },
+    {
+      "text": "/印度/",
+      "marker": true
+    },
+    {
+      "anchor": "p-biryani",
+      "dishId": "fw4-02-biryani",
+      "text": "香料拥抱蓬松的长米，肉与米分层焖香，色彩艳丽。在印度，抓饭有了更多的艳遇。"
+    },
+    {
+      "text": "/沙特阿拉伯/",
+      "marker": true
+    },
+    {
+      "anchor": "p-mandi",
+      "dishId": "fw4-02-mandi",
+      "text": "炭火熏烤的羊肉铺在长米上，香料与烟熏气息交织。它诞生于西亚，伴随阿拉伯人战争与贸易的脚步。"
+    },
+    {
+      "text": "/西班牙·瓦伦西亚/",
+      "marker": true
+    },
+    {
+      "anchor": "p-paella",
+      "dishId": "fw4-02-paella",
+      "text": "平底大锅，兔肉鸡肉与米同煮，藏红花染就金黄，浅水慢收。稻米的前世今生，在大锅里娓娓道来。"
+    },
+    {
+      "text": "/广西·河池·贡川乡/",
+      "marker": true
+    },
+    {
+      "anchor": "p-shengzha-mifen",
+      "dishId": "fw4-02-shengzha-mifen",
+      "text": "籼米轻微发酵，现榨现煮，浮起即捞，软嫩顺滑。嗦一窝，沁出细细的汗，所谓酸爽大抵就是如此。"
+    },
+    {
+      "text": "/广西·桂林/",
+      "marker": true
+    },
+    {
+      "anchor": "p-guilin-mifen",
+      "dishId": "fw4-02-guilin-mifen",
+      "text": "圆润米粉浇上卤水锅烧，干拌或带汤，米香浓郁。在广西，有人群聚落处就有米粉。"
+    },
+    {
+      "text": "/广西·南宁/",
+      "marker": true
+    },
+    {
+      "anchor": "p-laoyou-fen",
+      "dishId": "fw4-02-laoyou-fen",
+      "text": "酸笋、蒜蓉、辣椒爆香，酸辣开胃，是南宁人的早餐魂。每个县份都有自己的地缘性坚持。"
+    },
+    {
+      "text": "/广西·柳州/",
+      "marker": true
+    },
+    {
+      "anchor": "p-luosifen",
+      "dishId": "fw4-02-luosifen",
+      "text": "螺汤打底，酸笋当家，臭与鲜并行，一嗦上瘾。如果米粉有天堂，也许就是广西的样子。"
+    },
+    {
+      "text": "/美国·明尼苏达/",
+      "marker": true
+    },
+    {
+      "anchor": "p-shanbei-yemita",
+      "dishId": "fw4-02-shanbei-yemita",
+      "text": "欧及布威人采收的菰米含水量极高，及时处理后与扇贝叠成塔。他们将菰米视为生命的种子。"
+    },
+    {
+      "text": "/浙江·丽水·大漈乡/",
+      "marker": true
+    },
+    {
+      "anchor": "p-suanjiaobai-xie",
+      "dishId": "fw4-02-suanjiaobai-xie",
+      "text": "腌渍一周的茭白酸味婉约，与拆出的蟹腿肉丝丝入扣。红酸汤的加入，激发出挑的鲜。"
+    },
+    {
+      "text": "/法国·里昂/",
+      "marker": true
+    },
+    {
+      "anchor": "p-yemi-anchun",
+      "dishId": "fw4-02-yemi-anchun",
+      "text": "土豆鹅肝碾泥黏合菰米，填入鹌鹑腹腔，猪皮包裹烤制。野米鹌鹑，是一道经久不衰的里昂乡土料理。"
+    },
+    {
+      "text": "/贵州·黔西南·丰岩村/",
+      "marker": true
+    },
+    {
+      "anchor": "p-yimi-tangba",
+      "dishId": "fw4-02-yimi-tangba",
+      "text": "糯薏米磨粉做皮，包入炒香的紫苏籽馅，彝族的节日点心。薏米汤粑和稻作区的糯米汤圆有异曲同工之妙。"
+    },
+    {
+      "text": "/江苏·苏州/",
+      "marker": true
+    },
+    {
+      "anchor": "p-guihua-tiaotougao",
+      "dishId": "fw4-02-guihua-tiaotougao",
+      "text": "糯粳镶粉调出弹糯，豆沙为芯，桂花点香，条状成形。一年四季，苏州人都沉溺在稻米、猪油和糖组成的世界里。"
+    },
+    {
+      "text": "/日本/",
+      "marker": true
+    },
+    {
+      "anchor": "p-heguozi",
+      "dishId": "fw4-02-heguozi",
+      "text": "米粉塑形，赋予四季草木的审美形态，精致如画。将糕团塑形、赋予审美，是稻米民族共有的行为。"
+    },
+    {
+      "text": "/福建·宁德·古田/",
+      "marker": true
+    },
+    {
+      "anchor": "p-hongqu-jiu",
+      "dishId": "fw4-02-hongqu-jiu",
+      "text": "红曲菌与酵母共生的红曲米充作酒曲，封坛三月，艳红夺目。因为水土、谷物和微生物不同，各地的米酒气质迥异。"
+    },
+    {
+      "text": "/福建·福州/",
+      "marker": true
+    },
+    {
+      "anchor": "p-hongzao-zhaman",
+      "dishId": "fw4-02-hongzao-zhaman",
+      "text": "海鳗用红糟抓拌，酒香深入肌理，裹粉油炸，消肥解腻。咬开的刹那，喷香四溢。"
+    },
+    {
+      "text": "/福建·古田·钱坂村/",
+      "marker": true
+    },
+    {
+      "anchor": "p-tangcu-mishaotu",
+      "dishId": "fw4-02-tangcu-mishaotu",
+      "text": "锅底铺米、岩茶、猪油干烧肉兔，出锅淋上自酿曲醋。醋是酒的下一棒，酒醋同源，起点都在米。"
+    },
+    {
+      "text": "百样米养百样人，稻米被人类驯化，也塑造了人类。一粒稻谷中，有四季风土、大地轮回，也看得见穹顶星空下的我们。"
+    }
+  ],
+  "links": [
+    {
+      "a": "fw4-02-wumifan",
+      "b": "fw4-02-mozhi-haixianfan",
+      "theme": "黑色的米饭·东西两端",
+      "desc": "江南用南烛叶花青素把糯米染成乌黑，西班牙人用乌贼墨囊给米饭染色——欧亚大陆两端，黑色的米饭以完全不同的方式相遇。"
+    },
+    {
+      "a": "fw4-02-biryani",
+      "b": "fw4-02-paella",
+      "theme": "抓饭西行·香料与米",
+      "desc": "公元八世纪稻米传入西班牙，抓饭一路西行到欧洲最南端，藏红花给瓦伦西亚大锅饭染色调味，米芯坚挺的夹生口感，是南欧人执拗的坚持。"
+    },
+    {
+      "a": "fw4-02-shanbei-yemita",
+      "b": "fw4-02-suanjiaobai-xie",
+      "theme": "菰的两种命运",
+      "desc": "同一种沼生菰，在北美湖区结籽成野米、被欧及布威人视作生命的种子；在中国却因黑粉菌侵染、茎部膨大成茭白，人们只识其鲜，淡忘了它的谷物身世。"
+    },
+    {
+      "a": "fw4-02-hongqu-jiu",
+      "b": "fw4-02-hongzao-zhaman",
+      "theme": "红曲·从酒到糟",
+      "desc": "红曲菌与酵母共生的红曲米可充酒曲，封坛酿出艳红的红曲酒；压榨后的酒糟红糟也不浪费，为闽菜的炸鳗注入鲜明的色与香。"
+    }
+  ]
+}

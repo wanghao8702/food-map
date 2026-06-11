@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>羊肉翡麦填烤鸡</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="70" rx="38" ry="25" fill="#b9763c"/>
+    <ellipse cx="60" cy="64" rx="29" ry="16" fill="#f0a05a"/>
+    <path d="M30,62 q-9,-9 0,-17 q7,7 6,17Z" fill="#e8623f"/>
+    <path d="M90,62 q9,-9 0,-17 q-7,7 -6,17Z" fill="#e8623f"/>
+    <circle cx="49" cy="66" r="2.3" fill="#7a2a1c"/>
+    <circle cx="60" cy="68" r="2.3" fill="#7a2a1c"/>
+    <circle cx="71" cy="66" r="2.3" fill="#7a2a1c"/>
+  </g>
+</svg>

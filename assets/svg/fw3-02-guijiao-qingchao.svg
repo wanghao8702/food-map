@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>清炒佛手螺</title>
+  <ellipse cx="60" cy="65" rx="30" ry="22" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M40,55 Q50,35 60,45 Q70,35 80,55" fill="none" stroke="#e8623f" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="55" cy="62" r="5" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="66" cy="65" r="4" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="58" cy="72" r="4.5" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.2"/>
+  <path d="M30,64 Q60,58 90,64" fill="none" stroke="#7fa860" stroke-width="1.2"/></svg>

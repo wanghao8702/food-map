@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>虾子捞面</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M22,58 H98 a38,30 0 0 1 -76,0 Z" fill="#fbf3e0"/>
+    <path d="M30,58 q8,-8 16,0 q8,-8 16,0 q8,-8 16,0" fill="none"/>
+    <path d="M34,52 q8,-7 16,0 q8,-7 16,0" fill="none"/>
+    <circle cx="44" cy="60" r="2" fill="#7a2a1c"/>
+    <circle cx="60" cy="62" r="2" fill="#7a2a1c"/>
+    <circle cx="76" cy="60" r="2" fill="#7a2a1c"/>
+    <path d="M80,40 q10,2 8,12" fill="none" stroke="#e8623f" stroke-width="2.2"/>
+  </g>
+</svg>

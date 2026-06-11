@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>莜麦窝窝</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M44,46 q-3,24 0,40 h6 q-3,-16 0,-40Z" fill="#fbf3e0"/>
+    <path d="M57,44 q-3,26 0,42 h6 q-3,-16 0,-42Z" fill="#fbf3e0"/>
+    <path d="M70,46 q-3,24 0,40 h6 q-3,-16 0,-40Z" fill="#fbf3e0"/>
+    <ellipse cx="60" cy="86" rx="26" ry="5" fill="#b9763c"/>
+  </g>
+</svg>

@@ -10,47 +10,84 @@
   --ink-soft:#6B6453;  /* 次级文字 */
 }
 *{box-sizing:border-box}
-body{margin:0;font-family:"Noto Serif SC",serif;background:var(--paper);color:var(--ink)}
-header{display:flex;align-items:center;gap:12px;padding:10px 18px;background:var(--band);border-bottom:2px solid var(--line)}
+body{margin:0;font-family:"Noto Serif SC",serif;background:var(--paper);color:var(--ink);display:flex;flex-direction:column;height:100vh;overflow:hidden}
+header{display:flex;align-items:center;gap:12px;padding:10px 18px;background:var(--band);border-bottom:2px solid var(--line);flex:0 0 auto}
 header h1{font-size:18px;margin:0;color:var(--ink)}
+#home{color:var(--ink-soft);text-decoration:none;font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:14px;background:var(--paper-2)}
+#home:hover{border-color:var(--accent);color:var(--accent-2)}
 #back{background:var(--accent);color:#fff;border:none;border-radius:14px;padding:4px 12px;cursor:pointer}
 #back:hover{background:var(--accent-2)}
-#stage{width:100%;height:calc(100vh - 56px)}
-#map{width:100%;height:100%;display:block;background:#f4ecd8;cursor:grab;touch-action:none}
+#minortoggle{margin-left:auto;font-size:12px;color:var(--ink-soft);cursor:pointer;display:flex;align-items:center;gap:4px;user-select:none}
+#minortoggle[hidden]{display:none}
+#minortoggle input{cursor:pointer;margin:0}
+#stage{flex:1 1 auto;min-height:0;width:100%;position:relative}
+#map{width:100%;height:100%;display:block;background:#f4ecd8;cursor:grab;touch-action:none;transform-origin:center center}
+/* 钻取(进入中国)/返回(回世界)切换动画：缩放 + 淡入淡出 */
+#map.anim-leave-in{animation:swapLeaveIn .2s ease forwards}
+#map.anim-enter-in{animation:swapEnterIn .3s ease}
+#map.anim-leave-out{animation:swapLeaveOut .2s ease forwards}
+#map.anim-enter-out{animation:swapEnterOut .3s ease}
+@keyframes swapLeaveIn{to{opacity:0;transform:scale(1.12)}}
+@keyframes swapEnterIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:none}}
+@keyframes swapLeaveOut{to{opacity:0;transform:scale(.9)}}
+@keyframes swapEnterOut{from{opacity:0;transform:scale(1.12)}to{opacity:1;transform:none}}
 .basemap path{fill:#e3d5ad;stroke:#b9985a;stroke-width:.4;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .pin{cursor:pointer}
-.pin-inner{transition:transform .12s ease}
-.pin:hover .pin-inner{transform:scale(1.2)}
+.pin-inner{transform:scale(var(--pscale,1));transition:transform .1s ease}
+.pin:hover .pin-inner{transform:scale(calc(var(--pscale,1) * 1.5))}
 .pin-bg{fill:#fffdf7;stroke:var(--accent);stroke-width:1.4}
 .pin:hover .pin-bg{stroke-width:2}
 .pin-img{pointer-events:none}
 .cluster{cursor:pointer}
-.cl-inner{transition:transform .12s ease}
-.cluster:hover .cl-inner{transform:scale(1.08)}
+.cl-inner{transform:scale(var(--pscale,1));transition:transform .1s ease}
+.cluster:hover .cl-inner{transform:scale(calc(var(--pscale,1) * 1.12))}
 .cl-disc{fill:#fffdf7;stroke:var(--accent);stroke-width:1.2}
 .cl-badge circle{fill:var(--accent);stroke:#fff;stroke-width:1.5}
 .cl-badge text{fill:#fff;font-size:12px;font-weight:700;pointer-events:none}
 
 /* 视图切换 / 集标签 / 风味连接 */
-#viewtabs{display:flex;gap:6px;margin-left:8px}
-#viewtabs button{border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);border-radius:14px;padding:4px 14px;cursor:pointer;font-size:13px;font-family:inherit}
-#viewtabs button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-#eptabs{display:flex;flex-wrap:wrap;gap:6px;padding:8px 18px;background:var(--band);border-bottom:1px solid var(--line)}
-#eptabs button{border:1px solid var(--line);background:var(--paper-2);color:var(--ink);border-radius:12px;padding:3px 12px;cursor:pointer;font-size:12px;font-family:inherit}
-#eptabs button:hover{border-color:var(--accent)}
-#eptabs button.active{background:var(--accent-2);color:#fff;border-color:var(--accent-2)}
+/* 底部两行「季/集」点击导航 */
+#mapnav{display:flex;flex-direction:column;gap:6px;padding:8px 14px;background:var(--band);border-top:2px solid var(--line);flex:0 0 auto}
+#mapnav[hidden]{display:none}
+.nav-row{display:flex;gap:6px;align-items:center;overflow-x:auto;white-space:nowrap}
+.nav-row[hidden]{display:none}
+#mapnav button{flex:0 0 auto;border:1px solid var(--line);background:var(--paper-2);color:var(--ink);border-radius:12px;padding:4px 12px;cursor:pointer;font-size:12px;font-family:inherit}
+#mapnav button:hover{border-color:var(--accent)}
+#mapnav button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+/* 第一行：季级，强调 */
+.nav-row button.season{font-weight:700;font-size:13px;padding:5px 16px}
+/* 第二行：集级，略小、缩进对齐 */
+.nav-row-ep{padding-left:6px}
+.nav-row-ep button{background:var(--paper-2);color:var(--ink-soft)}
+.nav-row-ep button.active{background:var(--accent-2);color:#fff;border-color:var(--accent-2)}
+/* 集级按钮加一点「连接」暗示：左侧小弧线圆点 */
+.nav-row-ep button.ep-conn::before{content:"◠ ";color:var(--accent);font-weight:700}
+.nav-row-ep button.ep-conn.active::before{color:#fff}
 #stage{position:relative}
 #conn-label{position:absolute;left:50%;top:12px;transform:translateX(-50%);color:#fff;font-size:13px;font-weight:700;padding:4px 16px;border-radius:14px;box-shadow:0 2px 8px rgba(60,40,10,.25);pointer-events:none;z-index:5}
 .arc{fill:none;stroke-width:2.4;stroke-linecap:round;opacity:.85;transition:opacity .12s,stroke-width .12s}
 .arc.hl{stroke-width:4.5;opacity:1}
 .arc.dim{opacity:.15}
 .arc-hit{fill:none;stroke:transparent;stroke-width:16;pointer-events:stroke;cursor:pointer}
-#panel{position:fixed;top:56px;right:0;width:360px;max-width:90vw;height:calc(100vh - 56px);
-  background:var(--paper-2);border-left:2px solid var(--line);box-shadow:-6px 0 24px rgba(60,40,10,.18);
-  padding:18px 20px;overflow:auto;animation:slide .18s ease}
-@keyframes slide{from{transform:translateX(40px);opacity:.3}to{transform:none;opacity:1}}
-#panel .close{position:absolute;top:8px;right:12px;border:none;background:none;font-size:22px;cursor:pointer;color:var(--accent-2)}
-#panel .art{display:block;width:120px;height:120px;margin:6px auto}
+/* 详情浮卡：锚定在被点击图钉旁，带指向小三角 */
+#panel{position:fixed;width:300px;max-width:92vw;background:var(--paper-2);
+  border:1.5px solid var(--line);border-radius:14px;box-shadow:0 8px 30px rgba(60,40,10,.28);
+  overflow:visible;z-index:8;animation:pop .16s ease}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+#panel .pp-body{padding:14px 16px 16px;max-height:74vh;overflow:auto;border-radius:14px}
+#panel .close{position:absolute;top:6px;right:10px;border:none;background:none;font-size:22px;line-height:1;cursor:pointer;color:var(--accent-2);z-index:2}
+#panel .art{display:block;width:110px;height:110px;margin:2px auto 4px}
+/* 指向三角(双层：外描边 + 内填充)，data-side 决定朝向 */
+#panel::before,#panel::after{content:"";position:absolute;width:0;height:0;border:9px solid transparent;pointer-events:none}
+#panel::after{border-width:8px}
+#panel[data-side="right"]::before{left:-18px;top:var(--caret-y);margin-top:-9px;border-right-color:var(--line)}
+#panel[data-side="right"]::after{left:-15px;top:var(--caret-y);margin-top:-8px;border-right-color:var(--paper-2)}
+#panel[data-side="left"]::before{right:-18px;top:var(--caret-y);margin-top:-9px;border-left-color:var(--line)}
+#panel[data-side="left"]::after{right:-15px;top:var(--caret-y);margin-top:-8px;border-left-color:var(--paper-2)}
+#panel[data-side="bottom"]::before{top:-18px;left:var(--caret-x);margin-left:-9px;border-bottom-color:var(--line)}
+#panel[data-side="bottom"]::after{top:-15px;left:var(--caret-x);margin-left:-8px;border-bottom-color:var(--paper-2)}
+#panel[data-side="top"]::before{bottom:-18px;left:var(--caret-x);margin-left:-9px;border-top-color:var(--line)}
+#panel[data-side="top"]::after{bottom:-15px;left:var(--caret-x);margin-left:-8px;border-top-color:var(--paper-2)}
 #panel h2{text-align:center;color:var(--ink);margin:6px 0}
 #panel .meta{text-align:center;color:var(--ink-soft);font-size:12px;margin:0 0 10px}
 #panel h3{font-size:13px;color:var(--accent-2);margin:14px 0 4px}
@@ -70,3 +107,47 @@ header h1{font-size:18px;margin:0;color:var(--ink)}
 .ft-box .loc{color:var(--ink-soft);font-weight:700}
 .ft-box .seg .tag{display:inline-block;background:var(--accent);color:#fff;font-size:11px;border-radius:8px;padding:0 6px;margin-right:6px}
 .ft-box .seg.active{background:rgba(217,119,87,.22);border-radius:6px;padding:6px 8px;transition:background .3s}
+
+/* ---------- 风味连接弹窗 ---------- */
+#connmodal{position:fixed;inset:0;z-index:12;display:flex;justify-content:center;align-items:center;padding:4vh 16px}
+#connmodal[hidden]{display:none}
+.cm-backdrop{position:absolute;inset:0;background:rgba(40,25,10,.5)}
+.cm-card{position:relative;background:var(--paper-2);width:680px;max-width:96vw;max-height:92vh;overflow:auto;border-radius:12px;padding:22px 24px 26px;box-shadow:0 8px 30px rgba(60,40,10,.3);animation:cmPop .2s ease}
+@keyframes cmPop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+.cm-close{position:absolute;top:8px;right:14px;border:none;background:none;font-size:24px;cursor:pointer;color:var(--accent-2)}
+.cm-theme{display:inline-block;background:var(--accent);color:#fff;font-size:15px;font-weight:700;padding:5px 18px;border-radius:16px;box-shadow:0 2px 8px rgba(60,40,10,.2)}
+.cm-desc{margin:14px 0 18px;line-height:1.85;color:var(--ink);font-size:14px}
+.cm-pair{display:flex;align-items:stretch;gap:12px}
+.cm-dish{flex:1 1 0;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:14px 14px 16px;text-align:center}
+.cm-art{width:96px;height:96px;display:block;margin:0 auto 6px}
+.cm-name{font-weight:700;color:var(--ink);font-size:15px}
+.cm-region{color:var(--ink-soft);font-size:12px;margin:2px 0 8px}
+.cm-intro{text-align:left;line-height:1.8;color:var(--ink-soft);font-size:13px;margin:0}
+.cm-arrow{flex:0 0 auto;align-self:center;color:var(--accent);font-size:22px;font-weight:700}
+@media (max-width:560px){.cm-pair{flex-direction:column}.cm-arrow{transform:rotate(90deg)}}
+/* 一个主题串起 3 道以上美食时：所有美食换行铺开（讲解仍是上方一整段） */
+.cm-pair.cm-multi{flex-wrap:wrap;gap:14px}
+.cm-pair.cm-multi .cm-dish{flex:1 1 150px;min-width:140px}
+
+/* ---------- 季节简介卡片：常驻左上角（仿豆瓣条目：封面 + 信息），不挡操作、无需关闭 ---------- */
+#seasoncard{position:fixed;left:12px;top:64px;z-index:6;display:flex;gap:12px;
+  width:338px;max-width:calc(100vw - 24px);background:var(--paper-2);
+  border:1.5px solid var(--line);border-radius:12px;padding:12px 12px 12px 12px;
+  box-shadow:0 6px 20px rgba(60,40,10,.22);animation:pop .18s ease}
+#seasoncard[hidden]{display:none}
+.sc-close{position:absolute;top:3px;right:7px;border:none;background:none;font-size:17px;line-height:1;cursor:pointer;color:var(--accent-2)}
+.sc-close:hover{color:var(--accent)}
+.sc-cover-wrap{position:relative;flex:0 0 80px;width:80px;height:112px;border-radius:6px;overflow:hidden;background:var(--tint,#cc785c);display:flex;align-items:center;justify-content:center}
+.sc-cover-fallback{color:#fff;font-size:12px;font-weight:700;text-align:center;padding:0 5px;line-height:1.45;opacity:.95}
+.sc-cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sc-info{flex:1 1 0;min-width:0}
+.sc-title{margin:0 16px 4px 0;font-size:15px;color:var(--ink);line-height:1.3}
+.sc-meta{color:var(--ink-soft);font-size:11px;margin-bottom:5px;line-height:1.5}
+.sc-rating{display:flex;align-items:baseline;gap:5px;margin-bottom:6px}
+.sc-score{font-size:20px;font-weight:800;color:#e09b3a}
+.sc-score-tag{font-size:10px;color:var(--ink-soft)}
+.sc-score-na{font-size:12px;color:var(--ink-soft);font-style:italic}
+.sc-summary{line-height:1.65;color:var(--ink-soft);font-size:12px;margin:0 0 6px}
+.sc-link{display:inline-block;color:var(--accent);text-decoration:none;font-size:12px;font-weight:700}
+.sc-link:hover{color:var(--accent-2)}
+@media (max-width:480px){#seasoncard{width:calc(100vw - 24px)}}

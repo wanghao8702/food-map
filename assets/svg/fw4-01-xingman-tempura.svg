@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>星鳗天妇罗</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M30,52 q30,-12 60,0 q-4,8 0,14 q-30,12 -60,0 q4,-6 0,-14Z" fill="#f0a05a"/>
+    <path d="M36,54 H84" fill="none" stroke="#b9763c"/>
+    <circle cx="48" cy="58" r="1.8" fill="#f4c95d"/>
+    <circle cx="62" cy="60" r="1.8" fill="#f4c95d"/>
+    <circle cx="74" cy="58" r="1.8" fill="#f4c95d"/>
+  </g>
+</svg>

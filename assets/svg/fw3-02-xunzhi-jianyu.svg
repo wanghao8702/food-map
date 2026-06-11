@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>熏炙鲣鱼</title>
+  <path d="M25,60 C35,40 85,40 95,60 C85,80 35,80 25,60 Z" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M91,54 L104,52 L96,62 Z" fill="#b9763c" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="34" cy="57" r="3.5" fill="#7a2a1c"/>
+  <line x1="48" y1="46" x2="48" y2="74" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="60" y1="44" x2="60" y2="76" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="72" y1="46" x2="72" y2="74" stroke="#7a2a1c" stroke-width="1"/>
+  <path d="M48,44 Q60,38 72,44" fill="none" stroke="#f4c95d" stroke-width="1.5"/></svg>

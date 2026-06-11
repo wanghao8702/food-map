@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>意大利海鲜汤</title>
+  <ellipse cx="60" cy="78" rx="40" ry="22" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <rect x="20" y="54" width="80" height="26" rx="8" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="54" rx="40" ry="12" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M36,60 C38,52 46,50 50,58" fill="none" stroke="#fbf3e0" stroke-width="2" stroke-linecap="round"/>
+  <path d="M56,58 C58,50 66,50 68,58" fill="none" stroke="#fbf3e0" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="78" cy="60" r="8" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.2"/>
+  <path d="M74,60 Q78,54 82,60" fill="none" stroke="#7a2a1c" stroke-width="1.2"/>
+  <path d="M38,70 C42,64 50,64 52,70" fill="none" stroke="#fbf3e0" stroke-width="1.5"/>
+  <circle cx="62" cy="68" r="5" fill="#e8623f" stroke="#7a2a1c" stroke-width="1"/></svg>

@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>风味地图 · 风味人间</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header>
+  <a id="home" href="./index.html" title="返回首页">← 首页</a>
+  <h1>风味地图 · 风味人间</h1>
+  <button id="back" hidden>← 返回世界</button>
+  <label id="minortoggle" hidden title="纪录片里一闪而过的小食/拼盘菜，默认隐藏以减少拥挤">
+    <input type="checkbox" id="minorchk"> 显示短暂出现的食物
+  </label>
+</header>
+<main id="stage">
+  <svg id="map" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet"></svg>
+  <div id="conn-label" hidden></div>
+</main>
+<nav id="mapnav"></nav>
+<aside id="panel" hidden></aside>
+<div id="connmodal" hidden></div>
+<div id="seasoncard" hidden></div>
+<div id="fulltext" hidden></div>
+<script type="module">
+  import { init, renderWorld, renderConnections, getEpisodes, setScope, setShowMinor, onReady } from './src/map.js';
+  import { openPanel, bindFulltext, openConnModal, openSeasonCard } from './src/panel.js';
+  import { openFulltext } from './src/fulltext.js';
+  init(openPanel, openConnModal);
+  bindFulltext(openFulltext);
+  document.getElementById('minorchk').addEventListener('change', e=> setShowMinor(e.target.checked));
+
+  const mapnav = document.getElementById('mapnav');
+  let row1, row2, seasonChips = [], epChips = [];
+
+  // 底部两行「季/集」导航：第一行选季（全部/S1/S2，普通图钉地图）；
+  // 第二行点「本季全部」回到该季图钉地图，点具体某集 → 进入该集「风味连接」弧线视图。
+  onReady(function buildNav(){
+    const eps = getEpisodes();
+    const seasons = [...new Set(eps.map(e=>e.season))].sort((a,b)=>a-b);
+    mapnav.innerHTML = '';
+    row1 = document.createElement('div'); row1.className = 'nav-row';
+    row2 = document.createElement('div'); row2.className = 'nav-row nav-row-ep';
+    mapnav.append(row1, row2);
+    seasonChips = [];
+    const mkSeason = (label, fn)=>{
+      const b = document.createElement('button'); b.textContent = label; b.className = 'season';
+      b.addEventListener('click', ()=>{ seasonChips.forEach(c=>c.classList.toggle('active', c===b)); fn(); });
+      seasonChips.push(b); row1.appendChild(b); return b;
+    };
+    const allBtn = mkSeason('全部', ()=>{ setScope(null,null); showEpisodes(null); openSeasonCard(null); });
+    seasons.forEach(s=> mkSeason(`风味人间S${s}`, ()=>{ setScope(s,null); showEpisodes(s); openSeasonCard(s); }) );
+    allBtn.classList.add('active');
+    showEpisodes(null);
+  });
+  function showEpisodes(season){
+    row2.innerHTML = ''; epChips = [];
+    if(season==null){ row2.hidden = true; return; }
+    row2.hidden = false;
+    const mkEp = (label, fn)=>{
+      const b = document.createElement('button'); b.textContent = label;
+      b.addEventListener('click', ()=>{ epChips.forEach(c=>c.classList.toggle('active', c===b)); fn(); });
+      epChips.push(b); row2.appendChild(b); return b;
+    };
+    mkEp('本季全部', ()=>{ setScope(season,null); openSeasonCard(season); }).classList.add('active');
+    getEpisodes().filter(e=>e.season===season).forEach(e=>{
+      const b = mkEp(`${e.episode}·${e.title}`, ()=>renderConnections(season, e.episode));
+      b.title = '查看本集风味连接';
+      b.classList.add('ep-conn');
+    });
+  }
+</script>
+</body></html>

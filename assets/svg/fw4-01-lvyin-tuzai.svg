@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>绿茵兔仔饺</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="66" rx="30" ry="20" fill="#fbf3e0"/>
+    <ellipse cx="60" cy="66" rx="30" ry="20" fill="#7fa860" opacity="0.35"/>
+    <path d="M52,50 q-6,-14 2,-18 q4,8 2,18Z" fill="#fbf3e0"/>
+    <path d="M64,50 q6,-14 -2,-18 q-4,8 -2,18Z" fill="#fbf3e0"/>
+    <circle cx="54" cy="64" r="2" fill="#e8623f"/>
+    <circle cx="66" cy="64" r="2" fill="#e8623f"/>
+  </g>
+</svg>

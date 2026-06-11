@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>藕丝糖</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="60" rx="30" ry="22" fill="#fbf3e0"/>
+    <path d="M34,52 H86 M33,60 H87 M34,68 H86" fill="none" stroke="#f0a05a" stroke-width="1.2"/>
+    <path d="M40,46 H80 M40,74 H80" fill="none" stroke="#f0a05a" stroke-width="1.2"/>
+  </g>
+</svg>

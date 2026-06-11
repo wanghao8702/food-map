@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>秃黄油盖饭</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M26,60 H94 a34,28 0 0 1 -68,0 Z" fill="#f0a05a"/>
+    <path d="M30,60 a30,8 0 0 1 60,0 Z" fill="#f4c95d"/>
+    <circle cx="46" cy="57" r="1.6" fill="#b9763c"/>
+    <circle cx="60" cy="55" r="1.6" fill="#b9763c"/>
+    <circle cx="74" cy="57" r="1.6" fill="#b9763c"/>
+  </g>
+</svg>

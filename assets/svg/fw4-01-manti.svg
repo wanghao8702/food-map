@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>土耳其饺子</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M40,52 L60,44 L80,52 L72,74 L48,74 Z" fill="#fbf3e0"/>
+    <path d="M60,44 L60,74 M40,52 L72,74 M80,52 L48,74" fill="none" stroke="#b9763c" stroke-width="1.2"/>
+    <circle cx="60" cy="60" r="5" fill="#e8623f"/>
+  </g>
+</svg>

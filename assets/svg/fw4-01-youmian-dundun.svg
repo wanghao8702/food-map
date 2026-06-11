@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>莜面墩墩</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="64" rx="26" ry="28" fill="#fbf3e0"/>
+    <ellipse cx="60" cy="64" rx="15" ry="17" fill="#7fa860"/>
+    <ellipse cx="60" cy="64" rx="7" ry="8" fill="#f0a05a"/>
+  </g>
+</svg>

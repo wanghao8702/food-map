@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>安第斯根茎挞</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="40" y="70" width="40" height="14" rx="3" fill="#b9763c"/>
+    <rect x="44" y="56" width="32" height="16" rx="3" fill="#f4c95d"/>
+    <circle cx="60" cy="50" r="7" fill="#e8623f"/>
+  </g>
+</svg>

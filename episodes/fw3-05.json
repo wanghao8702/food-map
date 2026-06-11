@@ -1,0 +1,96 @@
+{
+  "id": "fw3-05",
+  "title": "时鲜·秋去春来",
+  "season": 3,
+  "episode": 5,
+  "paragraphs": [
+    {
+      "text": "汪洋沧海，亦有寒暑气象；鱼虾蚌蟹，随四季来去隐现。讨海人应时而动，鲜总与季节和时令关联。冬去夏往，春秋书写于餐盘，冷暖潜行于人间。"
+    },
+    {
+      "text": "/浙江舟山（延绳钓渔船）/",
+      "marker": true
+    },
+    {
+      "anchor": "p-huangjin-daiyu",
+      "dishId": "fw3-05-huangjin-daiyu",
+      "text": "鱼身略薄的适合油炸，表皮香酥，内里依然鲜嫩。带鱼最极致的鲜，或许出自渔船的灶头。"
+    },
+    {
+      "anchor": "p-qingzheng-daiyu",
+      "dishId": "fw3-05-qingzheng-daiyu",
+      "text": "趁新鲜清蒸，外层银脂裂开，鱼肉细腻温润。带鱼，骨架简单，鱼肉柔弱娇嫩，火力大会使其支离破碎，小火清蒸最宜。"
+    },
+    {
+      "text": "/山东烟台·牟平/",
+      "marker": true
+    },
+    {
+      "anchor": "p-cuiban-haichang",
+      "dishId": "fw3-05-cuiban-haichang",
+      "text": "单环刺螠，胶东人叫它海肠，开春最是肥美。去除内脏，只剩肥厚的体壁肌肉，剪成段，入水汆烫，柔韧而富有弹性。撒盐，混合蒜泥芹菜凉拌，口感爽脆，有提神的香气。"
+    },
+    {
+      "anchor": "p-chunjiu-haichang",
+      "dishId": "fw3-05-chunjiu-haichang",
+      "text": "切春韭爆炒，醒目的辛和温柔的鲜相拥。山野的新嫩与海洋的鲜美在春季相逢，海肠的旺发期只有两个月，随着气温升高，它们将让出这片舞台。"
+    },
+    {
+      "text": "/广东广州·万顷沙/",
+      "marker": true
+    },
+    {
+      "anchor": "p-fengweiyuchun-bao",
+      "dishId": "fw3-05-fengweiyuchun-bao",
+      "text": "凤尾鱼春，胶着的颗粒晶莹圆润。用来做煲仔饭，醇厚的味道渗透米粒，鲜香随热气扩散。海洋季风吹散春天的凉意，鱼子的鲜美在热锅中尽情绽放。"
+    },
+    {
+      "text": "/广东广州·南沙/",
+      "marker": true
+    },
+    {
+      "anchor": "p-haidan-caoxia",
+      "dishId": "fw3-05-haidan-caoxia",
+      "text": "脊尾白虾，广东人叫它曹虾，膏黄充盈，子粒满怀。虾头熬汤做底，鱼子酱和海胆左右合围，曹虾以甘鲜清甜卓然而立。"
+    },
+    {
+      "anchor": "p-baizhuо-caoxia",
+      "dishId": "fw3-05-baizhuо-caoxia",
+      "text": "只需简单白灼，就能一步直抵曹虾的至鲜境界。粉白的壳包着水润的肉，一只，美好就咬进了嘴巴。时令鲜物，总是昙花一现即走，却年复一年又来。"
+    },
+    {
+      "text": "/辽宁大连·小黑石/",
+      "marker": true
+    },
+    {
+      "anchor": "p-shengyin-chijiahong",
+      "dishId": "fw3-05-shengyin-chijiahong",
+      "text": "石蟹，生活在近岸礁石地带，腹部和螯足边缘呈红色，又名赤甲红。花椒大料和酱油，煮好卤汁，冷却后浸泡两个昼夜。辽东生腌，蟹肉有胶冻的弹润，咸鲜中有温和的甜。"
+    },
+    {
+      "anchor": "p-qingzheng-chijiahong",
+      "dishId": "fw3-05-qingzheng-chijiahong",
+      "text": "上灶蒸，一刻钟，外壳变成漂亮的鲜红色。用力敲开，肥厚的膏肉毕现无遗。相比其他海蟹，赤甲红在甜度上更胜一筹，这是甘氨酸等甜味物质累积的结果。"
+    },
+    {
+      "text": "海面上，望尽风云变幻，忘却岁月更迭。大海化育有时，人们朝夕收获。那些形形色色的海错，经年往返，有如春华秋实、夏雨冬雪，仿佛回应着大地的四季、人间的凉热。"
+    }
+  ],
+  "links": [
+    {
+      "a": "fw3-05-cuiban-haichang",
+      "b": "fw3-05-chunjiu-haichang",
+      "theme": "海肠应春·两种吃法"
+    },
+    {
+      "a": "fw3-05-fengweiyuchun-bao",
+      "b": "fw3-05-haidan-caoxia",
+      "theme": "春夏时鲜·转瞬即逝"
+    },
+    {
+      "a": "fw3-05-shengyin-chijiahong",
+      "b": "fw3-05-qingzheng-chijiahong",
+      "theme": "生腌vs蒸·赤甲红两面"
+    }
+  ]
+}

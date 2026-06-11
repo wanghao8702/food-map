@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>苦荞酒</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M50,40 h20 v10 l6,8 v26 a6,6 0 0 1 -6,6 h-20 a6,6 0 0 1 -6,-6 v-26 l6,-8 Z" fill="#7fa860"/>
+    <rect x="52" y="34" width="16" height="8" rx="2" fill="#b9763c"/>
+    <rect x="46" y="70" width="28" height="12" fill="#fbf3e0" opacity="0.55"/>
+  </g>
+</svg>

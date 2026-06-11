@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>翡麦配鸡肉</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M24,62 a36,20 0 0 0 72,0 Z" fill="#b9763c"/>
+    <ellipse cx="60" cy="62" rx="36" ry="9" fill="#f4c95d"/>
+    <circle cx="48" cy="60" r="3" fill="#7fa860"/>
+    <circle cx="62" cy="58" r="3" fill="#e8623f"/>
+    <circle cx="72" cy="61" r="3" fill="#f0a05a"/>
+    <path d="M40,56 q4,-6 9,-2" fill="none"/>
+  </g>
+</svg>

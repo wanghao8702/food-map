@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>蒜蓉蒸沙虫</title>
+  <path d="M30,55 C32,42 42,38 50,45 C58,52 62,52 70,45 C78,38 88,42 90,55 C92,68 82,80 70,75 C62,70 58,70 50,75 C38,80 28,68 30,55 Z" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M40,50 C44,40 56,40 60,50 C64,40 76,40 80,50" fill="none" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="42" cy="68" r="5" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="60" cy="72" r="5" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="78" cy="68" r="5" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1"/></svg>

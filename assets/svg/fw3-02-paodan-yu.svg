@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>炮弹鱼炖五花肉</title>
+  <ellipse cx="60" cy="72" rx="36" ry="20" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M28,58 C40,42 80,42 92,58" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="58" rx="32" ry="10" fill="#b9763c" stroke="#7a2a1c" stroke-width="1"/>
+  <path d="M88,50 L98,50 L93,44 Z" fill="#b9763c" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="34" cy="55" r="3" fill="#7a2a1c"/>
+  <line x1="50" y1="50" x2="55" y2="60" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="60" y1="48" x2="60" y2="60" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="70" y1="50" x2="65" y2="60" stroke="#7a2a1c" stroke-width="1"/></svg>

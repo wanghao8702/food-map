@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>薄壳芋头煲</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M30,58 h60 v8 a30,22 0 0 1 -60,0 Z" fill="#b9763c"/>
+    <ellipse cx="60" cy="58" rx="30" ry="9" fill="#b9763c"/>
+    <path d="M22,58 h76" fill="none" stroke="#7a2a1c" stroke-width="1.6"/>
+    <circle cx="54" cy="56" r="2.4" fill="#e8623f"/>
+    <circle cx="66" cy="57" r="2.4" fill="#7fa860"/>
+  </g>
+</svg>

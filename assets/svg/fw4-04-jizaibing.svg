@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>鸡仔饼</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M32,66 q4,-26 28,-26 q24,0 28,26 q-28,8 -56,0Z" fill="#b9763c"/>
+    <ellipse cx="60" cy="66" rx="28" ry="7" fill="#f4c95d"/>
+    <path d="M44,56 q16,-8 32,0" fill="none" stroke="#7a2a1c" stroke-width="1.2"/>
+  </g>
+</svg>

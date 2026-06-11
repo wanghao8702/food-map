@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>大地鱼粉菜粿</title>
+  <ellipse cx="60" cy="78" rx="36" ry="18" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="60" rx="30" ry="20" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M34,60 Q60,46 86,60" fill="none" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="48" cy="68" r="8" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="72" cy="68" r="8" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="60" cy="58" r="6" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1"/></svg>

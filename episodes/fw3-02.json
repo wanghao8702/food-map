@@ -1,0 +1,95 @@
+{
+  "id": "fw3-02",
+  "title": "弄潮·浪头击水",
+  "season": 3,
+  "episode": 2,
+  "paragraphs": [
+    {
+      "text": "海洋，狂暴凶险的生命摇篮，动荡不安，又潜藏诱惑。从大海到餐桌，人们把海洋的物产变成这颗星球上最鲜美的味道。这是最后的狩猎之地，吸引勇敢的人立上潮头。"
+    },
+    {
+      "text": "/海南万宁·蓝田/",
+      "marker": true
+    },
+    {
+      "anchor": "p-sanmu-xie",
+      "dishId": "fw3-02-sanmu-xie",
+      "text": "刚捕捞的三目蟹趁新鲜下锅，越是简单烹饪，越是不会错过海蟹的美好。这个季节蟹黄最厚，有流沙的质感。"
+    },
+    {
+      "anchor": "p-paodan-yu",
+      "dishId": "fw3-02-paodan-yu",
+      "text": "炮弹鱼是当地渔民对一些小型金枪鱼族的统称，妻子拿它炖猪腩肉。吸纳猪肉的肥香，鱼的鲜味更上层楼。"
+    },
+    {
+      "anchor": "p-xunzhi-jianyu",
+      "dishId": "fw3-02-xunzhi-jianyu",
+      "text": "木炭预烤，撒盐火炙，嫩肉呈束状裂开，脂肪产生迷人的焦香。外层烤熟，内部还保留鲜肉的水润，层次丰富的好味道次第绽开。"
+    },
+    {
+      "text": "/浙江舟山/",
+      "marker": true
+    },
+    {
+      "anchor": "p-guijiao-jiaoma",
+      "dishId": "fw3-02-guijiao-jiaoma",
+      "text": "海藻胶体，加花椒、葱头和酱油，熬得似凝非凝，裹一层椒麻的啫喱冻，放进莳萝橄榄油浸泡。彻底冷却后，香料以里应外合之局，彰显龟足的细嫩和脆弹。"
+    },
+    {
+      "text": "/浙江舟山·青浜岛/",
+      "marker": true
+    },
+    {
+      "anchor": "p-guijiao-qingchao",
+      "dishId": "fw3-02-guijiao-qingchao",
+      "text": "生姜、菜油、老酒，快速爆炒。再加少量清水，烧煮片刻。沾满汤汁的外壳，封住一小坨软滑小鲜肉，趁热上桌。生活向来充满风浪，但人们总愿意把信心交给明天。"
+    },
+    {
+      "text": "/重庆/",
+      "marker": true
+    },
+    {
+      "anchor": "p-haoer-yu",
+      "dishId": "fw3-02-haoer-yu",
+      "text": "急速冷冻的耗儿鱼，长时间烫煮依然润嫩。牛油捎带麻辣滋味，将耗儿鱼紧紧簇拥。外层有老辣的重口味，拨开是嫩滑的瓣状肉，色香味撩人。原本海洋的物产，无意中装点了一座内陆城市的口味。"
+    },
+    {
+      "text": "/广东珠海/",
+      "marker": true
+    },
+    {
+      "anchor": "p-tanshao-xianglo",
+      "dishId": "fw3-02-tanshao-xianglo",
+      "text": "加高汤，连壳炭烤，慢慢煨熟。用力顿出螺肉，趁热切薄片。浓郁的鲜甜味，带着韧劲，在齿舌间跳弹。"
+    },
+    {
+      "text": "/广东珠海·东澳岛/",
+      "marker": true
+    },
+    {
+      "anchor": "p-yanjiao-luo",
+      "dishId": "fw3-02-yanjiao-luo",
+      "text": "辣螺更适合带壳盐焗。它的尾端隐藏着特殊的辣腺，随着加热，辣腺中的色素分解转化，不断变幻色彩，绚丽得如同极光在夜空飞舞。一丝金属气息和类似芥辣的味道，正是辣腺的功劳。"
+    },
+    {
+      "anchor": "p-laozhi-hualuo",
+      "dishId": "fw3-02-laozhi-hualuo",
+      "text": "螺的体内蓄积着大量氨基酸，帮助提升内部渗透压，对抗海水盐分，也是鲜和甜味的来源。紧凑弹牙之余，有淡淡的柑橘和嫩草的清香。"
+    },
+    {
+      "text": "人们对螺的喜好由来已久，我们的祖先最早从海洋获取的食物可能就是这类行动迟缓的动物。立于潮头，勇气随风浪沉浮；越过山丘，才能看清生活的底色。"
+    }
+  ],
+  "links": [
+    {
+      "a": "fw3-02-guijiao-jiaoma",
+      "b": "fw3-02-guijiao-qingchao",
+      "theme": "同食材·精细与朴素"
+    },
+    {
+      "a": "fw3-02-tanshao-xianglo",
+      "b": "fw3-02-yanjiao-luo",
+      "theme": "螺之风味"
+    }
+  ]
+}

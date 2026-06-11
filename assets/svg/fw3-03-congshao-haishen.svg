@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>葱烧海参</title>
+  <path d="M30,68 C32,50 42,40 60,40 C78,40 88,50 90,68 C88,82 78,88 60,88 C42,88 32,82 30,68 Z" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M38,68 C40,56 48,50 60,50 C72,50 80,56 82,68" fill="none" stroke="#fbf3e0" stroke-width="1.5"/>
+  <circle cx="40" cy="62" r="4" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="50" cy="52" r="3" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="60" cy="50" r="3" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="70" cy="52" r="3" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="80" cy="62" r="4" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="45" y1="34" x2="48" y2="42" stroke="#7fa860" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="60" y1="30" x2="60" y2="40" stroke="#7fa860" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="75" y1="34" x2="72" y2="42" stroke="#7fa860" stroke-width="2.5" stroke-linecap="round"/></svg>

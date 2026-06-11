@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>清蒸带鱼</title>
+  <path d="M22,50 C32,44 88,44 98,50 C98,66 88,72 22,72 C12,66 12,56 22,50 Z" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M20,58 L14,50 L18,64 Z" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="30" cy="54" r="3" fill="#7a2a1c"/>
+  <line x1="44" y1="48" x2="44" y2="68" stroke="#7a2a1c" stroke-width="0.8"/>
+  <line x1="58" y1="47" x2="58" y2="69" stroke="#7a2a1c" stroke-width="0.8"/>
+  <line x1="72" y1="47" x2="72" y2="69" stroke="#7a2a1c" stroke-width="0.8"/>
+  <line x1="86" y1="48" x2="86" y2="68" stroke="#7a2a1c" stroke-width="0.8"/>
+  <path d="M40,44 C50,32 70,32 80,44" fill="none" stroke="#f4c95d" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/></svg>

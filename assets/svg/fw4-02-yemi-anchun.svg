@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>野米鹌鹑</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="70" rx="38" ry="24" fill="#b9763c"/>
+    <ellipse cx="60" cy="64" rx="28" ry="15" fill="#f0a05a"/>
+    <path d="M30,62 q-9,-9 0,-17 q7,7 6,17Z" fill="#e8623f"/>
+    <path d="M90,62 q9,-9 0,-17 q-7,7 -6,17Z" fill="#e8623f"/>
+  </g>
+</svg>

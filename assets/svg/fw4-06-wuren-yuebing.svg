@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>五仁月饼</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="68" rx="32" ry="10" fill="#b9763c"/>
+    <rect x="34" y="50" width="52" height="20" rx="8" fill="#f0a05a"/>
+    <path d="M44,50 V70 M60,50 V70 M76,50 V70 M34,60 H86" stroke="#7a2a1c" stroke-width="1" fill="none"/>
+  </g>
+</svg>

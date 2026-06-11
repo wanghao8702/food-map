@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>甜晒鲅鱼炖豆腐</title>
+  <ellipse cx="60" cy="72" rx="36" ry="20" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M28,62 Q60,45 92,62" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="62" rx="32" ry="8" fill="#b9763c" stroke="#7a2a1c" stroke-width="1"/>
+  <rect x="38" y="74" width="16" height="12" rx="2" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.2"/>
+  <rect x="58" y="74" width="16" height="12" rx="2" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="30" cy="65" r="3" fill="#7a2a1c"/></svg>

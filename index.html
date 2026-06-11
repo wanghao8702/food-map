@@ -1,66 +1,72 @@
 <!DOCTYPE html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>风味地图 · 风味人间</title><link rel="stylesheet" href="styles.css"></head>
+<title>风味地图 · 把纪录片里的美食钉回产地</title>
+<link rel="stylesheet" href="home.css">
+</head>
 <body>
-<header>
-  <h1>风味地图</h1>
-  <nav id="viewtabs">
-    <button id="tab-map" class="active">风味地图</button>
-    <button id="tab-connect">风味连接</button>
-  </nav>
-  <button id="back" hidden>← 返回世界</button>
-</header>
-<div id="eptabs" hidden></div>
-<main id="stage">
-  <svg id="map" viewBox="0 0 1000 500" preserveAspectRatio="xMidYMid meet"></svg>
-  <div id="conn-label" hidden></div>
-</main>
-<aside id="panel" hidden></aside>
-<div id="fulltext" hidden></div>
-<script type="module">
-  import { init, renderWorld, renderConnections, getEpisodes } from './src/map.js';
-  import { openPanel, bindFulltext } from './src/panel.js';
-  import { openFulltext } from './src/fulltext.js';
-  init(openPanel);
-  bindFulltext(openFulltext);
 
-  const tabMap = document.getElementById('tab-map');
-  const tabConnect = document.getElementById('tab-connect');
-  const eptabs = document.getElementById('eptabs');
-  const back = document.getElementById('back');
-  const connLabel = document.getElementById('conn-label');
-  let curEp = null;
+<!-- ============ HERO · 插画墙 ============ -->
+<section class="hero">
+  <div class="wall" id="wall" aria-hidden="true"></div>
+  <div class="hero-warmglow"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-center">
+    <div class="kicker">FOOD · MAP</div>
+    <h1 class="hero-title">风味<span class="accent">地图</span></h1>
+    <p class="hero-sub">把纪录片里的美食，钉回它生长的地方</p>
+  </div>
+  <a class="scroll-cue" href="#intro" aria-label="向下滚动"><span>向下滚动</span><span class="arrow"></span></a>
+</section>
 
-  function setView(connect){
-    tabMap.classList.toggle('active', !connect);
-    tabConnect.classList.toggle('active', connect);
-    eptabs.hidden = !connect;
-    connLabel.hidden = true;
-    document.getElementById('panel').hidden = true;
-    if(connect){ back.hidden = true; }
-  }
-  tabMap.addEventListener('click', ()=>{ setView(false); renderWorld(); });
-  tabConnect.addEventListener('click', ()=>{ if(tabConnect.classList.contains('active')) return; openConnect(); });
+<!-- ============ 深色 → 暖色过渡带 ============ -->
+<div class="fade" id="intro" aria-hidden="true"></div>
 
-  function openConnect(){
-    setView(true);
-    if(!eptabs.childElementCount){
-      getEpisodes().forEach(ep=>{
-        const b=document.createElement('button');
-        b.textContent = `《风味人间》S${ep.season} 第${ep.episode}集 ${ep.title}`;
-        b.addEventListener('click', ()=>selectEp(ep, b));
-        eptabs.appendChild(b);
-      });
-    }
-    const first = curEp || getEpisodes()[0];
-    const btn = [...eptabs.children][getEpisodes().findIndex(e=>e.season===first.season && e.episode===first.episode)];
-    selectEp(first, btn);
-  }
-  function selectEp(ep, btn){
-    curEp = ep;
-    [...eptabs.children].forEach(c=>c.classList.toggle('active', c===btn));
-    connLabel.hidden = true;
-    renderConnections(ep.season, ep.episode);
-  }
-</script>
+<!-- ============ 项目理念（落在暖色实底上，保证可读） ============ -->
+<section class="intro">
+  <div class="reveal">
+    <p class="intro-lead">一档接一档的美食纪录片，<br>把散落世界的味道，一道道钉回它生长的地方。</p>
+    <p class="intro-text">点开一道菜，看手绘插画、读纪录片文案，溯源到哪一季哪一集；<br>
+      再顺着「风味连接」，看见食物之间跨越山海的隐秘血脉。</p>
+  </div>
+</section>
+
+<!-- ============ 招牌功能 · 风味连接（大闸蟹 · 迁移） ============ -->
+<section class="conn" id="conn">
+  <div class="conn-head reveal">
+    <div class="conn-kicker">招牌功能 · 风味连接</div>
+    <h2 class="conn-title">风味，会迁徙</h2>
+    <p class="conn-sub">同一种味道，常常漂洋过海，在世界另一端长出另一种命运。</p>
+  </div>
+  <div class="conn-card reveal">
+    <div class="conn-map" id="connDemoMap"></div>
+    <div class="conn-foot">
+      <span class="conn-theme" id="connTheme"></span>
+      <p class="conn-desc" id="connDesc"></p>
+      <div class="conn-dots" id="connDots"></div>
+      <a class="conn-cta" href="./fengwei.html">进入地图，探索全部风味连接 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 数据看点 ============ -->
+<section class="stats" id="stats">
+  <ul class="stats-grid reveal" id="statsGrid"></ul>
+</section>
+
+<!-- ============ 节目门户 ============ -->
+<section class="portal" id="portal">
+  <div class="reveal">
+    <h2 class="section-title">节目</h2>
+    <p class="section-sub">目前整理了《风味人间》，更多节目陆续加入</p>
+  </div>
+  <div class="portal-grid reveal" id="portalGrid"></div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer class="foot">
+  <p class="foot-note">本站为个人非商业的可视化整理 · 纪录片版权归原制作方所有</p>
+  <a class="totop" href="#">↑ 回到顶部</a>
+</footer>
+
+<script type="module" src="./src/home.js"></script>
 </body></html>

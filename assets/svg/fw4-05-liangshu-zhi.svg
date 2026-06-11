@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>凉薯汁</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M44,46 h32 a6,6 0 0 1 6,6 v18 a14,14 0 0 1 -14,14 h-16 a14,14 0 0 1 -14,-14 v-18 a6,6 0 0 1 6,-6 Z" fill="#fbf3e0"/>
+    <ellipse cx="60" cy="46" rx="16" ry="4.4" fill="#f4c95d"/>
+  </g>
+</svg>

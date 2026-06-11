@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>菱肉粽</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M60,40 L88,80 L32,80 Z" fill="#7fa860"/>
+    <path d="M60,52 L78,76 L42,76 Z" fill="#fbf3e0"/>
+    <path d="M60,40 L60,80 M44,80 L70,52" stroke="#7a2a1c" stroke-width="1" fill="none"/>
+  </g>
+</svg>

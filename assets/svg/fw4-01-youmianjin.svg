@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>油面筋</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="60" cy="62" r="30" fill="#f4c95d"/>
+    <circle cx="50" cy="54" r="5" fill="#f0a05a"/>
+    <circle cx="70" cy="56" r="6" fill="#f0a05a"/>
+    <circle cx="58" cy="72" r="6" fill="#f0a05a"/>
+    <circle cx="72" cy="72" r="4" fill="#f0a05a"/>
+    <circle cx="46" cy="66" r="4" fill="#f0a05a"/>
+  </g>
+</svg>

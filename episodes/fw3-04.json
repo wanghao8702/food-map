@@ -1,0 +1,87 @@
+{
+  "id": "fw3-04",
+  "title": "赶海·潮来汐往",
+  "season": 3,
+  "episode": 4,
+  "paragraphs": [
+    {
+      "text": "从海面到水底，潮汐驱动着大海和每个赶海为生的人。潮起潮落相伴而生，如同白天紧随黑夜。人们行止作息，往来奔走，与潮汐同进退。"
+    },
+    {
+      "text": "/山东崂山·黄山村/",
+      "marker": true
+    },
+    {
+      "anchor": "p-laocuzheto",
+      "dishId": "fw3-04-laocuzheto",
+      "text": "海蜇含水量高达95%，伞盖按当地习俗分割加工。老醋蛰头，以米醋和香油调味，脆嫩爽口，是胶东人钟爱的凉菜。"
+    },
+    {
+      "anchor": "p-zhizi-kaohaizheli",
+      "dishId": "fw3-04-zhizi-kaohaizheli",
+      "text": "伞盖内侧的薄膜，崂山话叫里子，形似腐竹，有嚼头，浓郁的鲜味四溢。炙子烧热，椒盐调味，撒葱花芫荽，打上几枚鸡蛋。伴着蒸腾的香气，夹小饼，将好滋味一举囊括。"
+    },
+    {
+      "anchor": "p-haizhe-liangfen",
+      "dishId": "fw3-04-haizhe-liangfen",
+      "text": "新鲜蜇皮细嫩顺滑，配小菜，以蒜泥、米醋调味。清爽脆口，是解暑的神器。"
+    },
+    {
+      "text": "/辽宁葫芦岛/",
+      "marker": true
+    },
+    {
+      "anchor": "p-shipeng-geli",
+      "dishId": "fw3-04-shipeng-geli",
+      "text": "贝类的碳酸钙外壳，盛放着大海风味的奥妙。受热打开，浓郁的汤汁渗出。谷氨酸和琥珀酸等呈味物质送来出类拔萃的鲜甜。"
+    },
+    {
+      "anchor": "p-lachao-hanzi",
+      "dishId": "fw3-04-lachao-hanzi",
+      "text": "在葫芦岛，人们把双壳贝类统称为蚶子。它以咸鲜的风韵、柔韧的口感，让美味来得简单而亲切。辣炒，香麻鲜嫩，最是下饭。"
+    },
+    {
+      "text": "/广西北海/",
+      "marker": true
+    },
+    {
+      "anchor": "p-suanrong-shachong",
+      "dishId": "fw3-04-suanrong-shachong",
+      "text": "方格星虫，俗称沙虫，涨潮时外出，落潮后潜藏。沙虫的外观让人退避三分，但若能过了心里这道关，它柔嫩的质地、甘美的滋味，让嗜好者为之四顾踌躇。蒜蓉蒸，鲜甜清雅。"
+    },
+    {
+      "anchor": "p-xiani-shachong",
+      "dishId": "fw3-04-xiani-shachong",
+      "text": "将海虾碾摔成泥，灌进沙虫的皮囊，滚水焯熟，爽脆包裹润嫩，鲜香映照清甜，得到双重的美妙。"
+    },
+    {
+      "text": "/山东青岛·灵山岛/",
+      "marker": true
+    },
+    {
+      "anchor": "p-jingcong-wangtao",
+      "dishId": "fw3-04-jingcong-wangtao",
+      "text": "短蛸，一种小型章鱼，当地人称之为八带。肉质细密紧致，胶原蛋白含量在普通鱼肉的五倍以上。快速水煮，冰镇增加Q弹的牙感，搭配酥香的金葱，是南方人喜爱的口味。"
+    },
+    {
+      "anchor": "p-qingzheng-kouxiagu",
+      "dishId": "fw3-04-qingzheng-kouxiagu",
+      "text": "口虾蛄，当地人叫它虾虎，肉质甜润，橙红色的虾子晶莹饱满。清蒸后，壳内藏着满满的鲜甜滋味。"
+    },
+    {
+      "text": "古人说天地不仁，但海洋总是露出它慷慨的一面。海面上潮起潮落，人们紧随大海的脚步，览尽甘苦与沉浮。回头看，仿佛光阴如水，人生不复少年。只是，大海的节律不改，正如人间的求索依然。"
+    }
+  ],
+  "links": [
+    {
+      "a": "fw3-04-suanrong-shachong",
+      "b": "fw3-04-xiani-shachong",
+      "theme": "沙虫两吃"
+    },
+    {
+      "a": "fw3-04-laocuzheto",
+      "b": "fw3-04-zhizi-kaohaizheli",
+      "theme": "海蜇全用·一凉一热"
+    }
+  ]
+}

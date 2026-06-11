@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>手撕牛肉塔可</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M28,74 a32,30 0 0 1 64,0 q-32,8 -64,0Z" fill="#f4c95d"/>
+    <path d="M36,70 a24,22 0 0 1 48,0 Z" fill="#b9763c"/>
+    <circle cx="50" cy="64" r="3" fill="#7fa860"/>
+    <circle cx="62" cy="62" r="3" fill="#fbf3e0"/>
+    <circle cx="72" cy="65" r="3" fill="#f4c95d"/>
+  </g>
+</svg>

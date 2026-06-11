@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>寿司</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="34" y="58" width="52" height="20" rx="9" fill="#fbf3e0"/>
+    <path d="M34,58 h52 v6 h-52Z" fill="#e8623f"/>
+    <rect x="56" y="52" width="8" height="30" fill="#7fa860"/>
+  </g>
+</svg>

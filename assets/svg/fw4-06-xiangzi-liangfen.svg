@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>橡子凉粉</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M36,54 h48 v18 a8,6 0 0 1 -8,6 h-32 a8,6 0 0 1 -8,-6Z" fill="#b9763c"/>
+    <ellipse cx="60" cy="54" rx="24" ry="6" fill="#b9763c"/>
+    <path d="M44,50 q16,-6 32,0" fill="none" stroke="#e8623f" stroke-width="2.4"/>
+  </g>
+</svg>

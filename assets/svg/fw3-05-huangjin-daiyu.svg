@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>黄金脆带鱼</title>
+  <path d="M20,52 C30,46 90,46 100,52 C100,62 90,68 20,68 C10,62 10,58 20,52 Z" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M18,58 L12,50 L16,62 Z" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="28" cy="56" r="3.5" fill="#7a2a1c"/>
+  <line x1="40" y1="50" x2="40" y2="66" stroke="#7a2a1c" stroke-width="0.8"/>
+  <line x1="55" y1="49" x2="55" y2="67" stroke="#7a2a1c" stroke-width="0.8"/>
+  <line x1="70" y1="49" x2="70" y2="67" stroke="#7a2a1c" stroke-width="0.8"/>
+  <line x1="85" y1="50" x2="85" y2="66" stroke="#7a2a1c" stroke-width="0.8"/></svg>

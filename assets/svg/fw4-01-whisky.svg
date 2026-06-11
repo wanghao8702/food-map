@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>麦芽威士忌</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M38,44 H82 L76,84 H44 Z" fill="#f0a05a"/>
+    <path d="M42,62 H78 L76,84 H44 Z" fill="#b9763c"/>
+    <ellipse cx="60" cy="44" rx="22" ry="5" fill="#f4c95d"/>
+    <circle cx="54" cy="74" r="3" fill="#fbf3e0"/>
+  </g>
+</svg>

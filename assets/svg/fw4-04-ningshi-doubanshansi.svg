@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>宁式豆瓣鳝丝</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M26,60 q22,-22 48,-8 q10,6 18,8 q-8,6 -18,8 q-26,14 -48,-8Z" fill="#f0a05a"/>
+    <path d="M26,60 q7,-5 13,0 q-7,5 -13,0Z" fill="#e8623f"/>
+    <circle cx="66" cy="55" r="2.2" fill="#7a2a1c"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>参花蛋汤</title>
+  <ellipse cx="60" cy="75" rx="36" ry="22" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="72" rx="28" ry="14" fill="#f4c95d" opacity="0.5" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="48" cy="66" r="5" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="60" cy="62" r="4" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="72" cy="66" r="5" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="54" cy="74" r="4" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="67" cy="74" r="4" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.2"/></svg>

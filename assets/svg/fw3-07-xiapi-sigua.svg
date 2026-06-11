@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>虾皮炒丝瓜</title>
+  <rect x="24" y="54" width="72" height="48" rx="8" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="54" rx="36" ry="12" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="46" cy="68" rx="10" ry="14" fill="#7fa860" stroke="#7a2a1c" stroke-width="1.2"/>
+  <ellipse cx="72" cy="68" rx="10" ry="14" fill="#7fa860" stroke="#7a2a1c" stroke-width="1.2"/>
+  <line x1="46" y1="54" x2="46" y2="82" stroke="#7a2a1c" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <line x1="72" y1="54" x2="72" y2="82" stroke="#7a2a1c" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <circle cx="58" cy="62" r="3" fill="#e8623f" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="66" cy="68" r="3" fill="#e8623f" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="56" cy="74" r="3" fill="#e8623f" stroke="#7a2a1c" stroke-width="1"/></svg>

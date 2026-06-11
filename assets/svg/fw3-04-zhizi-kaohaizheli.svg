@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>炙子烤海蜇里子</title>
+  <rect x="22" y="65" width="76" height="38" rx="4" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <line x1="30" y1="65" x2="30" y2="103" stroke="#7a2a1c" stroke-width="1.2"/>
+  <line x1="44" y1="65" x2="44" y2="103" stroke="#7a2a1c" stroke-width="1.2"/>
+  <line x1="58" y1="65" x2="58" y2="103" stroke="#7a2a1c" stroke-width="1.2"/>
+  <line x1="72" y1="65" x2="72" y2="103" stroke="#7a2a1c" stroke-width="1.2"/>
+  <line x1="86" y1="65" x2="86" y2="103" stroke="#7a2a1c" stroke-width="1.2"/>
+  <path d="M30,40 Q60,22 90,40 L84,65 L36,65 Z" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.6" opacity="0.85"/>
+  <circle cx="46" cy="50" r="6" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="62" cy="46" r="6" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="75" cy="52" r="5" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.2"/></svg>

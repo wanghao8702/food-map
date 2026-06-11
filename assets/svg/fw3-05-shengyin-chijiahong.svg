@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>生腌赤甲红</title>
+  <ellipse cx="60" cy="60" rx="28" ry="20" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="58" rx="20" ry="12" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="50" cy="52" r="3" fill="#7a2a1c"/>
+  <circle cx="70" cy="52" r="3" fill="#7a2a1c"/>
+  <line x1="34" y1="58" x2="20" y2="50" stroke="#e8623f" stroke-width="4" stroke-linecap="round"/>
+  <line x1="86" y1="58" x2="100" y2="50" stroke="#e8623f" stroke-width="4" stroke-linecap="round"/>
+  <line x1="36" y1="66" x2="22" y2="64" stroke="#e8623f" stroke-width="3" stroke-linecap="round"/>
+  <line x1="84" y1="66" x2="98" y2="64" stroke="#e8623f" stroke-width="3" stroke-linecap="round"/>
+  <line x1="40" y1="74" x2="28" y2="76" stroke="#e8623f" stroke-width="3" stroke-linecap="round"/>
+  <line x1="80" y1="74" x2="92" y2="76" stroke="#e8623f" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="60" cy="88" rx="24" ry="8" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.2" opacity="0.6"/></svg>

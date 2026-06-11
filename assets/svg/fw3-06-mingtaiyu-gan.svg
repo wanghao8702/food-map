@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>明太鱼干</title>
+  <path d="M24,54 C32,42 76,42 96,54 C96,68 76,74 56,70 C36,66 16,68 24,54 Z" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M94,50 L106,50 L98,60 Z" fill="#b9763c" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="32" cy="52" r="3" fill="#7a2a1c"/>
+  <line x1="48" y1="48" x2="46" y2="66" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="62" y1="46" x2="60" y2="68" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="76" y1="46" x2="74" y2="66" stroke="#7a2a1c" stroke-width="1"/>
+  <line x1="90" y1="48" x2="88" y2="62" stroke="#7a2a1c" stroke-width="1"/></svg>

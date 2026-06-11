@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>花园小鱼</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M30,60 q20,-22 44,-6 q10,6 16,6 q-6,4 -16,6 q-24,16 -44,-6 Z" fill="#f4c95d"/>
+    <path d="M30,60 q6,-4 12,0 q-6,4 -12,0Z" fill="#7fa860"/>
+    <circle cx="66" cy="56" r="2.2" fill="#7a2a1c"/>
+  </g>
+</svg>

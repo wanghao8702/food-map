@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>小葱炒糯玉米</title>
+  <g stroke="#7a2a1c" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="60" cy="62" rx="14" ry="30" fill="#f4c95d"/>
+    <path d="M48,44 q-14,2 -16,20 q12,-2 16,-18Z" fill="#7fa860"/>
+    <path d="M72,44 q14,2 16,20 q-12,-2 -16,-18Z" fill="#7fa860"/>
+    <path d="M52,42 V86 M60,40 V88 M68,42 V86" stroke="#7a2a1c" stroke-width="0.9" fill="none"/>
+    <path d="M50,52 H70 M50,60 H70 M50,68 H70 M50,76 H70" stroke="#7a2a1c" stroke-width="0.7" fill="none"/>
+  </g>
+</svg>

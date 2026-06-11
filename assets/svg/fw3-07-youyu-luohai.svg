@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>鱿鱼卵醢</title>
+  <ellipse cx="60" cy="68" rx="32" ry="22" fill="#b9763c" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="64" rx="22" ry="14" fill="#f4c95d" stroke="#7a2a1c" stroke-width="1.2"/>
+  <circle cx="48" cy="60" r="5" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="60" cy="58" r="5" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="72" cy="60" r="5" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="54" cy="70" r="4" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1"/>
+  <circle cx="66" cy="70" r="4" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1"/>
+  <text x="60" y="100" text-anchor="middle" font-size="10" fill="#7a2a1c" font-family="sans-serif">卵醢</text></svg>

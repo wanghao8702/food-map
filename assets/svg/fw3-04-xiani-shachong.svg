@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <title>虾泥沙虫汤</title>
+  <ellipse cx="60" cy="72" rx="36" ry="22" fill="#f0a05a" stroke="#7a2a1c" stroke-width="1.6"/>
+  <path d="M30,62 C34,48 50,44 60,50 C70,44 86,48 90,62" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1.6"/>
+  <ellipse cx="60" cy="62" rx="28" ry="8" fill="#fbf3e0" stroke="#7a2a1c" stroke-width="1"/>
+  <ellipse cx="46" cy="72" rx="8" ry="6" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.2"/>
+  <ellipse cx="60" cy="74" rx="8" ry="6" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.2"/>
+  <ellipse cx="74" cy="72" rx="8" ry="6" fill="#e8623f" stroke="#7a2a1c" stroke-width="1.2"/></svg>
