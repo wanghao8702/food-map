@@ -132,14 +132,21 @@ function pixelSpread(list, min=22){
   return out;
 }
 
+// 解析后的底图 <g class="basemap"> 模板缓存：避免每次世界↔中国切换都重新 fetch + DOMParser。
+// 模板自身从不入 DOM，每次 setBase 克隆一份新节点(getBBox/isPointInFill 仍作用于渲染中的克隆，与原行为一致)。
+const _baseCache = {};
 async function setBase(cfg){
-  const txt = await (await fetch(cfg.base)).text();
+  let tmpl = _baseCache[cfg.base];
+  if(!tmpl){
+    const txt = await (await fetch(cfg.base)).text();
+    // svg-maps 文件含 xml 声明/注释/多行 <svg> 包裹，正则不可靠；用 DOMParser 只提取 <path>。
+    const doc = new DOMParser().parseFromString(txt, 'image/svg+xml');
+    tmpl = el('g',{class:'basemap'});
+    doc.querySelectorAll('path').forEach(p=> tmpl.appendChild(document.importNode(p,true)));
+    _baseCache[cfg.base] = tmpl;
+  }
   svg.innerHTML = '';
-  // svg-maps 文件含 xml 声明/注释/多行 <svg> 包裹，正则不可靠；用 DOMParser 只提取 <path>。
-  const doc = new DOMParser().parseFromString(txt, 'image/svg+xml');
-  const g = el('g',{class:'basemap'});
-  doc.querySelectorAll('path').forEach(p=> g.appendChild(document.importNode(p,true)));
-  svg.appendChild(g);
+  svg.appendChild(tmpl.cloneNode(true));
   resetView(cfg);
 }
 
