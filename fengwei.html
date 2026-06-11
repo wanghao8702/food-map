@@ -33,7 +33,8 @@
   import { initSearch } from './src/search.js';
   init(openPanel, openConnModal);
   bindFulltext(openFulltext);
-  onReady(()=> initSearch(getAllDishes(), focusDish));
+  // 搜索跳转会内部取消季/集筛选，故先把底部导航复位成「全部」，避免高亮失同步。
+  onReady(()=> initSearch(getAllDishes(), id=>{ resetNavToAll(); focusDish(id); }));
   document.getElementById('minorchk').addEventListener('change', e=> setShowMinor(e.target.checked));
 
   const mapnav = document.getElementById('mapnav');
@@ -59,6 +60,12 @@
     allBtn.classList.add('active');
     showEpisodes(null);
   });
+  // 把底部导航复位为「全部」激活态（不触发重绘，仅同步高亮 / 收起集行与季节卡）。
+  function resetNavToAll(){
+    if(seasonChips.length) seasonChips.forEach((c,i)=> c.classList.toggle('active', i===0));
+    showEpisodes(null);
+    openSeasonCard(null);
+  }
   function showEpisodes(season){
     row2.innerHTML = ''; epChips = [];
     if(season==null){ row2.hidden = true; return; }
