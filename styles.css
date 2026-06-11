@@ -159,7 +159,7 @@ header h1{font-size:18px;margin:0;color:var(--ink)}
 #minortoggle{margin-left:8px}
 #searchpanel{position:fixed;right:18px;width:320px;max-width:92vw;max-height:70vh;display:flex;flex-direction:column;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px rgba(60,40,10,.22);z-index:9;overflow:hidden}
 #searchpanel[hidden]{display:none}
-#searchchips{padding:10px 12px 6px;gap:6px}
+#searchchips{display:flex;flex-wrap:wrap;gap:6px;padding:10px 12px 8px;border-bottom:1px solid var(--line)}
 #searchchips button{flex:0 0 auto;border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);border-radius:12px;padding:3px 12px;cursor:pointer;font-size:12px;font-family:inherit}
 #searchchips button:hover{border-color:var(--accent)}
 #searchchips button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
