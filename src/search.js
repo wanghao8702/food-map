@@ -18,12 +18,27 @@ export function matchDishes(dishes, query, season){
 
 const MAX_RESULTS = 60;
 
+// 转义 + 把命中词包成 <mark>(供结果列表高亮)。导出供 tests.html 单测。
+function esc(s){ return (s||'').replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+export function highlight(text, q){
+  text = text || '';
+  if(!q) return esc(text);
+  const lower = text.toLowerCase(), ql = q.toLowerCase();
+  let out = '', i = 0, idx;
+  while((idx = lower.indexOf(ql, i)) !== -1){
+    out += esc(text.slice(i, idx)) + '<mark>' + esc(text.slice(idx, idx+ql.length)) + '</mark>';
+    i = idx + ql.length;
+  }
+  return out + esc(text.slice(i));
+}
+
 export function initSearch(dishes, focusDish){
   const box     = document.getElementById('searchbox');
   const panel   = document.getElementById('searchpanel');
   const chipbar = document.getElementById('searchchips');
   const list    = document.getElementById('searchresults');
   const empty   = document.getElementById('searchempty');
+  const count   = document.getElementById('searchcount');
   if(!box || !panel) return;
 
   let season = null;
@@ -37,19 +52,39 @@ export function initSearch(dishes, focusDish){
   mkChip('全部', null).classList.add('active');
   seasons.forEach(s=> mkChip('S'+s, s));
 
+  let items = [];      // [{li, dish}]，当前展示的结果
+  let active = -1;     // 键盘高亮的结果下标
+
+  function select(d){ close(); focusDish(d.id); }
+  function updateActive(){
+    items.forEach((it,i)=> it.li.classList.toggle('active', i===active));
+    if(active>=0 && items[active]) items[active].li.scrollIntoView({block:'nearest'});
+  }
   function render(){
     const results = matchDishes(dishes, box.value, season);
-    list.innerHTML = '';
+    const q = box.value.trim();
+    list.innerHTML = ''; items = [];
     results.slice(0, MAX_RESULTS).forEach(d=>{
       const li = document.createElement('li'); li.className = 'sr-item';
       li.innerHTML =
         `<img class="sr-art" src="./assets/svg/${d.svg}" alt="">` +
-        `<div class="sr-text"><div class="sr-name">${d.name}</div>` +
-        `<div class="sr-region">📍${d.region} · S${d.season}E${d.episode}</div></div>`;
-      li.addEventListener('click', ()=>{ close(); focusDish(d.id); });
+        `<div class="sr-text"><div class="sr-name">${highlight(d.name, q)}</div>` +
+        `<div class="sr-region">📍${highlight(d.region, q)} · S${d.season}E${d.episode}</div></div>`;
+      const idx = items.length;
+      li.addEventListener('click', ()=> select(d));
+      li.addEventListener('mouseenter', ()=>{ active=idx; updateActive(); });
       list.appendChild(li);
+      items.push({li, dish:d});
     });
+    active = items.length ? 0 : -1;
+    updateActive();
     empty.hidden = results.length !== 0;
+    if(count){
+      count.hidden = results.length === 0;
+      count.textContent = results.length > MAX_RESULTS
+        ? `显示前 ${MAX_RESULTS} / 共 ${results.length} 条`
+        : `共 ${results.length} 条`;
+    }
   }
 
   // 下拉面板贴在搜索框正下方、右对齐。
@@ -63,6 +98,12 @@ export function initSearch(dishes, focusDish){
 
   box.addEventListener('focus', open);
   box.addEventListener('input', ()=>{ if(panel.hidden) open(); else render(); });
+  box.addEventListener('keydown', e=>{
+    if(panel.hidden) return;
+    if(e.key==='ArrowDown'){ e.preventDefault(); if(items.length){ active=Math.min(active+1, items.length-1); updateActive(); } }
+    else if(e.key==='ArrowUp'){ e.preventDefault(); if(items.length){ active=Math.max(active-1, 0); updateActive(); } }
+    else if(e.key==='Enter'){ if(active>=0 && items[active]){ e.preventDefault(); select(items[active].dish); } }
+  });
   window.addEventListener('resize', ()=>{ if(!panel.hidden) place(); });
   document.addEventListener('click', e=>{
     if(panel.hidden) return;

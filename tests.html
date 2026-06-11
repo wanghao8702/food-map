@@ -2,11 +2,15 @@
 <body><pre id="out"></pre>
 <script type="module">
 import { project } from './src/projection.js';
-import { matchDishes } from './src/search.js';
+import { matchDishes, highlight } from './src/search.js';
 const out = document.getElementById('out');
 let pass = 0, fail = 0;
 function eq(name, a, b, tol=0.5){
   if (Math.abs(a-b) <= tol){ pass++; out.textContent += `PASS ${name}\n`; }
+  else { fail++; out.textContent += `FAIL ${name}: got ${a}, want ${b}\n`; }
+}
+function eqs(name, a, b){
+  if (a === b){ pass++; out.textContent += `PASS ${name}\n`; }
   else { fail++; out.textContent += `FAIL ${name}: got ${a}, want ${b}\n`; }
 }
 // 世界图参数：经度[-180,180]→x[0,1000]，纬度[85,-60]→y[0,500]
@@ -30,6 +34,13 @@ eq('search-season-filter', matchDishes(sample,'',1).length, 2);
 eq('search-empty-all', matchDishes(sample,'',null).length, 3);
 eq('search-no-match', matchDishes(sample,'zzz',null).length, 0);
 eq('search-query-and-season', matchDishes(sample,'海鲜',4).length, 1);
+
+// 结果命中高亮 highlight(text, q)
+eqs('hl-basic', highlight('太湖大闸蟹','大闸蟹'), '太湖<mark>大闸蟹</mark>');
+eqs('hl-empty-q', highlight('土黄油',''), '土黄油');
+eqs('hl-no-match', highlight('土黄油','蟹'), '土黄油');
+eqs('hl-escape', highlight('a<b&c','x'), 'a&lt;b&amp;c');
+eqs('hl-multi', highlight('蟹黄蟹','蟹'), '<mark>蟹</mark>黄<mark>蟹</mark>');
 
 out.textContent += (fail===0)?`\nALL PASS (${pass})`:`\n${fail} FAILED`;
 </script></body></html>
