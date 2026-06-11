@@ -151,3 +151,29 @@ header h1{font-size:18px;margin:0;color:var(--ink)}
 .sc-link{display:inline-block;color:var(--accent);text-decoration:none;font-size:12px;font-weight:700}
 .sc-link:hover{color:var(--accent-2)}
 @media (max-width:480px){#seasoncard{width:calc(100vw - 24px)}}
+
+/* ---------- 搜索 + 季筛选（二合一下拉面板） ---------- */
+#search{margin-left:auto}
+#searchbox{font-family:inherit;font-size:13px;padding:5px 12px;border:1px solid var(--line);border-radius:14px;background:var(--paper-2);color:var(--ink);width:180px;outline:none}
+#searchbox:focus{border-color:var(--accent)}
+#minortoggle{margin-left:8px}
+#searchpanel{position:fixed;right:18px;width:320px;max-width:92vw;max-height:70vh;display:flex;flex-direction:column;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;box-shadow:0 10px 30px rgba(60,40,10,.22);z-index:9;overflow:hidden}
+#searchpanel[hidden]{display:none}
+#searchchips{padding:10px 12px 6px;gap:6px}
+#searchchips button{flex:0 0 auto;border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);border-radius:12px;padding:3px 12px;cursor:pointer;font-size:12px;font-family:inherit}
+#searchchips button:hover{border-color:var(--accent)}
+#searchchips button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+#searchresults{list-style:none;margin:0;padding:4px 6px 8px;overflow:auto}
+.sr-item{display:flex;align-items:center;gap:10px;padding:7px 8px;border-radius:10px;cursor:pointer}
+.sr-item:hover{background:var(--band)}
+.sr-art{width:34px;height:34px;flex:0 0 auto}
+.sr-text{min-width:0}
+.sr-name{font-size:14px;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sr-region{font-size:11px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#searchempty{padding:18px;text-align:center;color:var(--ink-soft);font-size:13px}
+#searchempty[hidden]{display:none}
+/* 搜索定位后目标图钉的脉冲高亮 */
+.pin.pin-focus .pin-bg{stroke-width:2.6}
+.pin.pin-focus .pin-inner{animation:pinPulse 1s ease-out 3}
+@keyframes pinPulse{0%,100%{transform:scale(var(--pscale,1))}50%{transform:scale(calc(var(--pscale,1)*1.5))}}
+@media (max-width:480px){#searchbox{width:120px}#searchpanel{right:8px;left:8px;width:auto}}

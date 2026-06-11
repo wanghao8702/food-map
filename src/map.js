@@ -182,7 +182,7 @@ function regionCenter(id){
 const PIN_R = 12;    // 衬底圆半径(用户单位)
 const PIN_IMG = 22;  // 美食插画边长
 function pinAt(d,cx,cy){
-  const g=el('g',{class:'pin','data-id':d.id, transform:`translate(${cx},${cy})`});
+  const g=el('g',{class:'pin','data-id':d.id,'data-x':cx,'data-y':cy, transform:`translate(${cx},${cy})`});
   const inner=el('g',{class:'pin-inner'});
   inner.appendChild(el('circle',{r:PIN_R,class:'pin-bg'}));
   const img=el('image',{x:-PIN_IMG/2,y:-PIN_IMG/2,width:PIN_IMG,height:PIN_IMG,class:'pin-img'});
@@ -221,7 +221,12 @@ function miniCluster(x,y,dishes,labelText,onClick){
   g.addEventListener('click',()=>onClick(g));
   return g;
 }
-export async function renderWorld(){
+// 把某国家的菜从聚合气泡散开成独立图钉(国家中心 seed + 防重叠)。renderWorld 与 focusDish 共用。
+function expandCountry(cx,cy,dishes){
+  const seeded=dishes.map((d,i)=>({d, x:cx+Math.cos(i*2.399)*0.1, y:cy+Math.sin(i*2.399)*0.1}));
+  pixelSpread(seeded,24).forEach(o=>pinAt(o.d,o.x,o.y));
+}
+export async function renderWorld(expandIso=null){
   _rerender=renderWorld;
   await setBase(WORLD); curBase='world'; back.hidden=true; chinaZoom=null; hideOverlayLabel();
   // 海外按国家分组：<5 道直接散开画钉，≥5 道画「国家·N道」气泡；中国整体一枚聚合气泡。
@@ -243,18 +248,13 @@ export async function renderWorld(){
   pixelSpread(items, 26).forEach(it=>{
     if(it.kind==='china'){ svg.appendChild(clusterMarker(it.x,it.y,it.dishes)); return; }
     const cx=it.x, cy=it.y, dishes=it.dishes;
-    if(dishes.length < 5){            // <5 道：不聚合，按国家中心散开图钉
-      const seeded=dishes.map((d,i)=>({d, x:cx+Math.cos(i*2.399)*0.1, y:cy+Math.sin(i*2.399)*0.1}));
-      pixelSpread(seeded,24).forEach(o=>pinAt(o.d,o.x,o.y));
+    if(dishes.length < 5 || it.iso===expandIso){   // <5 道或被指定展开：散开图钉
+      expandCountry(cx,cy,dishes);
       return;
     }
     // ≥5 道：聚合成「国家·N道」气泡，点击就地展开
     const label=(COUNTRY_NAME[it.iso]||it.iso)+' · '+dishes.length+'道';
-    svg.appendChild(miniCluster(cx,cy,dishes,label,(g)=>{
-      g.remove();
-      const seeded=dishes.map((d,i)=>({d, x:cx+Math.cos(i*2.399)*0.1, y:cy+Math.sin(i*2.399)*0.1}));
-      pixelSpread(seeded,24).forEach(o=>pinAt(o.d,o.x,o.y));
-    }));
+    svg.appendChild(miniCluster(cx,cy,dishes,label,(g)=>{ g.remove(); expandCountry(cx,cy,dishes); }));
   });
 }
 
@@ -320,26 +320,30 @@ export async function renderChina(){
   }
 }
 
-// 省份钻取：放大该省 → 散开省内各菜。落位用各菜校准坐标的包围盒(加留白)，动画缩放 viewBox。
-async function drillProvince(prov, dishes){
-  const placed = dishes.map(d=>({d, ...chinaPos(d)}));
-  const sp = pixelSpread(placed); ensureOnLand(sp);
-  // 该省各菜坐标的包围盒
+// 一组散开点的包围盒 → viewBox(加留白，下限 MIN 防只有两三道菜时过度放大)。drillProvince 与 focusDish 共用。
+function provinceViewBox(sp){
   let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
   sp.forEach(o=>{ minX=Math.min(minX,o.x); minY=Math.min(minY,o.y); maxX=Math.max(maxX,o.x); maxY=Math.max(maxY,o.y); });
   let w=maxX-minX, h=maxY-minY;
   const padX=Math.max(40, w*0.45), padY=Math.max(40, h*0.45);
   minX-=padX; minY-=padY; w+=padX*2; h+=padY*2;
-  const MIN=170;   // 防止只有两三道菜时过度放大
+  const MIN=170;
   if(w<MIN){ const c=minX+w/2; w=MIN; minX=c-w/2; }
   if(h<MIN){ const c=minY+h/2; h=MIN; minY=c-h/2; }
+  return {x:minX,y:minY,w,h};
+}
+// 省份钻取：放大该省 → 散开省内各菜。落位用各菜校准坐标的包围盒(加留白)，动画缩放 viewBox。
+async function drillProvince(prov, dishes){
+  const placed = dishes.map(d=>({d, ...chinaPos(d)}));
+  const sp = pixelSpread(placed); ensureOnLand(sp);
+  const vbT = provinceViewBox(sp);
   // 清掉中国全图的气泡/图钉，只画该省的散开图钉
   svg.querySelectorAll('.pin,.cluster').forEach(e=>e.remove());
   sp.forEach(o=>pinAt(o.d,o.x,o.y));
   chinaZoom = prov;
   back.textContent = '← 返回中国';
   showOverlayLabel(prov + ' · ' + dishes.length + '道');
-  await animateVB({x:minX,y:minY,w,h});
+  await animateVB(vbT);
 }
 async function exitProvince(){
   await animateVB({x:0,y:0,w:baseW,h:baseH});
@@ -368,6 +372,59 @@ async function animateSwap(run, mode){
 }
 
 export function init(onPickCb, onConnCb){ onPick = onPickCb || onPick; onConn = onConnCb || onConn; }
+
+/* ---------- 搜索定位：飞到某道菜的图钉、高亮并打开详情面板 ---------- */
+export function getAllDishes(){ return store ? store.all.slice() : []; }
+let _focusedId = null;
+function clearFocus(){ svg.querySelectorAll('.pin.pin-focus').forEach(p=>p.classList.remove('pin-focus')); _focusedId=null; }
+// 高亮目标图钉、置顶、并打开详情面板(复用 onPick=openPanel)。
+function focusPin(d){
+  clearFocus();
+  const p=svg.querySelector('.pin[data-id="'+d.id+'"]');
+  if(!p) return;
+  p.classList.add('pin-focus'); _focusedId=d.id;
+  svg.appendChild(p);              // 置于最上层
+  onPick(d, p);
+}
+// 把视野对准 (cx,cy)，viewBox 宽 w(高按底图比例)，并夹在底图范围内。
+async function focusPanTo(cx,cy,w){
+  const h = w * (baseH/baseW || 0.66);
+  let x=cx-w/2, y=cy-h/2;
+  x=Math.max(-w*0.1, Math.min(x, baseW-w*0.9));
+  y=Math.max(-h*0.1, Math.min(y, baseH-h*0.9));
+  await animateVB({x,y,w,h});
+}
+// 跳转到某道菜：取消季/集筛选、临时含 minor 以保证目标可渲染，再按 scope 走中国/世界两条定位路径。
+export async function focusDish(id){
+  if(!store) return;
+  const d=store.all.find(x=>x.id===id); if(!d) return;
+  scope={season:null,episode:null};
+  const savedMinor=showMinor; showMinor=true;
+  if(d.scope==='china') await focusChinaDish(d); else await focusWorldDish(d);
+  showMinor=savedMinor;
+}
+async function focusChinaDish(d){
+  _rerender=renderChina;
+  if(curBase!=='china'){ await setBase(CHINA); curBase='china'; }
+  back.hidden=false;
+  const prov=provinceOf(d);
+  const dishes=store.china.filter(x=>provinceOf(x)===prov);
+  const placed=dishes.map(x=>({d:x, ...chinaPos(x)}));
+  const sp=pixelSpread(placed); ensureOnLand(sp);
+  const vbT=provinceViewBox(sp);
+  svg.querySelectorAll('.pin,.cluster,.arc-layer').forEach(e=>e.remove());
+  sp.forEach(o=>pinAt(o.d,o.x,o.y));
+  chinaZoom=prov; back.textContent='← 返回中国';
+  showOverlayLabel(prov+' · '+dishes.length+'道');
+  await animateVB(vbT);
+  focusPin(d);
+}
+async function focusWorldDish(d){
+  await renderWorld(WORLD_REGION[d.id]||'??');     // 世界全图，但把目标国家预先展开成图钉
+  const p=svg.querySelector('.pin[data-id="'+d.id+'"]');
+  if(p) await focusPanTo(+p.getAttribute('data-x'), +p.getAttribute('data-y'), Math.max(180, baseW*0.26));
+  focusPin(d);
+}
 
 /* ---------- 风味连接视图：单集内、按地理铺开、主题彩色弧线 ---------- */
 export function getEpisodes(){
